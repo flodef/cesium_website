@@ -10,8 +10,8 @@ function getLangName ($code)
 			return 'english' ;
 		case 'es' :
 			return 'español';
-		case 'hv' :
-			return 'haut valyrian';
+		case 'va' :
+			return 'valyrio';
 		case 'it' : 
 			return 'italiano';
 		default : 
@@ -29,7 +29,7 @@ function getGetTextFolder ($code)
 			return 'en_GB';
 		case 'es' :
 			return 'es_ES';
-		case 'hv' :
+		case 'va' :
 			return 'en_US';
 		case 'it' :
 			return 'it_IT';

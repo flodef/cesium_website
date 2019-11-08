@@ -21,7 +21,7 @@ $availableLanguages =
 	 'fr',
 	 'en',
 	 'es',
-	 'hv'
+	 'va'
 	];
 
 define('DEFAULT_LANG', 'fr'); 

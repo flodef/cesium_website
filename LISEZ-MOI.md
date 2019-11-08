@@ -57,6 +57,30 @@ Aux exceptions suivantes :
 
 ### .htaccess
 
+Votre fichier .htaccess doit contenir les infos suivantes :
+
+```
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /www/cesium-website/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .*\.php - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/(.*)$ index.php?lang=$1&page=/$2 [L]
+
+
+# Redirections pour gérer l'ancienne structure de liens sans perdre en SEO
+# (ex : /telechargement au lieu de /fr/telechargement)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ fr/$1 [R=301]
+</IfModule>
+```
+
 Modifiez l'instruction RewriteBase du .htaccess pour qu'elle s'accorde à votre propre configuration 
 (tapez l'endroit où CesiumWebsite est installé, typiquement /)
 
