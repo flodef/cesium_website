@@ -1,0 +1,151 @@
+<h1>1. La méthode par transformation de phrases mémorables</h1>
+
+<p>
+	Cette méthode consiste à choisir 2 phrases mémorables.
+</p>
+<p>
+	La première constituera votre identifiant.
+</p>
+<p>
+	La seconde constituera votre mot de passe.
+</p>
+<p>
+	Chaque phrase doit être <b>suffisamment longue</b>
+	: cherchez une phrase comprenant une bonne cinquantaine de caractères
+	(soit une dizaine de mots, dans une phrase française standard)
+</p>
+<p>
+	Chaque phrase doit également être <b>mémorable</b>. Pour cette raison, on choisit généralement deux phrases d'une chanson ou d'un poème. Par exemple :
+</p>
+
+<blockquote style="background: white; border-left: 2px solid gray; padding-left: 1em;">
+	Mon petit oiseau a pris sa volée<br />
+	<mark>Mon petit oiseau a pris sa volée</mark><br />
+	<mark>A pris sa, à la volette</mark><br />
+	A pris sa, à la volette<br />
+	A pris sa volée
+</blockquote>
+
+<p>
+	(celle-là elle est bien parce qu'elle reste)
+</p>
+
+<p>
+	<code>Mon petit oiseau a pris sa volée</code> sera la base de ma première phrase (mon identifiant secret).
+</p>
+
+<p>
+
+	<code>A pris sa, à la volette</code> sera la base de ma deuxième phrase (mon mot de passe).
+</p>
+
+	<p>
+		Mais pas si vite !
+	</p>
+	<p>
+		Laissées telles
+		quelles, un pirate pourrait facilement deviner mes identifiants,
+		simplement en programmant un logiciel qui teste toutes les combinaisons
+		des deux premières phrases de toutes les paroles de chansons, qu'il
+		pourrait récupérer automatiquement depuis internet.
+	</p>
+
+	<p>
+		Je vais donc transformer ces phrases !
+	</p>
+
+	<p>
+		Pour ce faire, je
+		vais définir des règles de remplacement de caractère, que je
+		vais&nbsp;mémoriser, voire noter sur un morceau de papier conservé en
+		lieu sûr (mais en aucun cas je ne vais noter les phrases de départ, sans
+		quoi la sécurité de mon compte serait compromise, et je tiens à garder
+		mes Ğ1).
+	</p>
+
+<h2>Exemple 1 :</h2>
+
+	<p>
+
+		Ma phrase de départ est : <code>Mon petit oiseau a pris sa volée</code>
+	</p>
+
+	<p>
+		Mes règles sont :
+	</p>
+
+	<ul>
+		<li>je remplace les espaces par des #</li>
+	</ul>
+
+	<p>
+		Ma phrase d'arrivée est : <code>Mon#petit#oiseau#a#pris#sa#volée</code>
+	</p>
+	<p>
+		Le niveau de sécurité est :
+
+	</p>
+	<p>
+
+		<i>
+			faible
+		</i>
+
+	</p>
+
+<h2>Exemple 2 :</h2>
+
+	<p>
+
+		Ma phrase de départ est : <code>Mon petit oiseau a pris sa volée</code>
+	</p>
+	<p>
+
+		Mes règles sont :
+	</p>
+	<ul>
+		<li>je remplace les espaces par les caractères # / -, toujours dans le même ordre</li>
+		<li>je supprime les voyelles</li>
+	</ul>
+
+
+	<p>
+		Ma phrase d'arrivée est : <code>Mn#ptt/s-#prs/s-vl</code>
+	</p>
+	<p>
+		Le niveau de sécurité est : <strong class="good">correct</strong>
+
+
+		<i> </i>
+
+	</p>
+	<p>
+
+		<i>
+
+
+		</i>
+
+	</p>
+
+	<p>
+		Quelques idées de règles de transformation que vous pourriez utiliser :
+	</p>
+	<ul>
+		<li>Inverser le sens d’écriture des mots</li>
+		<li>Terminer chaque mot par une majuscule</li>
+		<li>Remplacer chaque lettre a par un @</li>
+		<li>Remplacer chaque lettre o par le chiffre 0</li>
+		<li>Remplacer chaque lettre s par le chiffre 5</li>
+		<li>Remplacer chaque lettre e par le chiffre 3</li>
+	</ul>
+
+
+	<h2>
+		À vous de jouer :
+	</h2>
+
+<ol>
+	<li><strong>Choisissez 2 phrases</strong> que vous être sûr de mémoriser sans les noter</li>
+	<li><strong>Définissez vos règles de transformation</strong> (celles-là, vous pouvez les noter sur un morceau de papier conservé en lieu sûr)</li>
+</ol>

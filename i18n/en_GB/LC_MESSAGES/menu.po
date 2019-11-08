@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 18:21+0100\n"
+"PO-Revision-Date: 2019-11-07 18:21+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: foot.php\n"
+"X-Poedit-SearchPath-1: head.php\n"
+
+#: foot.php:13
+msgid "Plan du site"
+msgstr "Sitemap"
+
+#: foot.php:19 head.php:61
+msgid "Accueil"
+msgstr "Home"
+
+#: foot.php:23 head.php:64
+msgid "/fonctionnalites"
+msgstr "/features"
+
+#: foot.php:24 head.php:65
+msgid "Fonctionnalités"
+msgstr "Features"
+
+#: foot.php:28 head.php:68
+msgid "/telechargement"
+msgstr "/download"
+
+#: foot.php:29
+msgid "Téléchargement"
+msgstr "Download"
+
+#: foot.php:34
+msgid "Support"
+msgstr "Support"
+
+#: foot.php:42
+msgid "Développeur ? Rejoignez-nous !"
+msgstr "Developper? Join us!"
+
+#: foot.php:48
+msgid "Forum Cesium"
+msgstr "Cesium forums"
+
+#: foot.php:53
+msgid "Venez faire connaissance"
+msgstr "Comme say hello"
+
+#: foot.php:58
+msgid "Forge GitLab de Cesium"
+msgstr "Cesium GitLab forge"
+
+#: foot.php:63
+msgid "Guide du développement Cesium"
+msgstr "Cesium development guide"
+
+#: foot.php:82
+msgid "/mentions-legales"
+msgstr "/legal-notice"
+
+#: foot.php:87
+msgid "Choix de langue"
+msgstr "Language"
+
+#: head.php:60
+msgid "/"
+msgstr "/"
+
+#: head.php:69
+msgid "Télécharger"
+msgstr "Download"
+
+#: head.php:72
+msgid "/tutoriel-cesium"
+msgstr "/tutorial"
+
+#: head.php:73
+msgid "Tutoriel"
+msgstr "Tutorial"
+
+#~ msgid "Cesium Ğ1"
+#~ msgstr "Cesium Ğ1"
+
+#~ msgid "/creer-compte-cesium-g1"
+#~ msgstr "/sign-up"
+
+#~ msgid "Créer un compte"
+#~ msgstr "Sign up"
+
+#~ msgid "Utiliser"
+#~ msgstr "Usage"

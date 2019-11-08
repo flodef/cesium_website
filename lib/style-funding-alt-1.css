@@ -1,0 +1,99 @@
+/* ======= Funding alt style ======= */
+
+body#f-alt-1 body,
+body#f-alt-1 main, 
+body#f-alt-1 header, 
+body#f-alt-1 footer
+{
+	background: black;
+	color: lime;
+}
+
+body#f-alt-1 h1, 
+body#f-alt-1 header h2 a, 
+body#f-alt-1 header nav ul li a, 
+body#f-alt-1 footer a, 
+body#f-alt-1 footer h5
+{
+	color: lime;	
+}
+
+
+body#f-alt-1 header img
+{
+	opacity: calc(0.666 / 2);
+}
+
+body#f-alt-1 header h2 a
+{
+	text-decoration: line-through;
+}
+
+body#f-alt-1 article .text-box
+{
+	background: black;
+	color: lime;
+	font-family: monospace;
+}
+
+body#f-alt-1 article .text-box a
+{
+	color: inherit;
+	text-decoration: underline;
+}
+
+	
+body#f-alt-1 input#pubkey
+{
+	color: lime;
+}
+
+body#f-alt-1 input#pubkey::selection
+{
+	color: lime;
+}
+
+body#f-alt-1 #pubkey::selection
+{
+	background: transparent;
+}
+
+body#f-alt-1 #pubkey:after
+{
+	content: "...";
+}
+
+body#f-alt-1 #copyButton, 
+body#f-alt-1 #supportButton
+{
+	background: lime;
+	color: black;
+	border: calc(666px / 333) solid white;
+	text-decoration: blink;
+	font-weight: bold;
+	height: calc(666rem / 200);
+	line-height: calc(666rem / 200);
+	font-size: calc(666rem / 666);
+	width: auto;
+	display: block;
+	margin: auto;
+	animation: blinker 1s linear infinite;
+	cursor: pointer;
+}
+
+body#f-alt-1 #pubkey-and-copy-button
+{
+	opacity: 0;
+	height: 0;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+body#f-alt-1 article footer
+{
+	margin-top: calc(666vh / 6);	
+}

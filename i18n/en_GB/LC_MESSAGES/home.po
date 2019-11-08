@@ -1,0 +1,182 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 17:18+0100\n"
+"PO-Revision-Date: 2019-11-07 17:28+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../../tpl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: home.php\n"
+
+#: home.php:4
+msgid "Cesium Ğ1 - Site officiel"
+msgstr "Cesium Ğ1 - Official website"
+
+#: home.php:5
+msgid ""
+"Cesium est l'application la plus intuitive pour gérer votre portefeuille en "
+"monnaie-libre Ğ1."
+msgstr ""
+"Cesium is the most intuitive app for managing your Ğ1 libre money wallets."
+
+#: home.php:16 home.php:145
+msgid "/accueil"
+msgstr "/home"
+
+#: home.php:16
+msgid "/Cesium-G1-maquette.png"
+msgstr "/Cesium-G1-mockup.png"
+
+#: home.php:21
+msgid "Recevez et envoyez <br />de la monnaie libre Ğ1"
+msgstr "Receive and send<br />Ğ1 libre currency"
+
+#: home.php:25 home.php:93 home.php:104
+msgid "/telechargement"
+msgstr "/download"
+
+#: home.php:26
+#, php-format
+msgid "Télécharger Cesium %s"
+msgstr "Download Cesium %s"
+
+#: home.php:32
+#, php-format
+msgid "Logiciel libre sous licence %s"
+msgstr "Cesium is free software distributed<br /> under %s licence"
+
+#: home.php:36
+#, php-format
+msgid "Développeur ?"
+msgstr "Are you a developper?"
+
+#: home.php:37
+msgid "/developpeurs"
+msgstr "/developers"
+
+#: home.php:38
+msgid "Rejoignez-nous !"
+msgstr "Join us!"
+
+#: home.php:48
+msgid "Cesium : la solution simple<br />pour échanger en monnaie libre"
+msgstr ""
+"Cesium is the simple solution<br />to make exchanges using libre money"
+
+#: home.php:52
+msgid "Sécurisé"
+msgstr "Secured"
+
+#: home.php:56
+msgid ""
+"Cesium signe numériquement vos transactions avant de les transmettre à la "
+"blockchain de Duniter."
+msgstr ""
+"Cesium digitally sign your transactions before sending them to the Duniter "
+"blockchain."
+
+#: home.php:60
+msgid "Offert"
+msgstr "It's on us ;-)"
+
+#: home.php:64
+msgid ""
+"Parce qu'il est codé avec amour par une communauté de gens qui croient aux "
+"monnaies libres en général (et à la Ğ1 en particulier), Cesium vous est "
+"offert sans exiger de contre-partie. "
+msgstr ""
+"Because it is programmed with love by a community of people who believe in "
+"libre moneys in general (and in the Ğ1 in particular), Cesium is given to "
+"you without demanding any counter-part."
+
+#: home.php:70
+msgid "Libre"
+msgstr "You are Free too"
+
+#: home.php:75
+msgid "Cesium est un logiciel libre."
+msgstr "Cesium is a free software."
+
+#: home.php:77
+#, php-format
+msgid ""
+"Vous êtes donc libre d'en consulter le code source (sur <a href=\"%s"
+"\">GitLab</a>), et d'adapter Cesium à vos besoins pour, par exemple, lancer "
+"votre propre monnaie libre."
+msgstr ""
+"This means you can have a look at its source code (on <a href=\"%s"
+"\">GitLab</a>) and adapt it to your need in order to, for instance, create "
+"your own free money."
+
+#: home.php:89
+msgid "Plus que quelques pas<br />avant de recevoir vos premières Ğ1"
+msgstr "Only a few clicks left<br />before you can get your first Ğ1"
+
+#: home.php:98
+msgid "Téléchargez Cesium"
+msgstr "Download Cesium"
+
+#: home.php:102
+#, php-format
+msgid ""
+"Rendez-vous sur <a href=\"%s\">la page Téléchargement</a> pour récupérer le "
+"fichier qui convient à votre système d'exploitation."
+msgstr ""
+"Go to <a href=\"%s\">the Download page</a> to get the file that suits your "
+"operating system."
+
+#: home.php:115
+msgid "Créez un compte"
+msgstr "Create an account"
+
+#: home.php:118
+msgid ""
+"Sur l'accueil, cliquez sur \"Créer un compte\", puis \"Commencer\" et "
+"\"Simple portefeuille\"."
+msgstr ""
+"On Cesium home screen, click \"Create an account\", then \"Start\" and "
+"finally choose \"Simple wallet\" for a start."
+
+#: home.php:122
+msgid "Choisissez un identifiant secret et un mot de passe tout aussi secret."
+msgstr "Choose secret id and password."
+
+#: home.php:123
+msgid ""
+"Mémorisez-les bien car il ne sera pas possible de les retrouver ensuite."
+msgstr ""
+"Make sure to memorize them correctly because you won't be able to get them "
+"back if you forget them."
+
+#: home.php:132
+msgid "Recevez des paiements"
+msgstr "Start receiving payments"
+
+#: home.php:135
+msgid ""
+"Cliquez sur votre clef publique, copiez-la et transmettez-la à la personne "
+"qui souhaite vous faire un virement en Ğ1."
+msgstr ""
+"Click on your public key ; it will be automatically copied to your "
+"clipboard. Then simply paste it to the user who wants to transfer Ğ1 to you."
+
+#: home.php:145
+msgid "/avis"
+msgstr "/reviews"
+
+#: home.php:152
+msgid "Ce qu'elles et ils en pensent"
+msgstr "What they think of Cesium"
+
+#: home.php:180
+msgid "Cesium partout"
+msgstr "Cesium around the world"
+
+#~ msgid "telechargement"
+#~ msgstr "download"

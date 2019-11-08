@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-06 22:52+0100\n"
+"PO-Revision-Date: 2019-11-06 23:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../../contents\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: home.php\n"
+
+#: home.php:4
+msgid "Cesium Ğ1 - Site officiel"
+msgstr ""
+
+#: home.php:5
+msgid ""
+"Cesium est l'application la plus intuitive pour gérer votre portefeuille en "
+"monnaie-libre Ğ1."
+msgstr ""
+
+#: home.php:17
+msgid "/accueil"
+msgstr "/home"
+
+#: home.php:17
+msgid "/Cesium-G1-maquette.png"
+msgstr "/Cesium-G1-mockup.png"
+
+#: home.php:22
+msgid "Recevez et envoyez <br />de la monnaie libre Ğ1"
+msgstr "Jiōragon se jikagon<br />Ğ1 dāerī gēlior"
+
+#: home.php:26 home.php:54 home.php:62
+msgid "/telechargement"
+msgstr "/download"
+
+#: home.php:27
+#, php-format
+msgid "Télécharger Cesium %s"
+msgstr "Download Cesium %s"
+
+#: home.php:39
+msgid "/developpeurs"
+msgstr "/developers"
+
+#~ msgid "telechargement"
+#~ msgstr "download"

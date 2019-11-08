@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 17:10+0100\n"
+"PO-Revision-Date: 2019-11-07 17:14+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: tpl/download.php\n"
+"X-Poedit-SearchPath-1: cesiumDownloads.php\n"
+
+#: cesiumDownloads.php:10
+msgid "Disponible directement sur le Play Store"
+msgstr "Descarga del Play Store"
+
+#: cesiumDownloads.php:11
+#, php-format
+msgid "(ou <a href=\"%s\">télécharger le fichier .apk</a>)"
+msgstr "(o <a href=\"%s\">descarga el archivo .apk</a>)"
+
+#: cesiumDownloads.php:17
+msgid "Disponible sur l'App Store"
+msgstr "Descarga del App Store"
+
+#: cesiumDownloads.php:24
+msgid "Paquet .deb pour Debian ou Ubuntu"
+msgstr ".deb<br /> para Debian o Ubuntu"
+
+#: cesiumDownloads.php:25
+msgid "En cas de problème&nbsp;:"
+msgstr "Si encuentra un problema&nbsp;:"
+
+#: cesiumDownloads.php:31
+msgid "Installateur .exe pour Windows"
+msgstr ".exe<br />para Windows"
+
+#: cesiumDownloads.php:32
+msgid "Lancez le .exe et suivez les instructions à l'écran"
+msgstr "Sigue las instrucciones."
+
+#: cesiumDownloads.php:38
+msgid "Version web fonctionnant sous Mac"
+msgstr "Versión web<br />que funciona con Mac"
+
+#: cesiumDownloads.php:39
+msgid "Décompressez le fichier .zip et ouvrez le fichier index.html"
+msgstr ""
+"Unzip el .zip<br />\n"
+"y abre el archivo index.html"
+
+#: cesiumDownloads.php:45
+msgid "Paquet pour Yunohost"
+msgstr ""
+"Programa para\n"
+"Yunohost"
+
+#: cesiumDownloads.php:52
+msgid "Pour une installation sur un serveur web"
+msgstr ""
+"Para instalar Cesium<br />\n"
+"sobre un servidor web"
+
+#: cesiumDownloads.php:56
+msgid "Livrables"
+msgstr ""
+
+#: cesiumDownloads.php:59
+msgid "Toutes versions disponibles sur GitHub"
+msgstr ""
+"Todas las versionas<br />\n"
+"disponible sobre GitHub"
+
+#: tpl/download.php:3
+msgid "Télécharger et installer"
+msgstr "Descargar e instalar"
+
+#: tpl/download.php:4
+msgid ""
+"Site officiel de Cesium. Télécharger la dernière version pour Linux, "
+"Windows, Mac, Android et iPhone."
+msgstr ""
+"Sitio web oficial de Cesium. Descargue la última versión para Linux, "
+"Windows, Mac, Android y iPhone."
+
+#: tpl/download.php:15
+msgid "Télécharger Cesium"
+msgstr "Descargar Cesium"
+
+#: tpl/download.php:24
+msgid "/merci/"
+msgstr "/gracias/"
+
+#: tpl/download.php:42
+msgid "Télécharger"
+msgstr "Descargar"
