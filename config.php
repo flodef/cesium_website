@@ -48,7 +48,7 @@ bindTextDomains($textDomains);
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	
-	$rootURL = '/www/cesiumApp';
+	$rootURL = '/www/cesium-website';
 	
 } else {
 	
