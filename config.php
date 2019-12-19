@@ -52,7 +52,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	
 } else {
 	
-	$rootURL = '/cesium/cesium.app';
+	$rootURL = '/';
 	
 }
 
