@@ -43,7 +43,7 @@ $availableLanguages =
 		 ], 
 	 'en' => [
 		 'name' => 'english', 
-		 'folder' => 'fr_FR'
+		 'folder' => 'en_GB'
 		 ], 
 	 'es' => [
 		 'name' => 'español', 

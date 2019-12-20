@@ -3,7 +3,7 @@ include('config.php');
 
 defineLang();
 
-putenv('LC_ALL='. LOCALE_CODE);
+putenv('LC_ALL='. LANG_FOLDER);
 setlocale(LC_ALL, LOCALE_CODE);
 
 textdomain("menu");

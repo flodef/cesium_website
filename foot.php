@@ -130,7 +130,7 @@ textdomain('menu');
 								</li>';
 							}
 							
-							putenv('LC_ALL='. LOCALE_CODE);
+							putenv('LC_ALL='. LANG_FOLDER);
 							setlocale(LC_ALL, LOCALE_CODE);
 							?>
 						</ul>
