@@ -91,35 +91,32 @@ textdomain('menu');
 
 							textdomain('menu');
 
-							foreach ($availableLanguages as $l)
+							foreach ($availableLanguages as $thisLangIsoCode => $thisLang)
 							{
 								echo '
 								<li>';
 								
-									if ($l == LANG) {
+									if ($isoCode == LANG) {
 
 										echo '
 										<strong>
 											<span>
-												' . $l . '
+												' . $thisLangIsoCode . '
 											</span>
 											<span>
-												' . getLangName($l) . '
+												' . $thisLang['name'] . '
 											</span>
 										</strong>';
 
 									} else {
-
-										putenv('LC_ALL='. getGetTextFolder($l));
-										setlocale(LC_ALL, getGetTextFolder($l) . '.utf8');
 										
 										echo '
-										<a href="'. $rootURL .'/'. $l . _($pagePermalink) .'">
+										<a href="'. $rootURL .'/'. $thisLangIsoCode . _($pagePermalink) .'">
 												<span>
-													' . $l . '
+													' . $thisLangIsoCode . '
 												</span>
 												<span>
-													' . getLangName($l) . '
+													' . $thisLang['name'] . '
 												</span>
 										</a>';
 										
@@ -128,9 +125,6 @@ textdomain('menu');
 									echo '
 								</li>';
 							}
-
-							putenv('LC_ALL='. L10N_FOLDER);
-							setlocale(LC_ALL, L10N_FOLDER . '.utf8');
 							?>
 						</ul>
 					</nav>

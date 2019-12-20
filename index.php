@@ -3,12 +3,8 @@ include('config.php');
 
 defineLang();
 
-putenv('LC_ALL='. L10N_FOLDER);
-
-
-if (false === setlocale(LC_ALL, L10N_FOLDER . '.utf8')) {
-    exit (sprintf('La langue "%s" n\'est pas installée sur ce système.', L10N_FOLDER));
-}
+putenv('LC_ALL='. LOCALE_CODE);
+setlocale(LC_ALL, LOCALE_CODE);
 
 textdomain("menu");
 

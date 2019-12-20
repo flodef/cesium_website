@@ -16,14 +16,55 @@ $legalNotice =
 
 /* ====== i18n ====== */
 
+function checkAvailableLanguages ($langList) {
+	
+	foreach ($langList as $k => $v) {
+		
+		$loc = setlocale(LC_ALL, $langList[$k]['folder'], ($langList[$k]['folder'] . '.utf8'));
+		
+		if ($loc === false) {
+			
+			$langList[$k] = NULL;
+				
+		} else {
+			
+			$langList[$k]['localeCode'] = $loc;
+		}
+	}
+	
+	return $langList;
+}
+
 $availableLanguages = 
 	[
-	 'fr',
-	 'en',
-	 'es',
-	 'va'
+	 'fr' => [
+		 'name' => 'français', 
+		 'folder' => 'fr_FR'
+		 ], 
+	 'en' => [
+		 'name' => 'english', 
+		 'folder' => 'fr_FR'
+		 ], 
+	 'es' => [
+		 'name' => 'español', 
+		 'folder' => 'es_ES'
+		 ], 
+	 'va' => [
+		 'name' => 'valyrio', 
+		 'folder' => 'en_US'
+		 ], 
+	/*
+	 'it' => [
+		 'name' => 'italiano', 
+		 'folder' => 'it_IT'
+		 ], 
+	*/
 	];
 
+$availableLanguages = checkAvailableLanguages($availableLanguages);
+
+//echo '<pre>'; print_r($availableLanguages); echo '</pre>';
+		
 define('DEFAULT_LANG', 'fr'); 
 
 include('inc/lang.php');

@@ -10,7 +10,7 @@ if (empty($subpage))
 
 
 
-$tutoContentsPath = './i18n/' . L10N_FOLDER . '/contents/tuto';
+$tutoContentsPath = './i18n/' . LANG_FOLDER . '/contents/tuto';
 
 
 if (file_exists($tutoContentsPath . $subpage) and !is_dir($tutoContentsPath . $subpage) )
@@ -75,7 +75,7 @@ if (file_exists($tutoContentsPath . $subpage) and !is_dir($tutoContentsPath . $s
 	{
 		/* === Menu === */
 		
-		$menu = './i18n/' . L10N_FOLDER . '/contents/tuto/menu.html';
+		$menu = './i18n/' . LANG_FOLDER . '/contents/tuto/menu.html';
 		if (file_exists($menu))
 		{
 			$toc = file_get_contents($menu, FILE_USE_INCLUDE_PATH);
