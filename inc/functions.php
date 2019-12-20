@@ -30,7 +30,8 @@ function getUserIpAddress ()
 		
 	} else if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
 
-		return array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+		$a = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+		return array_pop($a);
 
 	} else {
 
