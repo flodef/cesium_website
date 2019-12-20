@@ -24,10 +24,17 @@ function getLangFolder ($isoCode)
 function defineLang ()
 {
 	global $availableLanguages;
+	global $rootURL;
 	
 	if (isset($_GET['lang'])) {  /* From URL */
 
 		$lang = $_GET['lang'];
+		
+		
+		if (!in_array($lang, array_keys($availableLanguages))) {
+			
+			header('Location: '. $rootURL . '/'. DEFAULT_LANG . '/');
+		}
 
 	} else {  /* From browser (if visiting root page /) */
 

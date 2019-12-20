@@ -14,21 +14,33 @@ $legalNotice =
 
 
 
+// Trouver une façon de définir $rootURL sans faire ça :
+
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+	
+	$rootURL = '/www/cesium-website';
+	
+} else {
+	
+	$rootURL = '';
+	
+}
+
 /* ====== i18n ====== */
 
 function checkAvailableLanguages ($langList) {
 	
-	foreach ($langList as $k => $v) {
+	foreach ($langList as $isoCode => $l) {
 		
-		$loc = setlocale(LC_ALL, $langList[$k]['folder'], ($langList[$k]['folder'] . '.utf8'));
+		$loc = setlocale(LC_ALL, $l['folder'], ($l['folder'] . '.utf8'));
 		
 		if ($loc === false) {
 			
-			$langList[$k] = NULL;
+			unset($langList[$isoCode]);
 				
 		} else {
 			
-			$langList[$k]['localeCode'] = $loc;
+			$langList[$isoCode]['localeCode'] = $loc;
 		}
 	}
 	
@@ -84,18 +96,6 @@ bindTextDomains($textDomains);
 
 
 
-
-// Trouver une façon de définir $rootURL sans faire ça :
-
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	
-	$rootURL = '/www/cesium-website';
-	
-} else {
-	
-	$rootURL = '/';
-	
-}
 
 include('inc/functions.php');
 
