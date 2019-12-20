@@ -93,10 +93,14 @@ textdomain('menu');
 
 							foreach ($availableLanguages as $thisLangIsoCode => $thisLang)
 							{
+								/* To have links translated */
+								putenv('LC_ALL='. $thisLang['localeCode']);
+								setlocale(LC_ALL, $thisLang['localeCode']);
+
 								echo '
 								<li>';
 								
-									if ($isoCode == LANG) {
+									if ($thisLangIsoCode == LANG) {
 
 										echo '
 										<strong>
@@ -125,6 +129,9 @@ textdomain('menu');
 									echo '
 								</li>';
 							}
+							
+							putenv('LC_ALL='. LOCALE_CODE);
+							setlocale(LC_ALL, LOCALE_CODE);
 							?>
 						</ul>
 					</nav>
