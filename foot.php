@@ -91,35 +91,36 @@ textdomain('menu');
 
 							textdomain('menu');
 
-							foreach ($availableLanguages as $l)
+							foreach ($availableLanguages as $thisLangIsoCode => $thisLang)
 							{
+								/* To have links translated */
+								putenv('LC_ALL='. $thisLang['localeCode']);
+								setlocale(LC_ALL, $thisLang['localeCode']);
+
 								echo '
 								<li>';
 								
-									if ($l == LANG) {
+									if ($thisLangIsoCode == LANG) {
 
 										echo '
 										<strong>
 											<span>
-												' . $l . '
+												' . $thisLangIsoCode . '
 											</span>
 											<span>
-												' . getLangName($l) . '
+												' . $thisLang['name'] . '
 											</span>
 										</strong>';
 
 									} else {
-
-										putenv('LC_ALL='. getGetTextFolder($l));
-										setlocale(LC_ALL, getGetTextFolder($l) . '.utf8');
 										
 										echo '
-										<a href="'. $rootURL .'/'. $l . _($pagePermalink) .'">
+										<a href="'. $rootURL .'/'. $thisLangIsoCode . _($pagePermalink) .'">
 												<span>
-													' . $l . '
+													' . $thisLangIsoCode . '
 												</span>
 												<span>
-													' . getLangName($l) . '
+													' . $thisLang['name'] . '
 												</span>
 										</a>';
 										
@@ -128,9 +129,9 @@ textdomain('menu');
 									echo '
 								</li>';
 							}
-
-							putenv('LC_ALL='. L10N_FOLDER);
-							setlocale(LC_ALL, L10N_FOLDER . '.utf8');
+							
+							putenv('LC_ALL='. LANG_FOLDER);
+							setlocale(LC_ALL, LOCALE_CODE);
 							?>
 						</ul>
 					</nav>

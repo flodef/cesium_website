@@ -315,6 +315,7 @@ body header:first-child > h2
 	order: 2;
 	flex-grow: 1;
 	text-align: left;
+	font-size: 2.25rem;
 }
 
 body header:first-child > :first-child a, 
@@ -322,7 +323,7 @@ body header:first-child > :first-child a:hover
 {
 	color: white;
 	text-decoration: none;
-	padding-left: 0.5em;
+	padding-left: 0.25em;
 }
 
 
@@ -683,6 +684,11 @@ body#home #showcase h2#USP
 	text-align: center;
 }
 
+body#home #showcase :not(figure) {
+	
+	z-index: 666;
+}
+
 body#home #showcase h2#USP + p
 {
 	margin-top: 0rem;
@@ -775,7 +781,7 @@ body#home #showcase h2#USP + p
 	body#home #showcase div
 	{
 		flex-direction: column;
-		height: calc(100vh - 120px - 1rem);
+		height: calc(90vh - 120px - 1rem);
 		box-sizing: border-box;
 	}
 
@@ -797,7 +803,9 @@ body#home #showcase h2#USP + p
 	body#home #showcase figure img
 	{
 		align-self: center;
-		width: 112.5%;
+		height: calc(90vh - 120px);
+		width: auto;
+		transform: translateY(1rem) translateX(-2vw);
 	}
 }
 
@@ -811,7 +819,8 @@ body#home #showcase h2#USP + p
 	body#home #showcase figure img
 	{
 		align-self: center;
-		width: 125%;
+		height: calc(90vh - 120px);
+		width: auto;
 		transform: translateY(1rem) translateX(-2vw);
 	}
 }

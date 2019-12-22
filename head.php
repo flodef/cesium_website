@@ -27,20 +27,22 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 		<meta property="og:description" content="<?php echo $pageDescription; ?>" />
 		<meta property="og:url" content="http://cesium.app/" />
 		<meta property="og:site_name" content="Cesium Ğ1" />
-		<meta property="og:image" content="<?php echo $rootURL . '/i18n/' . L10N_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" />
+		
+		<meta property="og:image" content="<?php echo $rootURL . '/i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" />
 		<meta property="og:type" content="website" />
 
 		<meta name="twitter:description" content="<?php echo $pageDescription; ?>" />
 		<meta name="twitter:title" content="<?php echo $pageTitle; ?>" />
-		<meta name="twitter:image" content="<?php echo $rootURL . '/i18n/' . L10N_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" />
+		
+		<meta name="twitter:image" content="<?php echo $rootURL . '/i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" />
 		<meta name="twitter:card" content="summary_large_image" />
 		
 		<script type="text/javascript" src="<?php echo $rootURL; ?>/lib/lazyImg.min.js"></script>
 		
 		<?php
-		foreach ($availableLanguages as $l)
+		foreach ($availableLanguages as $isoCode => $v)
 		{
-			echo '<link rel="alternate" hreflang="'. $l .'" href="'. $rootURL .'/'. $l .'/" />'; 
+			echo '<link rel="alternate" hreflang="'. $isoCode .'" href="'. $rootURL .'/'. $isoCode .'/" />'; 
 		}
 		?>
 

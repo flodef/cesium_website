@@ -13,7 +13,7 @@ textdomain('home');
 <section id="showcase">
 	<div>
 		<figure id="home-app-screenshot">
-			<img src="<?php echo $rootURL . '/i18n/' . L10N_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" 
+			<img src="<?php echo $rootURL . '/i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" 
 				 alt="capture d'écran de Cesium" />
 		</figure>
 
@@ -143,7 +143,7 @@ textdomain('home');
 
 <?php
 
-$reviewsPath = './i18n/' . L10N_FOLDER . '/contents' . _('/accueil') . _('/avis') . '/';
+$reviewsPath = './i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/avis') . '/';
 
 if (file_exists($reviewsPath) AND ($reviewsFiles = scandir($reviewsPath)) AND count($reviewsFiles)-2 > 0)
 {

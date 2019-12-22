@@ -1,66 +1,59 @@
 <?php
 
-function getLangName ($code)
+function getLangName ($isoCode)
 {
-	switch ($code)
-	{
-		case 'fr' : 
-			return 'français';
-		case 'en' : 
-			return 'english' ;
-		case 'es' :
-			return 'español';
-		case 'va' :
-			return 'valyrio';
-		case 'it' : 
-			return 'italiano';
-		default : 
-			return ''; // Supposedly cannot happen
-	}
+	global $availableLanguages; 
+	
+	return $availableLanguages[$isoCode]['name'];
 }
 
-function getGetTextFolder ($code)
+function getLocaleCode ($isoCode)
 {
-	switch ($code)
-	{
-		case 'fr' :
-			return 'fr_FR';
-		case 'en' :
-			return 'en_GB';
-		case 'es' :
-			return 'es_ES';
-		case 'va' :
-			return 'en_US';
-		case 'it' :
-			return 'it_IT';
-	}
+	global $availableLanguages; 
+	
+	return $availableLanguages[$isoCode]['localeCode'];
+}
+
+function getLangFolder ($isoCode)
+{
+	global $availableLanguages; 
+	
+	return $availableLanguages[$isoCode]['folder'];
 }
 
 function defineLang ()
 {
 	global $availableLanguages;
+	global $rootURL;
 	
-	if (isset($_GET['lang'])) {
+	if (isset($_GET['lang'])) {  /* From URL */
 
 		$lang = $_GET['lang'];
+		
+		
+		if (!in_array($lang, array_keys($availableLanguages))) {
+			
+			header('Location: '. $rootURL . '/'. DEFAULT_LANG . '/');
+		}
 
-	} else {
+	} else {  /* From browser (if visiting root page /) */
 
 		$lang = preg_replace('/^([^,-]+).*$/', '$1', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
 	}
-
-	if (!in_array($lang, $availableLanguages)) {
+	
+	if (!in_array($lang, array_keys($availableLanguages))) {
 
 		define('LANG', DEFAULT_LANG);
 
 	} else {
-
+		
 		define('LANG', $lang);
 
 	}
 
-	define('L10N_FOLDER', getGetTextFolder(LANG));
+	define('LOCALE_CODE', getLocaleCode(LANG));
+	define('LANG_FOLDER', getLangFolder(LANG));
 }
 
 function bindTextDomains ($textDomains)

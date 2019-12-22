@@ -14,16 +14,69 @@ $legalNotice =
 
 
 
+// Trouver une façon de définir $rootURL sans faire ça :
+
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+	
+	$rootURL = '/www/cesium-website';
+	
+} else {
+	
+	$rootURL = '';
+	
+}
+
 /* ====== i18n ====== */
+
+function checkAvailableLanguages ($langList) {
+	
+	foreach ($langList as $isoCode => $l) {
+		
+		$loc = setlocale(LC_ALL, $l['folder'], ($l['folder'] . '.utf8'));
+		
+		if ($loc === false) {
+			
+			unset($langList[$isoCode]);
+				
+		} else {
+			
+			$langList[$isoCode]['localeCode'] = $loc;
+		}
+	}
+	
+	return $langList;
+}
 
 $availableLanguages = 
 	[
-	 'fr',
-	 'en',
-	 'es',
-	 'va'
+	 'fr' => [
+		 'name' => 'français', 
+		 'folder' => 'fr_FR'
+		 ], 
+	 'en' => [
+		 'name' => 'english', 
+		 'folder' => 'en_GB'
+		 ], 
+	 'es' => [
+		 'name' => 'español', 
+		 'folder' => 'es_ES'
+		 ], 
+	 'va' => [
+		 'name' => 'valyrio', 
+		 'folder' => 'en_US'
+		 ], 
+	/*
+	 'it' => [
+		 'name' => 'italiano', 
+		 'folder' => 'it_IT'
+		 ], 
+	*/
 	];
 
+$availableLanguages = checkAvailableLanguages($availableLanguages);
+
+//echo '<pre>'; print_r($availableLanguages); echo '</pre>';
+		
 define('DEFAULT_LANG', 'fr'); 
 
 include('inc/lang.php');
@@ -43,18 +96,6 @@ bindTextDomains($textDomains);
 
 
 
-
-// Trouver une façon de définir $rootURL sans faire ça :
-
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	
-	$rootURL = '/www/cesium-website';
-	
-} else {
-	
-	$rootURL = '/cesium/cesium.app';
-	
-}
 
 include('inc/functions.php');
 

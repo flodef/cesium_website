@@ -23,7 +23,7 @@ textdomain('features');
 	$reader = new Reader('vendor/GeoLite2-Country/GeoLite2-Country.mmdb');
 	$record = $reader->country(getUserIpAddress());
 	
-	$path = './i18n/' . L10N_FOLDER . '/contents' . _('/fonctionnalites');
+	$path = './i18n/' . LANG_FOLDER . '/contents' . _('/fonctionnalites');
 	$mapFileName = _('/carte-des-utilisateurs') . _('/pays') . sprintf('/%s.png', $record->country->isoCode);
 	
 	if (!file_exists($path . $mapFileName)) {
@@ -134,7 +134,7 @@ textdomain('features');
 	{
 		echo '
 		<figure>
-			<img src="'. $rootURL .'/i18n/' . L10N_FOLDER . '/contents' . _('/fonctionnalites') . $f['img']  .'" />
+			<img src="'. $rootURL .'/i18n/' . LANG_FOLDER . '/contents' . _('/fonctionnalites') . $f['img']  .'" />
 
 			<figcaption>
 				<h2>'. $f['name'] .'</h2>';
