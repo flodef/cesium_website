@@ -5,11 +5,11 @@ include('cesiumVersions.php');
 define('FUNDING_PUBKEY', 'CitdnuQgZ45tNFCagay7Wh12gwwHM8VLej1sWmfHWnQX');
 define('FUNDING_TARGET', '100');
 
-$legalNotice = 
+$legalNotice =
 	[
-		'editor' => 'Axiom-Team', 
-		'publisher' => 'Axiom-Team', 
-		'host' => 'P2Legal'
+		'editor' => 'Axiom-Team',
+		'publisher' => 'Axiom-Team',
+		'host' => 'p2p.legal'
 	];
 
 
@@ -17,76 +17,68 @@ $legalNotice =
 // Trouver une façon de définir $rootURL sans faire ça :
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	
 	$rootURL = '/www/cesium-website';
-	
 } else {
-	
 	$rootURL = '';
-	
 }
 
 /* ====== i18n ====== */
 
 function checkAvailableLanguages ($langList) {
-	
+
 	foreach ($langList as $isoCode => $l) {
-		
+
 		$loc = setlocale(LC_ALL, $l['folder'], ($l['folder'] . '.utf8'));
-		
+
 		if ($loc === false) {
-			
 			unset($langList[$isoCode]);
-				
 		} else {
-			
 			$langList[$isoCode]['localeCode'] = $loc;
 		}
 	}
-	
 	return $langList;
 }
 
-$availableLanguages = 
+$availableLanguages =
 	[
 	 'fr' => [
-		 'name' => 'français', 
+		 'name' => 'français',
 		 'folder' => 'fr_FR'
-		 ], 
+		 ],
 	 'en' => [
-		 'name' => 'english', 
+		 'name' => 'english',
 		 'folder' => 'en_GB'
-		 ], 
+		 ],
 	 'es' => [
-		 'name' => 'español', 
+		 'name' => 'español',
 		 'folder' => 'es_ES'
-		 ], 
+		 ],
 	 'va' => [
-		 'name' => 'valyrio', 
+		 'name' => 'valyrio',
 		 'folder' => 'en_US'
-		 ], 
+		 ],
 	/*
 	 'it' => [
-		 'name' => 'italiano', 
+		 'name' => 'italiano',
 		 'folder' => 'it_IT'
-		 ], 
+		 ],
 	*/
 	];
 
 $availableLanguages = checkAvailableLanguages($availableLanguages);
 
 //echo '<pre>'; print_r($availableLanguages); echo '</pre>';
-		
-define('DEFAULT_LANG', 'fr'); 
+
+define('DEFAULT_LANG', 'fr');
 
 include('inc/lang.php');
 
-$textDomains = 
+$textDomains =
 	[
-	 'menu', 
-	 'home', 
-	 'features', 
-	 'download', 
+	 'menu',
+	 'home',
+	 'features',
+	 'download',
 	 'tuto'
 	];
 
@@ -95,12 +87,10 @@ bindTextDomains($textDomains);
 /* ====== /i18n ====== */
 
 
-
-
 include('inc/functions.php');
 
 include('inc/display.php');
 
 
 define('MOD_REWRITE', 'on');
-define('FUNDING_ALT', false); 
+define('FUNDING_ALT', false);
