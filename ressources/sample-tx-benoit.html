@@ -1,0 +1,273 @@
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-card dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!---->
+    <!----><a class="gray" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::!tx.uid &amp;&amp; tx.pubkey" href="#/app/wot/78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8/">
+      <i class="ion-key gray"></i>
+      78Zwwgpg
+      <!---->
+    </a><!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="don barre de progression">
+      <i class="ion-ios-chatbubble-outline"></i>
+      don barre de progression<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/269548">
+        il y a 2 mois | 06/11/19 18:22
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="don barre de progression">don barre de progression</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-white" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">-49,456 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-card dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!---->
+    <!----><a class="gray" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::!tx.uid &amp;&amp; tx.pubkey" href="#/app/wot/3RnGXnLVCY3FkDTHG2mLHTdL49XjbhhRVHfLcaLquEEt/">
+      <i class="ion-key gray"></i>
+      3RnGXnLV
+      <!---->
+    </a><!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="courges et tomates">
+      <i class="ion-ios-chatbubble-outline"></i>
+      courges et tomates<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/262116">
+        il y a 3 mois | 11/10/19 08:00
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="courges et tomates">courges et tomates</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-white" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">-59,347 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-card dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!---->
+    <!----><a class="gray" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::!tx.uid &amp;&amp; tx.pubkey" href="#/app/wot/AUSKsZ2GqS83zbbtewEvGc46Wb9j7Kq7YbvMA7AWGa8L/">
+      <i class="ion-key gray"></i>
+      AUSKsZ2G
+      <!---->
+    </a><!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="paiement BAM papa benoit">
+      <i class="ion-ios-chatbubble-outline"></i>
+      paiement BAM papa benoit<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/256353">
+        il y a 3 mois | 20/09/19 11:30
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="paiement BAM papa benoit">paiement BAM papa benoit</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-white" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">-7,913 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-person dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!----><a class="" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::tx.uid" href="#/app/wot/5UGxjjevfX4vJwH3Q4e76nFEppfXFx6wyKzVBjRK8om5/mimi">
+      mimi
+    </a><!---->
+    <!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="3 livres">
+      <i class="ion-ios-chatbubble-outline"></i>
+      3 livres<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/243878">
+        il y a 5 mois | 06/08/19 13:06
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="3 livres">3 livres</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-calm" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">4,451 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-person dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!----><a class="" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::tx.uid" href="#/app/wot/DfAT7wGnRG4c3vnCDSfF5CW8HkwLRL6bMb1ykQPiAgCX/PascaleRoncoroni">
+      PascaleRoncoroni
+    </a><!---->
+    <!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="Merci pour le DVD La la land">
+      <i class="ion-ios-chatbubble-outline"></i>
+      Merci pour le DVD La la land<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/243269">
+        il y a 5 mois | 04/08/19 10:03
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="Merci pour le DVD La la land">Merci pour le DVD La la land</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-calm" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">4,946 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-person dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!----><a class="" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::tx.uid" href="#/app/wot/7Kei5oG4ZeANsRnhP2riso7KUNDWZonLwFduo8526NLn/Gerpin">
+      Gerpin
+    </a><!---->
+    <!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="Merci pour l-organisationn de cette journee.">
+      <i class="ion-ios-chatbubble-outline"></i>
+      Merci pour l-organisationn de cette journee.<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/243714">
+        il y a 5 mois | 05/08/19 23:48
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="Merci pour l-organisationn de cette journee.">Merci pour l-organisationn de cette journee.</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-calm" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">14,837 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
+<div ng-repeat="tx in formData.tx.history" class="item item-tx item-icon-left in done" ng-include="::!tx.isUD ? 'templates/wallet/item_tx.html' : 'templates/wallet/item_ud.html'"><!----><i class="icon item-image ion-person dark" ng-if="::!tx.avatar" ng-class="::{'ion-person dark': tx.uid, 'ion-card dark': !tx.uid}"></i><!---->
+<!---->
+
+<div class="row no-padding">
+  <div class="col no-padding">
+    <!----><a class="" ui-sref="app.wot_identity({pubkey:tx.pubkey, uid:tx.uid})" ng-if="::tx.uid" href="#/app/wot/2HgundtuL3qVFrEENj1DjrCm8MNag1jFEv3P8hsJeC3f/josyaneperez">
+      josyaneperez
+    </a><!---->
+    <!---->
+    <!----><p class="dark visible-xs width-cup text-italic" data-toggle="tooltip" ng-if="::tx.comment" title="Livre confiture pain de epices">
+      <i class="ion-ios-chatbubble-outline"></i>
+      Livre confiture pain de epices<br>
+    </p><!---->
+    <h4>
+      <!----><a ng-if="::!pending" class="gray underline" ui-sref="app.view_block({number: tx.block_number})" href="#/app/block/150196">
+        il y a un an | 01/09/18 12:41
+      </a><!---->
+      <!---->
+    </h4>
+  </div>
+  <!----><div class="col col-50 no-padding" ng-if="::tx.comment">
+    <p class="vertical-center gray text-italic hidden-xs" data-toggle="tooltip" title="Livre confiture pain de epices">Livre confiture pain de epices</p>
+  </div><!---->
+  <div class="col col-10 no-padding">
+
+    <!-- not locked TX -->
+    <!----><span ng-if="::!tx.lockedOutputs" class="badge item-note badge-calm" ng-class="{'badge-calm': tx.amount > 0, 'badge-white': tx.amount <= 0}">
+      <span ng-bind-html=":rebind:tx.amount| formatAmount:{currency:$root.currency.name}">19,782 DU<sub>Ğ1</sub></span>
+    </span><!---->
+
+    <!-- Locked TX -->
+    <!---->
+
+    <!---->
+  </div>
+</div>
+</div>
+
