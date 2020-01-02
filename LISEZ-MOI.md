@@ -34,20 +34,27 @@ Si ceux-ci étaient amenés à changer d'emplacement, veuillez mettre à jour le
 
 ### Contribuer aux traductions
 
-#### Pour le tutoriel
+#### Traduire le tutoriel
 
 Pour le tutoriel, vous trouverez les fichiers .html dans les dossiers type `i18n/es_ES/contents/tuto/`
 
-##### URLs dans le menu
+##### Comment formatter les URLs dans le menu
 
 Il vous faudra aussi modifier le fichier `menu.html`
 
 Dans le menu, les URLs doivent avoir la forme suivante : 
 ```html
 <ul>
-	<li><a href="item">Item</a></li>
-	<li><a href="item/">Item</a> <!-- Ira chercher le index.html du dossier -->
-		<li><a href="item/sous-item">Sous-item</a></li>
+	<li>
+		<a href="item">Item</a>
+	</li>
+	<li>
+		<a href="item/">Item</a>
+		<!-- Ira chercher le index.html du dossier -->
+		
+		<ul>
+			<li><a href="item/sous-item">Sous-item</a></li>
+		</ul>
 	</li>
 </ul>
 ````
@@ -56,19 +63,19 @@ Ici, slash ou pas slash, ça compte :
 * **un slash** de fin pour un **dossier** (va chercher le index.html à la racine du dossier)
 * **pas de slash** de fin pour un **fichier** (va chercher le .html correspondant)
 
-##### URLs dans les fichiers
+##### Comment formatter les URLs dans les fichiers
 
-Les URLs sont relatives au fichiers dans lequel vous écrivez.
+Chaque URLs est relative au fichier dans lequel on l'écrit.
 
+##### Soyons sémantiques
 
-##### Sémantique
+Écrivons à la mode XHTML : 
 
-Merci d'écrire à la mode XHTML : 
+* un slash à la fin de nos balises &lt;img /&gt;
+* un slash à la fin de nos balises &lt;br /&gt;
 
-* on met un slash à la fin de ses balises &lt;img /&gt;
-* on met un slash à la fin de ses balises &lt;br /&gt;
-
-Des éditeurs comme Notepadqq (Linux) vous permettent de répérer facilement la présence de balises non fermées (votre code est coloré diféremment).
+Des éditeurs comme Notepadqq (Linux) nous permettent de répérer facilement la 
+présence de balises non fermées (votre code est coloré diféremment).
 
 Niveau HTML&nbsp;:
 
@@ -77,17 +84,18 @@ Niveau HTML&nbsp;:
   Généralement le résultat que vous cherchez s'obtient mieux en CSS.
 
 Si un truc rend moche, bidouillez les fichiers .css ou demandez-moi de le faire plutôt 
-que de rajouter des balises surnuméraires (genre mettre des &gt;p&gt; ou des &gt;br/&gt; pour créer des marges).
+que de rajouter des balises surnuméraires (genre plutôt que de mettre des &gt;p&gt; ou des &gt;br/&gt; pour créer des marges, 
+utilisons la propriété CSS dédiée, *margin*).
 
-##### Clarté du code
+##### Que notre code soit d'une clarté incroyable
 
-Merci d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
+Efforçons-nous d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
 
 Aussi : utiliser 4 espaces consécutifs en guise d'indentation est une déviance ainsi qu'une perversion.
 
-##### Clarté du code du résultat
+##### Que notre contenu soit d'une lisibilité fabuleuse
 
-Pour les instructions dans un tuto, souvent une liste ordonnée &lt;ol&gt;&lt;/ol&gt; rend mieux 
+J'ai remarqué que pour les instructions dans un tuto, souvent une liste ordonnée &lt;ol&gt;&lt;/ol&gt; rend mieux 
 qu'une liste non-ordonnée &lt;ul&gt;&lt;/ul&gt;
 
 #### Pour les images
@@ -96,14 +104,14 @@ C'est dans `i18n/es_ES/contents/tuto/`
 
 Pour des questions de SEO, les noms des fichiers sont traduits, via les fichiers .po
 
-#### Pour tout le reste
+#### Traduire le reste
 
 Pour les pages :
 
-	- Accueil
-	- Fonctionnalités
-	- Téléchargement
-	- ...et les menu de l'entête et du pied de page
+- Accueil
+- Fonctionnalités
+- Téléchargement
+- ...et les menu de l'entête et du pied de page
 
 les modifications sont à faire dans les fichiers .po que vous trouverez dans les dossiers type `i18n/es_ES/LC_MESSAGES/` (ici : l'espagnol)
 
