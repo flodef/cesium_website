@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-11-07 17:37+0100\n"
-"PO-Revision-Date: 2019-11-07 18:15+0100\n"
+"PO-Revision-Date: 2020-01-02 21:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -195,7 +195,7 @@ msgstr "Scan QR codes"
 msgid ""
 "L'application Cesium pour téléphone vous permet de scanner le QR code d'un "
 "portefeuille."
-msgstr "Cesium phone app allows you to scan the QR code of a wallet."
+msgstr "Cesium app for smartphone allows you to scan the QR code of a wallet."
 
 #: features.php:116
 msgid "Cela vous évite de devoir rechercher le membre par son prénom."
@@ -203,7 +203,7 @@ msgstr "This prevent you to have to search for a member using their name."
 
 #: features.php:117
 msgid "Avec les QR codes, pas de risque de se tromper de destinataire !"
-msgstr "With QR codes, no risk to send money to the wrong recipient."
+msgstr "With QR codes, no risk of sending money to the wrong recipient."
 
 #: features.php:119
 msgid "/scanner-de-QR-codes.jpg"
