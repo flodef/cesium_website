@@ -81,8 +81,9 @@ que de rajouter des balises surnuméraires (genre mettre des &gt;p&gt; ou des &g
 
 ##### Clarté du code
 
-Merci d'aéré au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
+Merci d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
 
+Aussi : utiliser 4 espaces consécutifs en guise d'indentation est une déviance ainsi qu'une perversion.
 
 ##### Clarté du code du résultat
 
