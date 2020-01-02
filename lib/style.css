@@ -1611,6 +1611,18 @@ input##pubkey:after
 	padding-bottom: 0.75em;
 }
 
+#tuto li {
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#tuto li img {
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 @media (max-width: 991px)
 {
 	#tuto > *

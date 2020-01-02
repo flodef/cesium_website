@@ -1,32 +1,62 @@
 <h1>Installer Cesium Ğ1 sur GNU/Linux .deb (Debian, Ubuntu, etc.)</h1>
-	<p>Cesium n’est pas inclus dans les dépôts officiels. Pour l’installer sur votre système .deb, deux méthodes :</p>
+
+<p>Cesium n’est pas encore inclus dans les dépôts officiels.</p>
+
+<p>Pour l’installer sur votre système .deb, deux méthodes s'offrent à vous&nbsp;:</p>
 
 
-	<h4 id="ligne-de-commande">En ligne de commande</h4>
+<h2 id="ligne-de-commande">Méthode n°1 : En ligne de commande</h2>
+
+<p>Vous devez être connecté avec un compte ayant des droits “sudo”.</p>
+
+<ol>
+	<li>Télécharger Cesium :<br />
+		<code>$ wget lien/vers/cesium</code>
+	</li>
+	<li>Installez-le (remplacez XXX par la bonne version)<br />
+		<code>$ sudo dpkg -i cesium-desktop-vXXX.deb</code>
+	</li>
+	<li>S&#39;il y a un souci à la première exécution, installez les éventuelle bibliothèque manquante&nbsp;:<br />
+		<code>$ sudo apt-get install libgconf-2-4</code>
+	</li>
+</ol>
+</pre>
+
+
+<h2 id="interface-graphique">Méthode n°2 : Via l'interface graphique (logithèque Ubuntu)</h2>
+
+<ul>
+    <li>
+		Si votre ordinateur tourne avec Ubuntu, la logithèque est normalement disponible.
+	</li>
+    
+	<li>
+		Téléchargez Cesium depuis <a href="../../telechargement">la page téléchargement</a>
+        <br/>
+        <a href="../../telechargement">
+			<img src="screenshots/Deb-tel-site.png" alt="page de téléchargement Cesium.app." />
+		</a>
+	</li>
 	
-	<p>Vous devez être connecté avec un compte ayant des droits “sudo”.</p>
-	<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash">
-	# télécharger
-	$ wget lien/vers/cesium
-	# installer (remplacer XXX par la bonne version)
-	$ sudo dpkg -i cesium-desktop-vXXX.deb
-	# s&#39;il y a un souci à la première exécution
-	$ sudo apt-get install libgconf-2-4</code></pre></div>
-
-
-	<h4 id="interface-graphique">En interface graphique (logithèque Ubuntu)</h4>
+    <li>
+		Ouvrez le dossier de téléchargement. <br/>
+        <img src="screenshots/Deb-telecharger-3.png" alt="page de téléchargement Cesium.app." />
+	</li>
 	
-	<ul>
-	<li>Si votre ordinateur tourne avec Ubuntu, la logithèque est normalement disponible.</li>
-	<li>téléchargez Cesium depuis <a href="https://cesium.app/telechargement">cesium.app/telechargement</a></br>
-		<img src="screenshots/Deb-tel-site.png" alt="page de téléchargement Cesium.app." height="200"></li>
-	<li>Ouvrez le dossier de téléchargement.</br>
-		<img src="screenshots/Deb-telecharger-3.png" alt="page de téléchargement Cesium.app." height="100"></li></li>
-	<li>faites un double-clic sur le paquet cesium-desktop-vXXX.deb</li>
-	<li>La logithèque va s'ouvrir. Cliquez sur "Installer"</ br></br>
-		<img src="screenshots/Deb-logitheque.png" alt="logitheque Ubuntu" height="200"></li>
-	<li>Cesium derait s'installer seul.</li>
-	</ul>
+    <li>
+		Faites un double-clic sur le paquet cesium-desktop-vXXX.deb</li>
+	
+    <li>La logithèque va s'ouvrir. Cliquez sur "Installer" <br/>
+        <img src="screenshots/Deb-logitheque.png" alt="logitheque Ubuntu" />
+	</li>
+	
+    <li>
+		Cesium derait s'installer seul.
+	</li>
+</ul>
+
+<p>
 	En cas de souci, installez avec votre gestionnaire de paquets favori le paquet <code>libgconf-2-4</code>
+</p>
 	
 
