@@ -67,11 +67,23 @@ iframe
 }
 
 
-code
-{
+code, 
+pre {
+	
 	background-color: rgb(66, 66, 66);	
 	color: rgb(239, 239, 239);
 	padding: 0.375em 0.75em;
+}
+
+
+pre {
+	
+	margin: 0.375em 0;
+}
+
+pre.console:before {
+	
+	content: "$ ";
 }
 
 h1
