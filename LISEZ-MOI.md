@@ -1,7 +1,7 @@
 Cesium website
 ===
 
-## A propos
+## Le pourquoi du comment
 
 Cet ensemble de scripts a pour but de rendre la modification du site cesium.app accessible à tout un chacun.
 
@@ -22,9 +22,11 @@ Ce qui était autrefois fait avec un CMS est maintenant fait avec ce script mais
 * Edition facilitée : adieu le WYSIWYG laborieux de l'ancien CMS
 * Chargement plus rapide, grâce à un code plus léger et optimisé à nos besoins.
 
-## Contribuer
+Il est possible que courant 2020 ces scripts PHP soient remplacés par un générateur de site statiques (SSG) type Pelican.
 
-### Mettre à jour les liens de téléchargement
+## Guide du contributeur
+
+### Comment mettre à jour les liens de téléchargement
 
 Lors d'une mise à jour de Cesium, il suffit de mettre à jour le fichier cesiumVersions.php pour que les liens de téléchargement soient automatiquement mis à jour.
 
@@ -32,10 +34,80 @@ Si ceux-ci étaient amenés à changer d'emplacement, veuillez mettre à jour le
 
 ### Contribuer aux traductions
 
-Fichiers .po pour les pages Accueil, Fonctionnalités et Téléchargement (et les menu de l'entête et du pied de page).
-Ces fichiers sont éditables avec PoEdit.
+#### Pour le tutoriel
 
-Fichiers .html pour le tutoriel
+Pour le tutoriel, vous trouverez les fichiers .html dans les dossiers type `i18n/es_ES/contents/tuto/`
+
+##### URLs dans le menu
+
+Il vous faudra aussi modifier le fichier `menu.html`
+
+Dans le menu, les URLs doivent avoir la forme suivante : 
+```html
+<ul>
+	<li><a href="item">Item</a></li>
+	<li><a href="item/">Item</a> <!-- Ira chercher le index.html du dossier -->
+		<li><a href="item/sous-item">Sous-item</a></li>
+	</li>
+</ul>
+````
+Ici, slash ou pas slash, ça compte : 
+
+* **un slash** de fin pour un **dossier** (va chercher le index.html à la racine du dossier)
+* **pas de slash** de fin pour un **fichier** (va chercher le .html correspondant)
+
+##### URLs dans les fichiers
+
+Les URLs sont relatives au fichiers dans lequel vous écrivez.
+
+
+##### Sémantique
+
+Merci d'écrire à la mode XHTML : 
+
+* on met un slash à la fin de ses balises &lt;img /&gt;
+* on met un slash à la fin de ses balises &lt;br /&gt;
+
+Des éditeurs comme Notepadqq (Linux) vous permettent de répérer facilement la présence de balises non fermées (votre code est coloré diféremment).
+
+Niveau HTML&nbsp;:
+
+* [C'est pas interdit](https://developer.mozilla.org/fr/docs/Web/HTML/Element/li#R%C3%A9sum%C3%A9_technique) 
+  de mettre des &lt;p&gt; (contenu de flux) dans des &lt;li&gt;, mais c'est rare que ce soit vraiment nécessaire.
+  Généralement le résultat que vous cherchez s'obtient mieux en CSS.
+
+Si un truc rend moche, bidouillez les fichiers .css ou demandez-moi de le faire plutôt 
+que de rajouter des balises surnuméraires (genre mettre des &gt;p&gt; ou des &gt;br/&gt; pour créer des marges).
+
+##### Clarté du code
+
+Merci d'aéré au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
+
+
+##### Clarté du code du résultat
+
+Pour les instructions dans un tuto, souvent une liste ordonnée &lt;ol&gt;&lt;/ol&gt; rend mieux 
+qu'une liste non-ordonnée &lt;ul&gt;&lt;/ul&gt;
+
+#### Pour les images
+
+C'est dans `i18n/es_ES/contents/tuto/`
+
+Pour des questions de SEO, les noms des fichiers sont traduits, via les fichiers .po
+
+#### Pour tout le reste
+
+Pour les pages :
+
+	- Accueil
+	- Fonctionnalités
+	- Téléchargement
+	- ...et les menu de l'entête et du pied de page
+
+les modifications sont à faire dans les fichiers .po que vous trouverez dans les dossiers type `i18n/es_ES/LC_MESSAGES/` (ici : l'espagnol)
+
+Ces fichiers sont éditables avec des logiciels type PoEdit.
+
 
 
 ## Licences
