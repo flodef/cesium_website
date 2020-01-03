@@ -1,7 +1,7 @@
 Cesium website
 ===
 
-[TOC]
+[[_TOC_]]
 
 ## Le pourquoi du comment
 
