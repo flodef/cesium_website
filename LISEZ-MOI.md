@@ -1,6 +1,8 @@
 Cesium website
 ===
 
+[TOC]
+
 ## Le pourquoi du comment
 
 Cet ensemble de scripts a pour but de rendre la modification du site cesium.app accessible à tout un chacun.
@@ -24,7 +26,7 @@ Ce qui était autrefois fait avec un CMS est maintenant fait avec ce script mais
 
 Il est possible que courant 2020 ces scripts PHP soient remplacés par un générateur de site statiques (SSG) type Pelican.
 
-## Guide du contributeur
+## Comment contribuer
 
 ### Comment mettre à jour les liens de téléchargement
 
@@ -32,13 +34,11 @@ Lors d'une mise à jour de Cesium, il suffit de mettre à jour le fichier cesium
 
 Si ceux-ci étaient amenés à changer d'emplacement, veuillez mettre à jour le fichier cesiumDownloads.php
 
-### Contribuer aux traductions
-
-#### Traduire le tutoriel
+### Comment traduire le tutoriel
 
 Pour le tutoriel, vous trouverez les fichiers .html dans les dossiers type `i18n/es_ES/contents/tuto/`
 
-##### Comment formatter les URLs dans le menu
+#### Comment formatter les URLs dans le menu
 
 Il vous faudra aussi modifier le fichier `menu.html`
 
@@ -63,11 +63,22 @@ Ici, slash ou pas slash, ça compte :
 * **un slash** de fin pour un **dossier** (va chercher le index.html à la racine du dossier)
 * **pas de slash** de fin pour un **fichier** (va chercher le .html correspondant)
 
-##### Comment formatter les URLs dans les fichiers
+#### Comment formatter les URLs dans les fichiers
 
 Chaque URLs est relative au fichier dans lequel on l'écrit.
 
-##### Soyons sémantiques
+#### Comment rendre notre code clair pour les autres
+
+Efforçons-nous d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
+
+Aussi : utiliser 4 espaces consécutifs en guise d'indentation est une déviance ainsi qu'une perversion.
+
+#### Comment faire en sorte que le contenu soit lisible pour le visiteur
+
+J'ai remarqué que pour les instructions dans un tuto, souvent une liste ordonnée &lt;ol&gt;&lt;/ol&gt; rend mieux 
+qu'une liste non-ordonnée &lt;ul&gt;&lt;/ul&gt;
+
+#### Soyons sémantiques !
 
 Écrivons à la mode XHTML : 
 
@@ -87,24 +98,13 @@ Si un truc rend moche, bidouillez les fichiers .css ou demandez-moi de le faire 
 que de rajouter des balises surnuméraires (genre plutôt que de mettre des &gt;p&gt; ou des &gt;br/&gt; pour créer des marges, 
 utilisons la propriété CSS dédiée, *margin*).
 
-##### Que notre code soit d'une clarté incroyable
-
-Efforçons-nous d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
-
-Aussi : utiliser 4 espaces consécutifs en guise d'indentation est une déviance ainsi qu'une perversion.
-
-##### Que notre contenu soit d'une lisibilité fabuleuse
-
-J'ai remarqué que pour les instructions dans un tuto, souvent une liste ordonnée &lt;ol&gt;&lt;/ol&gt; rend mieux 
-qu'une liste non-ordonnée &lt;ul&gt;&lt;/ul&gt;
-
-#### Pour les images
+### Comment modifier les images
 
 C'est dans `i18n/es_ES/contents/tuto/`
 
 Pour des questions de SEO, les noms des fichiers sont traduits, via les fichiers .po
 
-#### Traduire le reste
+### Comment traduire le reste
 
 Pour les pages :
 
