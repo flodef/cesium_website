@@ -1,8 +1,6 @@
 Cesium website
 ===
 
-[[_TOC_]]
-
 ## Le pourquoi du comment
 
 Cet ensemble de scripts a pour but de rendre la modification du site cesium.app accessible à tout un chacun.
