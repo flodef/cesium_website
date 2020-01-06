@@ -330,6 +330,15 @@ body header:first-child > h2
 	font-size: 2.25rem;
 }
 
+@media (max-width: 575px) {
+	
+	body header:first-child > h1, 
+	body header:first-child > h2
+	{
+        font-size: 2rem;
+	}
+}
+
 body header:first-child > :first-child a, 
 body header:first-child > :first-child a:hover
 {
@@ -748,11 +757,6 @@ body#home #showcase h2#USP + p
 }
 
 @media (max-width: 575px) {
-	
-	body#home header:first-child > h1
-	{
-        font-size: 2rem;
-	}
 	
     body#home section:nth-child(n+2) h2
 	{
