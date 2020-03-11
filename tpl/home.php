@@ -91,7 +91,7 @@ textdomain('home');
 		</h2>
 
 		<figure>
-			<a href="<?php echo _("/telechargement"); ?>">
+			<a href="<?php echo parseURI(_("/telechargement")); ?>">
 				<img src="<?php echo $rootURL; ?>/img/home/telecharger-cesium-full.png" alt="Télécharger Cesium" />
 			</a>
 
@@ -102,7 +102,7 @@ textdomain('home');
 					<?php 
 						printf(_('Rendez-vous sur <a href="%s">la page Téléchargement</a> pour récupérer le ' . 
 								 'fichier qui convient à votre système d\'exploitation.'
-								), _("/telechargement")
+								), parseURI(_("/telechargement"))
 							  );
 					?>
 				</p>
