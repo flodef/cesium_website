@@ -58,13 +58,13 @@ $cesiumDownloads =
 		'img' => 'firefox2019.png', 
 		'desc' => _('Expérimental Firefox Add-on'), 
 		'extra' => ''
-	] 
+	], 
 	'livrables' => [
 		'title' => _('Livrables'), 
 		'url' => 'https://github.com/duniter/cesium/releases', 
 		'img' => '1200px-Octicons-mark-github.png', 
 		'desc' => _('Toutes versions disponibles sur GitHub'), 
 		'extra' => ''
-	]
+	], 
 ];
 
