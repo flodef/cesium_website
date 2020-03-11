@@ -52,6 +52,13 @@ $cesiumDownloads =
 		'desc' => _('Pour une installation sur un serveur web'), 
 		'extra' => ''
 	], 
+	'Firefox_Add-on' => [
+		'title' => _('Firefox Add-on'), 
+		'url' => 'https://addons.mozilla.org/fr/firefox/addon/cesium/', 
+		'img' => 'firefox2019.png', 
+		'desc' => _('Expérimental Firefox Add-on'), 
+		'extra' => ''
+	] 
 	'livrables' => [
 		'title' => _('Livrables'), 
 		'url' => 'https://github.com/duniter/cesium/releases', 
