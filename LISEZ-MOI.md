@@ -28,9 +28,9 @@ Il est possible que courant 2020 ces scripts PHP soient remplacés par un géné
 
 ### Comment mettre à jour les liens de téléchargement
 
-Lors d'une mise à jour de Cesium, il suffit de mettre à jour le fichier cesiumVersions.php pour que les liens de téléchargement soient automatiquement mis à jour.
+Lors d'une mise à jour de Cesium, il suffit de mettre à jour [le fichier cesiumVersions.php](cesiumVersions.php) pour que les liens de téléchargement soient automatiquement mis à jour.
 
-Si ceux-ci étaient amenés à changer d'emplacement, veuillez mettre à jour [le fichier cesiumVersions.php](cesiumVersions.php)
+Si ceux-ci étaient amenés à changer d'emplacement, veuillez mettre à jour [le fichier cesiumDownloads.php](cesiumDownloads.php)
 
 ### Comment traduire le tutoriel
 
