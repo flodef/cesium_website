@@ -38,11 +38,11 @@ $cesiumDownloads =
 		'desc' => _('Version web fonctionnant sous Mac'), 
 		'extra' => _('Décompressez le fichier .zip et ouvrez le fichier index.html')
 	], 
-	'yunohost' => [
-		'title' => 'Yunohost', 
-		'url' => 'https://github.com/duniter/cesium_ynh', 
-		'img' => 'yunohost.png', 
-		'desc' => _('Paquet pour Yunohost'), 
+	'Firefox_Add-on' => [
+		'title' => _('Firefox Add-on'), 
+		'url' => sprintf('https://glibre.org/cesium/cesium-%s-an+fx.xpi', $cesiumVersions['firefox']), 
+		'img' => 'firefox2019.png', 
+		'desc' => _('Expérimental Firefox Add-on'), 
 		'extra' => ''
 	], 
 	'web' => [
@@ -52,11 +52,11 @@ $cesiumDownloads =
 		'desc' => _('Pour une installation sur un serveur web'), 
 		'extra' => ''
 	], 
-	'Firefox_Add-on' => [
-		'title' => _('Firefox Add-on'), 
-		'url' => 'https://addons.mozilla.org/fr/firefox/addon/cesium/', 
-		'img' => 'firefox2019.png', 
-		'desc' => _('Expérimental Firefox Add-on'), 
+	'yunohost' => [
+		'title' => 'Yunohost', 
+		'url' => 'https://github.com/duniter/cesium_ynh', 
+		'img' => 'yunohost.png', 
+		'desc' => _('Paquet pour Yunohost'), 
 		'extra' => ''
 	], 
 	'livrables' => [
