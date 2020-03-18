@@ -40,7 +40,7 @@ $cesiumDownloads =
 	], 
 	'Firefox_Add-on' => [
 		'title' => _('Firefox Add-on'), 
-		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-extension-firefox.xpi', $cesiumVersions['firefox']), 
+		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-extension-firefox.xpi', $cesiumVersions['firefox'], $cesiumVersions['firefox']), 
 		'img' => 'firefox2019.png', 
 		'desc' => _('Expérimental Firefox Add-on'), 
 		'extra' => ''
