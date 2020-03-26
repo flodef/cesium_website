@@ -1,5 +1,7 @@
 <?php
 
+textdomain('download');
+
 $pageTitle = _('Télécharger et installer');
 $pageDescription = _("Site officiel de Cesium. Télécharger la dernière version pour Linux, Windows, Mac, Android et iPhone.");
 
