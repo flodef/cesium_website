@@ -91,7 +91,7 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 				
 				<p>
 					<a href="<?php echo parseURI("/"); ?>">
-						<img src="<?php echo $rootURL; ?>/lib/logo.png" alt="logo Cesium Ğ1" />
+						<img src="<?php echo $rootURL; ?>/lib/logo-cesium.svg" alt="logo Cesium Ğ1" />
 					</a>
 				</p>
 
