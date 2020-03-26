@@ -17,7 +17,8 @@ $legalNotice =
 // Trouver une façon de définir $rootURL sans faire ça :
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	$rootURL = '/www/cesium_website';
+	// Adaptez la ligne suivante à votre configuration (sans slash à la fin)
+	$rootURL = '/cesium-website-project/cesium_website';
 } else {
 	$rootURL = '';
 }
