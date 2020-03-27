@@ -1,13 +1,12 @@
 <?php
-
-textdomain('home');
-
 $bodyIds = 'home';
 
 $pageTitle = _('Cesium Ğ1 - Site officiel');
 $pageDescription = _("Cesium est l'application la plus intuitive pour gérer votre portefeuille en monnaie-libre Ğ1.");
 
 include('head.php');
+
+textdomain('home');
 
 ?>
 

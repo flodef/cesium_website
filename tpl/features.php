@@ -1,11 +1,11 @@
 <?php
 
-textdomain('features');
-
 $pageTitle = _('Fonctionnalités');
 $pageDescription = _("Fonctionnalités de Cesium : gérer son comptes monnaie libre Ğ1, rechercher des membres dans l'annuaire, trouver des entreprises qui acceptent la Ğ1.");
 
 include('head.php');
+
+textdomain('features');
 
 ?>
 <article id="features">

@@ -1,5 +1,4 @@
 <?php
-textdomain('legal-notice');
 
 $pageTitle = _("Mentions légales");
 $pageDescription = _("");

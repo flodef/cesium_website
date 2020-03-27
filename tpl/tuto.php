@@ -1,7 +1,4 @@
 <?php
-
-textdomain('tuto');
-
 $pageTitle = '';
 
 $tutoURL = $rootURL . '/' . LANG . dgettext('menu', $pagePermalink) . '/';
