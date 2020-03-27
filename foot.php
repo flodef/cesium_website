@@ -1,37 +1,31 @@
-<?php
-
-textdomain('menu');
-
-?>
-
 			</main>
 
 			<footer>
 				<div>
 					<nav id="sitemap">
 						<h5>
-							<?php echo _('Plan du site'); ?>
+							<?php echo dgettext('menu', 'Plan du site'); ?>
 						</h5>
 
 						<ul>
 							<li>
 								<a href="<?php echo parseURI('/'); ?>">
-									<?php echo _('Accueil'); ?>
+									<?php echo dgettext('menu', 'Accueil'); ?>
 								</a>
 							</li>
 							<li>
-								<a href="<?php echo parseURI(_('/fonctionnalites')); ?>">
-									<?php echo _('Fonctionnalités'); ?>
+								<a href="<?php echo parseURI(dgettext('menu', '/fonctionnalites')); ?>">
+									<?php echo dgettext('menu', 'Fonctionnalités'); ?>
 								</a>
 							</li>
 							<li>
-								<a href="<?php echo parseURI(_('/telechargement')); ?>">
-									<?php echo _('Téléchargement'); ?>
+								<a href="<?php echo parseURI(dgettext('menu', '/telechargement')); ?>">
+									<?php echo dgettext('menu', 'Téléchargement'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="https://forum.duniter.org/c/support/cesium">
-									<?php echo _('Support'); ?>
+									<?php echo dgettext('menu', 'Support'); ?>
 								</a>
 							</li>
 						</ul>
@@ -39,28 +33,28 @@ textdomain('menu');
 
 					<nav id="developper-links">
 						<h5>
-							<?php echo _('Développeur ? Rejoignez-nous !');?>
+							<?php echo dgettext('menu', 'Développeur ? Rejoignez-nous !');?>
 						</h5>
 
 						<ul>
 							<li>
 								<a href="https://forum.duniter.org/c/support/cesium">
-									<?php echo _('Forum Cesium'); ?>
+									<?php echo dgettext('menu', 'Forum Cesium'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="https://forum.duniter.org/c/presentations">
-									<?php echo _('Venez faire connaissance'); ?>
+									<?php echo dgettext('menu', 'Venez faire connaissance'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="https://git.duniter.org/clients/cesium-grp/cesium">
-									<?php echo _('Forge GitLab de Cesium'); ?>
+									<?php echo dgettext('menu', 'Forge GitLab de Cesium'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="https://git.duniter.org/clients/cesium-grp/cesium/blob/master/doc/development_guide.md">
-									<?php echo _('Guide du développement Cesium'); ?>
+									<?php echo dgettext('menu', 'Guide du développement Cesium'); ?>
 								</a>
 							</li>
 							<li>
@@ -79,12 +73,12 @@ textdomain('menu');
 						</p>
 
 						<p>
-							<a href="<?php echo $rootURL . _('/mentions-legales'); ?>">Mentions légales</a>
+							<a href="<?php echo $rootURL . dgettext('menu', '/mentions-legales'); ?>">Mentions légales</a>
 						</p>
 					</section>
 
 					<nav id="langSelector">
-						<h5><?php echo _('Choix de langue'); ?></h5>
+						<h5><?php echo dgettext('menu', 'Choix de langue'); ?></h5>
 
 						<ul>
 							<?php 
@@ -115,7 +109,7 @@ textdomain('menu');
 									} else {
 										
 										echo '
-										<a href="'. $rootURL .'/'. $thisLangIsoCode . _($pagePermalink) .'">
+										<a href="'. $rootURL .'/'. $thisLangIsoCode . dgettext('menu', $pagePermalink) .'">
 												<span>
 													' . $thisLangIsoCode . '
 												</span>

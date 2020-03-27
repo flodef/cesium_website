@@ -9,8 +9,6 @@ include('cesiumDownloads.php');
 
 include('head.php');
 
-textdomain('download');
-
 ?>
 
 

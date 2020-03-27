@@ -1,4 +1,7 @@
 <?php
+
+textdomain('tuto');
+
 $pageTitle = '';
 
 $tutoURL = $rootURL . '/' . LANG . dgettext('menu', $pagePermalink) . '/';
@@ -98,13 +101,11 @@ if (file_exists($tutoContentsPath . $subpage) and !is_dir($tutoContentsPath . $s
 
 		include('head.php');
 
-		textdomain('tuto');
-
 		?>
 
 		<section id="tuto">
 			<nav>
-				<h2>Sommaire</h2>
+				<h2><?php echo _('Sommaire'); ?></h2>
 
 				<?php echo $toc; ?>
 			</nav>
