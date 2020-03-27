@@ -53,6 +53,7 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 	</head>
 	<body id="<?php echo $bodyIds; ?>">
 			<?php
+				$currentPageTextDomain = textdomain();
 				textdomain("menu");
 
 				$menu =
@@ -122,3 +123,6 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 			</header>
 			
 			<main>
+			<?php
+				textdomain($currentPageTextDomain);
+			?>

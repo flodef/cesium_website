@@ -1,5 +1,5 @@
 <?php
-
+textdomain('jobs');
 
 $pageTitle = _("Rejoignez l'équipe");
 $pageDescription = _("");

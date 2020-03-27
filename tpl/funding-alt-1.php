@@ -1,4 +1,5 @@
 <?php
+textdomain('funding');
 
 $pageTitle = _("Coucou");
 $pageDescription = _("");
