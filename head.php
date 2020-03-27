@@ -53,8 +53,6 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 	</head>
 	<body id="<?php echo $bodyIds; ?>">
 			<?php
-				textdomain("menu");
-
 				$menu =
 					array(
 						[
