@@ -46,7 +46,7 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 		}
 		?>
 
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rootURL; ?>/lib/style.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="<?php echo $rootURL; ?>/lib/style.css" />
 		
 		<?php if (FUNDING_ALT) echo '<link type="text/css" rel="stylesheet" media="screen" href="'. $rootURL .'/lib/style-funding-alt-1.css" />'; ?>
 		
