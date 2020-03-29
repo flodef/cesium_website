@@ -45,8 +45,23 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 			echo '<link rel="alternate" hreflang="'. $isoCode .'" href="'. $rootURL .'/'. $isoCode .'/" />'; 
 		}
 		?>
-
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $rootURL; ?>/lib/style.css" />
+		
+		<?php
+		
+		if ($_SERVER['SERVER_NAME'] == 'localhost') {
+			
+			echo '
+			<link rel="stylesheet/less" type="text/css" href="' . $rootURL . '/lib/style.less" />
+			<script src="' . $rootURL . '/lib/less-3.9.0.min.js" ></script>
+			';
+		
+		} else {
+		
+			echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $rootURL . '/lib/style.css" />';
+			
+		}
+		
+		?>
 		
 		<?php if (FUNDING_ALT) echo '<link type="text/css" rel="stylesheet" media="screen" href="'. $rootURL .'/lib/style-funding-alt-1.css" />'; ?>
 		

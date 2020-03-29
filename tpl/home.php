@@ -11,16 +11,16 @@ include('head.php');
 
 ?>
 
-<section id="showcase">
+<header id="showcase">
 	<div>
+		<h2 id="USP">
+			<?php echo _("Recevez et envoyez <br />de la monnaie libre Ğ1"); ?>
+		</h2>
+		
 		<figure id="home-app-screenshot">
 			<img src="<?php echo $rootURL . '/i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" 
 				 alt="capture d'écran de Cesium" />
 		</figure>
-
-		<h2 id="USP">
-			<?php echo _("Recevez et envoyez <br />de la monnaie libre Ğ1"); ?>
-		</h2>
 
 		<p class="CTA-button">
 			<a href="<?php echo parseURI(_("/telechargement")); ?>">
@@ -33,24 +33,26 @@ include('head.php');
 			<?php printf(_('Logiciel libre sous licence %s'), 'GNU AGPL-3.0'); ?>
 		</p>
 
-		<aside>
+		<aside id="CTA-join-us">
 			<?php printf(_('Développeur ?')); ?>
 			<a href="<?php echo parseURI(_("/developpeurs")); ?>">
 				<?php echo _('Rejoignez-nous !'); ?>
 			</a>
 		</aside>
+		
+		<div></div>
 	</div>
-</section>
+</header>
 
 
-<section class="features-list" id="features-list-1">
+<section class="features-list">
 	<div>
 		<h2>
 			<?php echo _('Cesium : la solution simple<br />pour échanger en monnaie libre'); ?>
 		</h2>
 		
 		<dl>
-			<dt>
+			<dt class="feature-secured">
 				<?php echo _('Sécurisé'); ?>
 			</dt>
 
@@ -58,7 +60,7 @@ include('head.php');
 				<?php echo _('Cesium signe numériquement vos transactions avant de les transmettre à la blockchain de Duniter.'); ?>
 			</dd>
 
-			<dt>
+			<dt class="feature-gratis">
 				<?php echo _('Offert'); ?>
 			</dt>
 
@@ -68,7 +70,7 @@ include('head.php');
 							 "Cesium vous est offert sans exiger de contre-partie. "); ?>
 			</dd>
 
-			<dt>
+			<dt class="feature-libre">
 				<?php echo _('Libre'); ?>
 			</dt>
 
