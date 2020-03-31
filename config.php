@@ -62,10 +62,6 @@ $availableLanguages =
 		 'name' => 'español',
 		 'folder' => 'es_ES'
 		 ],
-	 'va' => [
-		 'name' => 'valyrio',
-		 'folder' => 'en_US'
-		 ],
 	/*
 	 'it' => [
 		 'name' => 'italiano',
