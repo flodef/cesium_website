@@ -98,4 +98,4 @@ include('inc/display.php');
 
 
 define('MOD_REWRITE', 'on');
-define('FUNDING_ALT', false);
+define('FUNDING_ALT', (date('d/m') == '01/04'));

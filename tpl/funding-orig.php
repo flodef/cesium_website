@@ -143,7 +143,7 @@ include('head.php');
 
 			<p>
 				<strong>'. $totalCollected . ' DU<sub>Ğ1</sub></strong>
-				<span>ont déjà donnés, sur un total de '. FUNDING_TARGET .' DU<sub>Ğ1</sub></span>
+				<span>ont déjà été donnés, sur un total de '. FUNDING_TARGET .' DU<sub>Ğ1</sub></span>
 			</p>
 
 			<p>
@@ -217,3 +217,36 @@ include('head.php');
 	</section>
 </article>
 
+
+<script>
+function copy() {
+	
+	var copyText = document.querySelector("#pubkey");
+	copyText.select();
+	document.execCommand("copy");
+
+	var successMsg = document.querySelector("#successMsg");
+	successMsg.style.opacity = "1";
+	/*successMsg.style.height = "3em";*/
+
+	var copyButton = document.querySelector("#copyButton");
+	copyButton.style.animation = "none";
+	
+}
+
+function support() {
+	
+	var pubkeyAndCopyButton = document.querySelector("#pubkey-and-copy-button");
+	var supportButtonContainer = document.querySelector("#supportButtonContainer");
+	supportButtonContainer.style.opacity = "0";
+	supportButtonContainer.style.height = "0";
+	pubkeyAndCopyButton.style.height = "100%";
+	pubkeyAndCopyButton.style.opacity = "1";
+	
+	var supportButton = document.querySelector("#supportButton");
+	$(this).style.animation = "none";
+}
+
+document.querySelector("#copyButton").addEventListener("click", copy);
+document.querySelector("#supportButton").addEventListener("click", support);
+</script>
