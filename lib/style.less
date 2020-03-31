@@ -188,6 +188,7 @@ section.text-box
 	background-color: #FDF5E6;
 	color: rgb(66, 66, 66);	
 	font-size: 1.25rem;
+	line-height: 1.75rem;
 	max-width: 800px;
 	margin: auto;
 	padding: 0 0 0.001rem 0;
@@ -560,11 +561,47 @@ body > header:first-child  {
 					color: rgb(228, 195, 128);
 					text-decoration: none;
 				}
+				
+				&.support-us {
+						
+					@media (max-width: 1139px) {
+						
+						a {
+							
+							color: hsl(349, 89%, 53%);
+						}
+					}
+					
+					@media (min-width: 1140px) {
+						
+						border: 0;
+
+
+						a {
+
+							margin: 0;
+							padding: 1em;
+							display: block;
+							border-radius: 1em;
+
+							color: #f2f2f2;
+							background: hsl(349, 89%, 53%);
+						}
+
+						&.active a {
+
+							color: hsl(349, 89%, 53%);
+							background: white;
+
+						}
+					}
+					
+				}
 			}
 		}
 		
 		
-		@media (max-width: 991px)
+		@media (max-width: 1139px)
 		{
 			ul
 			{
@@ -641,7 +678,7 @@ body > header:first-child  {
 			}
 		}
 
-		@media (min-width: 992px)
+		@media (min-width: 1140px)
 		{
 
 			button
@@ -1560,6 +1597,8 @@ article#features {
 
 article#funding {
 
+	text-align: justify;
+	
 	#supportButtonContainer, 
 	#projectStatus
 	{
@@ -1587,6 +1626,10 @@ article#funding {
 		border: transparent;
 		background: transparent;
 		font-size: 1rem;
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin: 0.5em auto;
 	}
 
 
@@ -1651,7 +1694,7 @@ article#funding {
 			max-width: 450px;
 		}
 
-		.progress-bar
+		.progress-meter
 		{
 			width: 100%;
 			height: 0.5em;
@@ -1668,8 +1711,111 @@ article#funding {
 		{
 			display: none;
 		}
+
+		.progress-container {
+
+			background-color: hsl(210, 15.8%, 92.5%);
+			border: 1px solid hsl(210, 10.3%, 32.7%);
+			height: 2rem;
+			border-radius: 0;
+
+			display: -ms-flexbox;
+			display: flex;
+			overflow: hidden;
+			font-size: .75rem;
+		}
+
+		@keyframes progress-bar-stripes {
+
+			from { background-position: 1rem 0; }
+			to { background-position: 0 0; }
+		}
+
+		.progress-bar {
+
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-ms-flex-pack: center;
+			justify-content: center;
+			color: #fff;
+			text-align: center;
+			white-space: nowrap;
+			background-color: hsl(45, 100.0%, 51.4%);
+			transition: width .6s ease;
+
+			-webkit-animation: progress-bar-stripes 1s linear infinite;
+			animation: progress-bar-stripes 1s linear infinite;
+		}
 	}
 
+	
+	.donorsList {
+
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 500px;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.donorsList > li {
+
+		padding: 0.10rem 0.5rem;
+		flex-shrink: 1;
+		box-sizing: border-box;
+	}
+
+	.donorsList > li span {
+
+		border-radius: 1em;
+		padding: 0 0.25em;
+		color: white;
+	}
+
+	.donorsList > li:nth-child(5n) span{
+
+		background: hsl(194, 100%, 70%);
+		color: black;
+	}
+
+	.donorsList > li:nth-child(5n+1) span{
+
+		background: hsl(185, 62%, 53%);
+	}
+
+	.donorsList > li:nth-child(5n+2) span{
+
+		background: hsl(210, 100%, 25%);
+	}
+
+	.donorsList > li:nth-child(5n+3) span{
+
+		background: hsl(194, 100%, 80%);
+		color: hsl(233, 88%, 9%);
+	}
+
+	.donorsList > li:nth-child(5n+4) span{
+
+		background: hsl(194, 100%, 60%);
+		color: hsl(233, 88%, 9%);
+	}
+
+	.donorsList > :nth-child(1) {
+
+		width: 100%;
+	}
+
+	.donorsList > :nth-child(2),
+	.donorsList > :nth-child(3)  {
+
+		width: 50%;
+	}
 }
 
 
@@ -1827,7 +1973,6 @@ article#funding {
 		}
 	}
 }
-
 
 
 /* ======= Legal Notice page ======= */

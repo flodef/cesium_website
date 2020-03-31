@@ -85,6 +85,12 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 						[
 							'uri' => dgettext('menu', '/tutoriel-cesium') . '/', 
 							'label' => dgettext('menu', 'Tutoriel')
+						],
+						[
+							'uri' => dgettext('menu', '/merci'), 
+							'label' => '❤ ' . dgettext('menu', 'Encouragez-nous !'),  
+							'class' => 'support-us'
+							// ❤
 						]
 					);
 			?>
@@ -119,10 +125,16 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 
 						for ($i = 0; $i < $itemsNb; ++$i)
 						{
-							$active = ($_SERVER['REQUEST_URI'] == parseURI($menu[$i]['uri'])) ? ' class="active"' : '';
-
+							$classes = '';
+							
+							$classes .= ($_SERVER['REQUEST_URI'] == parseURI($menu[$i]['uri'])) ? ' active' : '';
+							
+							$classes .= isset($menu[$i]['class']) ? ' '. $menu[$i]['class'] . '"' : '';
+							
+							$classes = !empty($classes) ? ' class="'. $classes .'"' : '';
+							
 							echo '
-							<li'. $active .'>
+							<li'. $classes . '>
 								<a role="menuitem" href="'. parseURI($menu[$i]['uri']) . '">
 									<span>'. $menu[$i]['label'] .'</span>
 								</a>
