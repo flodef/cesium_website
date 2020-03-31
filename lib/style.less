@@ -1694,15 +1694,45 @@ article#funding {
 		padding: 1em 2%;
 		align-self: flex-start;
 		
+		
 		li
 		{
 			margin-top: 0.5em;
 			margin-bottom: 0.5em;
+			
+			ul {
+				
+				display: none;
+			}
 		}
-
-		a.current
+		
+		li.active {
+			
+			> a {
+				
+				font-weight: bold;
+			}
+		}
+			
+		li.current
 		{
-			font-weight: bold;	
+			> ul {
+				
+				display: block;
+			}
+		}
+		
+		
+		> ul {
+			
+			list-style: none;
+			padding-left: 0;
+			
+			> li {
+					
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
 		}
 	}
 	
@@ -1711,7 +1741,7 @@ article#funding {
 		flex-grow: 1;
 		background-color: white;
 		color: black;
-		padding: 0 1em;
+		padding: 0 1em 1.5em;
 		align-self: flex-start;
 
 		h1
@@ -1719,7 +1749,7 @@ article#funding {
 			color: black;
 			font-size: 2rem;
 			font-weight: bold;
-			padding-bottom: 0.75em;
+			padding-bottom: 1em;
 		}
 		
 		li {
@@ -1732,6 +1762,23 @@ article#funding {
 				margin-top: 1em;
 				margin-bottom: 1em;
 			}
+		}
+		
+		dl {
+			
+			dt {
+				
+				font-weight: bold;
+				margin-bottom: 0.5em;
+				
+			}
+			
+			dd {
+				
+				margin-bottom: 1.5em;
+				
+			}
+			
 		}
 	}
 	

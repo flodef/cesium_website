@@ -1164,14 +1164,28 @@ article#funding .crowdfunding-widget > p:nth-of-type(3) span:first-child {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-#tuto nav a.current {
+#tuto nav li ul {
+  display: none;
+}
+#tuto nav li.active > a {
   font-weight: bold;
+}
+#tuto nav li.current > ul {
+  display: block;
+}
+#tuto nav > ul {
+  list-style: none;
+  padding-left: 0;
+}
+#tuto nav > ul > li {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 #tuto article {
   flex-grow: 1;
   background-color: white;
   color: black;
-  padding: 0 1em;
+  padding: 0 1em 1.5em;
   align-self: flex-start;
 }
 #tuto article h1 {
@@ -1187,6 +1201,13 @@ article#funding .crowdfunding-widget > p:nth-of-type(3) span:first-child {
 #tuto article li img {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+#tuto article dl dt {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+#tuto article dl dd {
+  margin-bottom: 1.5em;
 }
 @media (max-width: 991px) {
   #tuto > * {

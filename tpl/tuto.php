@@ -79,14 +79,35 @@ if (file_exists($tutoContentsPath . $subpage) and !is_dir($tutoContentsPath . $s
 		/* === Menu === */
 		
 		$menu = './i18n/' . LANG_FOLDER . '/contents/tuto/menu.html';
-		if (file_exists($menu))
-		{
+		
+		if (file_exists($menu)) {
+			
 			$toc = file_get_contents($menu, FILE_USE_INCLUDE_PATH);
+			
+			$pagePath = substr($subpage, 1);
+			
+			$branches = explode('/', removeTrailingSlash($pagePath), -1);
+			
+			$fullPath = '';
+			
+			foreach ($branches as $branch) {
+				
+				$fullPath .= $branch . '/';
 
-			$toc = str_replace('href="'.substr($subpage, 1) .'"', 'href="'. substr($subpage, 1) .'" class="current"', $toc);
-
-			$toc = str_replace('href="', ('href="' . $tutoURL), $toc);
-
+				$toc = preg_replace('#<li>(\s*<a href="'. $fullPath .'")#isU', 
+								   '<li class="current">$1', 
+								   $toc);
+			}
+			
+			$toc = preg_replace('#<li>(\s*<a href="'. $pagePath .'")#isU', 
+							   '<li class="current active">$1', 
+							   $toc);
+			
+			$toc = str_replace('href="', 
+							   ('href="' . $tutoURL), 
+							   $toc);
+			
+			
 		}
 		
 		/* === Contents === */
