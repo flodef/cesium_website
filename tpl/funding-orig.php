@@ -68,7 +68,7 @@ include('head.php');
 		</p>
 		
 		<p>
-			Tout simplement en finançant développeurs.
+			Tout simplement en finançant les développeurs.
 		</p>
 		
 		<p>
