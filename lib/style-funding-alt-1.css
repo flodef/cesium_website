@@ -63,6 +63,17 @@ body#f-alt-1 #pubkey:after
 	content: "...";
 }
 
+
+body#f-alt-1 #successMsg
+{
+	opacity: 0;
+	/*height: 0;*/
+	line-height: 1.5em;
+	transition-property: opacity, height;
+	transition-duration: 1.5s, 0.5s;
+}
+
+
 body#f-alt-1 #copyButton, 
 body#f-alt-1 #supportButton
 {
@@ -95,5 +106,5 @@ body#f-alt-1 #pubkey-and-copy-button
 
 body#f-alt-1 article footer
 {
-	margin-top: calc(666vh / 6);	
+	margin-top: calc(666vh / 6 / 2);	
 }

@@ -2,8 +2,10 @@
 
 include('cesiumVersions.php');
 
-define('FUNDING_PUBKEY', 'CitdnuQgZ45tNFCagay7Wh12gwwHM8VLej1sWmfHWnQX');
-define('FUNDING_TARGET', '100');
+define('FUNDING_PUBKEY',  '78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8');
+// Duniter : 78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8
+// Cesium : CitdnuQgZ45tNFCagay7Wh12gwwHM8VLej1sWmfHWnQX
+define('FUNDING_TARGET', 20*40+230);
 
 $legalNotice =
 	[
@@ -13,11 +15,18 @@ $legalNotice =
 	];
 
 
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+	
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+}
 
 // Trouver une façon de définir $rootURL sans faire ça :
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	$rootURL = '/www/cesium_website';
+	// Adaptez la ligne suivante à votre configuration (sans slash à la fin)
+	$rootURL = '/cesium-website-project/cesium_website';
 } else {
 	$rootURL = '';
 }
@@ -52,10 +61,6 @@ $availableLanguages =
 	 'es' => [
 		 'name' => 'español',
 		 'folder' => 'es_ES'
-		 ],
-	 'va' => [
-		 'name' => 'valyrio',
-		 'folder' => 'en_US'
 		 ],
 	/*
 	 'it' => [
@@ -93,4 +98,4 @@ include('inc/display.php');
 
 
 define('MOD_REWRITE', 'on');
-define('FUNDING_ALT', false);
+define('FUNDING_ALT', (date('d/m') == '01/04'));

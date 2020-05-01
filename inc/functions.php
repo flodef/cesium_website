@@ -40,3 +40,18 @@ function getUserIpAddress ()
 	}
 
 }
+
+
+
+function removeTrailingSlash ($str) {
+
+	if (substr($str, -1) == '/') {
+
+		return substr($str, 0, -1);
+
+	} else {
+
+		return $str;
+	}
+}
+
