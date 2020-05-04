@@ -18,9 +18,9 @@ $cesiumDownloads =
 		'extra' => ''
 	], 
 	'debian' => [
-		'title' => 'Debian (et dérivés)', 
+		'title' => 'Debian, Ubuntu (et dérivés)',
 		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-desktop-v%s-linux-x64.deb', $cesiumVersions['linux'], $cesiumVersions['linux']), 
-		'img' => 'debian.svg', 
+		'img' => 'tux.svg',
 		'desc' => _('Paquet .deb pour Debian ou Ubuntu'), 
 		'extra' => _('En cas de problème&nbsp;:') . '<br /><code>sudo apt-get install -y libgconf-2-4</code>'
 	],

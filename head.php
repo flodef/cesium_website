@@ -83,6 +83,10 @@ $bodyIds = !isset($bodyIds) ? '' : $bodyIds;
 							'label' => dgettext('menu', 'Télécharger')
 						],
 						[
+							'uri' => 'https://demo.cesium.app',
+							'label' => dgettext('menu', 'Démo')
+						],
+						[
 							'uri' => dgettext('menu', '/tutoriel-cesium') . '/', 
 							'label' => dgettext('menu', 'Tutoriel')
 						],
