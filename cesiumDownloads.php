@@ -19,7 +19,7 @@ $cesiumDownloads =
 	],
 	'debian' => [
 		'title' => 'Debian (et dérivés)',
-		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-desktop-v%s-linux-x64.deb', $cesiumVersions['debian'], $cesiumVersions['debian']), 
+		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-desktop-v%s-linux-x64.deb', $cesiumVersions['debian'], $cesiumVersions['debian']),
 		'img' => 'debian.svg',
 		'desc' => _('Paquet .deb pour Debian ou Ubuntu'),
 		'extra' => _('En cas de problème&nbsp;:') . '<br /><code>sudo apt-get install -y libgconf-2-4</code>'
@@ -45,18 +45,18 @@ $cesiumDownloads =
 		'desc' => _('Version web fonctionnant sous Mac'),
 		'extra' => _('Décompressez le fichier .zip et ouvrez le fichier index.html')
 	],
-	'Firefox_Add-on' => [
-		'title' => _('Firefox Add-on'),
+	'firefox' => [
+		'title' => _('Firefox'),
 		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-extension-firefox.xpi', $cesiumVersions['firefox'], $cesiumVersions['firefox']),
 		'img' => 'firefox2019.png',
-		'desc' => _('Expérimental Firefox Add-on'),
+		'desc' => _('Module complémentaire pour Firefox'),
 		'extra' => ''
 	],
-	'Chromium_Add-on' => [
-		'title' => _('Chromium/Chrome Add-on'),
+	'chromium' => [
+		'title' => _('Chromium&nbsp;/&nbsp;Chrome'),
 		'url' => 'https://chrome.google.com/webstore/detail/cesium/ocbhjemiokgibfojkkjapfealnbmgoek',
 		'img' => 'chrome.png',
-		'desc' => _('Installation depuis le store Chrome'),
+		'desc' => _('Extension pour Chromium&nbsp;/&nbsp;Chrome'),
 		'extra' => ''
 	],
 	'web' => [
