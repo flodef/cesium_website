@@ -55,7 +55,7 @@ $cesiumDownloads =
 	'chromium' => [
 		'title' => _('Chromium&nbsp;/&nbsp;Chrome'),
 		'url' => 'https://chrome.google.com/webstore/detail/cesium/ocbhjemiokgibfojkkjapfealnbmgoek',
-		'img' => 'chrome.png',
+		'img' => 'chrome.svg',
 		'desc' => _('Extension pour Chromium&nbsp;/&nbsp;Chrome'),
 		'extra' => ''
 	],
