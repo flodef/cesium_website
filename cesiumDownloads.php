@@ -59,6 +59,13 @@ $cesiumDownloads =
 		'desc' => _('Extension pour Chromium&nbsp;/&nbsp;Chrome'),
 		'extra' => ''
 	],
+	'brave' => [
+		'title' => _('Brave'),
+		'url' => 'https://chrome.google.com/webstore/detail/cesium/ocbhjemiokgibfojkkjapfealnbmgoek',
+		'img' => 'brave_lion.svg',
+		'desc' => _('Extension pour Brave'),
+		'extra' => ''
+	],
 	'web' => [
 		'title' => 'Web',
 		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-web.zip', $cesiumVersions['web'], $cesiumVersions['web']),
