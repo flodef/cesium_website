@@ -52,6 +52,13 @@ $cesiumDownloads =
 		'desc' => _('Expérimental Firefox Add-on'), 
 		'extra' => ''
 	], 
+	'Chromium_Add-on' => [
+		'title' => _('Chromium/Chrome Add-on'), 
+		'url' => 'https://chrome.google.com/webstore/detail/cesium/ocbhjemiokgibfojkkjapfealnbmgoek', 
+		'img' => 'chrome.png', 
+		'desc' => _('Installation depuis le store Chrome'), 
+		'extra' => ''
+	], 
 	'web' => [
 		'title' => 'Web', 
 		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-web.zip', $cesiumVersions['web'], $cesiumVersions['web']), 
