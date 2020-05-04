@@ -17,13 +17,19 @@ $cesiumDownloads =
 		'desc' => _('Disponible sur l\'App Store'), 
 		'extra' => ''
 	], 
-	'linux' => [
-		'title' => 'Linux', 
-		'url' => 'https://github.com/duniter/cesium/releases/download/v1.6.1/cesium-desktop-v1.6.1-linux-x64.deb',  //, $cesiumVersions['linux'], $cesiumVersions['linux']), 
-//		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-desktop-v%s-linux-x64.deb', $cesiumVersions['linux'], $cesiumVersions['linux']), 
-		'img' => 'tux.svg', 
+	'debian' => [
+		'title' => 'Debian (et dérivés)', 
+		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-desktop-v%s-linux-x64.deb', $cesiumVersions['linux'], $cesiumVersions['linux']), 
+		'img' => 'debian.svg', 
 		'desc' => _('Paquet .deb pour Debian ou Ubuntu'), 
 		'extra' => _('En cas de problème&nbsp;:') . '<br /><code>sudo apt-get install -y libgconf-2-4</code>'
+	],
+		'arch' => [
+		'title' => 'Arch Linux (et dérivés)', 
+		'url' => sprintf('https://aur.archlinux.org/packages/cesium-desktop-deb'), 
+		'img' => 'arch.svg', 
+		'desc' => _('A installer via AUR'), 
+		'extra' => _('<code>yaourt -S cesium-desktop-deb</code>')
 	], 
 	'windows' => [
 		'title' => 'Windows', 
