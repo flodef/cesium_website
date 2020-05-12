@@ -1,25 +1,26 @@
 <?php
 $bodyIds = 'home';
 
+
+textdomain('home');
+
 $pageTitle = _('Cesium Ğ1 - Site officiel');
 $pageDescription = _("Cesium est l'application la plus intuitive pour gérer votre portefeuille en monnaie-libre Ğ1.");
 
 include('head.php');
 
-textdomain('home');
-
 ?>
 
-<section id="showcase">
+<header id="showcase">
 	<div>
+		<h2 id="USP">
+			<?php echo _("Recevez et envoyez <br />de la monnaie libre Ğ1"); ?>
+		</h2>
+		
 		<figure id="home-app-screenshot">
 			<img src="<?php echo $rootURL . '/i18n/' . LANG_FOLDER . '/contents' . _('/accueil') . _('/Cesium-G1-maquette.png'); ?>" 
 				 alt="capture d'écran de Cesium" />
 		</figure>
-
-		<h2 id="USP">
-			<?php echo _("Recevez et envoyez <br />de la monnaie libre Ğ1"); ?>
-		</h2>
 
 		<p class="CTA-button">
 			<a href="<?php echo parseURI(_("/telechargement")); ?>">
@@ -32,24 +33,26 @@ textdomain('home');
 			<?php printf(_('Logiciel libre sous licence %s'), 'GNU AGPL-3.0'); ?>
 		</p>
 
-		<aside>
+		<aside id="CTA-join-us">
 			<?php printf(_('Développeur ?')); ?>
 			<a href="<?php echo parseURI(_("/developpeurs")); ?>">
 				<?php echo _('Rejoignez-nous !'); ?>
 			</a>
 		</aside>
+		
+		<div></div>
 	</div>
-</section>
+</header>
 
 
-<section class="features-list" id="features-list-1">
+<section class="features-list">
 	<div>
 		<h2>
 			<?php echo _('Cesium : la solution simple<br />pour échanger en monnaie libre'); ?>
 		</h2>
 		
 		<dl>
-			<dt>
+			<dt class="feature-secured">
 				<?php echo _('Sécurisé'); ?>
 			</dt>
 
@@ -57,7 +60,7 @@ textdomain('home');
 				<?php echo _('Cesium signe numériquement vos transactions avant de les transmettre à la blockchain de Duniter.'); ?>
 			</dd>
 
-			<dt>
+			<dt class="feature-gratis">
 				<?php echo _('Offert'); ?>
 			</dt>
 
@@ -67,7 +70,7 @@ textdomain('home');
 							 "Cesium vous est offert sans exiger de contre-partie. "); ?>
 			</dd>
 
-			<dt>
+			<dt class="feature-libre">
 				<?php echo _('Libre'); ?>
 			</dt>
 
@@ -91,7 +94,7 @@ textdomain('home');
 		</h2>
 
 		<figure>
-			<a href="<?php echo _("/telechargement"); ?>">
+			<a href="<?php echo parseURI(_("/telechargement")); ?>">
 				<img src="<?php echo $rootURL; ?>/img/home/telecharger-cesium-full.png" alt="Télécharger Cesium" />
 			</a>
 
@@ -102,7 +105,7 @@ textdomain('home');
 					<?php 
 						printf(_('Rendez-vous sur <a href="%s">la page Téléchargement</a> pour récupérer le ' . 
 								 'fichier qui convient à votre système d\'exploitation.'
-								), _("/telechargement")
+								), parseURI(_("/telechargement"))
 							  );
 					?>
 				</p>

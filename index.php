@@ -6,8 +6,6 @@ defineLang();
 putenv('LC_ALL='. LANG_FOLDER);
 setlocale(LC_ALL, LOCALE_CODE);
 
-textdomain("menu");
-
 if (!isset($_GET['page'])) {
 	
 	$page = NULL;
@@ -25,37 +23,37 @@ $router =
 	array(
 		[
 			'permalink' => '/', 
-			'i18nedPermalink' => _('/'), 
+			'i18nedPermalink' => dgettext('menu', '/'), 
 			'tpl' => 'home.php'
 		], 
 		[
 			'permalink' => '/fonctionnalites', 
-			'i18nedPermalink' => _('/fonctionnalites'), 
+			'i18nedPermalink' => dgettext('menu', '/fonctionnalites'), 
 			'tpl' => 'features.php'
 		], 
 		[
 			'permalink' => '/telechargement', 
-			'i18nedPermalink' => _('/telechargement'), 
+			'i18nedPermalink' => dgettext('menu', '/telechargement'), 
 			'tpl' => 'download.php'
 		], 
 		[
 			'permalink' => '/merci', 
-			'i18nedPermalink' => _('/merci'), 
+			'i18nedPermalink' => dgettext('menu', '/merci'), 
 			'tpl' => 'funding.php'
 		], 
 		[
 			'permalink' => '/tutoriel-cesium', 
-			'i18nedPermalink' => _('/tutoriel-cesium'), 
+			'i18nedPermalink' => dgettext('menu', '/tutoriel-cesium'), 
 			'tpl' => 'tuto.php'
 		], 
 		[
 			'permalink' => '/developpeurs', 
-			'i18nedPermalink' => _('/developpeurs'), 
+			'i18nedPermalink' => dgettext('menu', '/developpeurs'), 
 			'tpl' => 'jobs.php'
 		],
 		[
 			'permalink' => '/mentions-legales', 
-			'i18nedPermalink' => _('/mentions-legales'), 
+			'i18nedPermalink' => dgettext('menu', '/mentions-legales'), 
 			'tpl' => 'legal-notice.php'
 		]
 	);
@@ -69,7 +67,7 @@ foreach ($router as $route)
 	{
 		$found = true;
 		$pagePermalink = $route['permalink'];
-		$pageIsHome = ($route['i18nedPermalink'] == _('/')) ? true : false;
+		$pageIsHome = ($route['i18nedPermalink'] == dgettext('menu', '/')) ? true : false;
 		
 		include('tpl/' . $route['tpl']);
 		
