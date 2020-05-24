@@ -1,0 +1,227 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 17:37+0100\n"
+"PO-Revision-Date: 2020-05-24 15:41+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ../../../tpl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: features.php\n"
+
+#: features.php:3 features.php:14
+msgid "Fonctionnalités"
+msgstr "Funkciaro"
+
+#: features.php:4
+msgid ""
+"Fonctionnalités de Cesium : gérer son comptes monnaie libre Ğ1, rechercher "
+"des membres dans l'annuaire, trouver des entreprises qui acceptent la Ğ1."
+msgstr ""
+"Funkcioj de Cesium: mastrumi viajn kontojn en libera valuto Ğ1, serĉi "
+"membrojn en la kontaro, trovi entreprenojn kiuj akceptas la Ğ1."
+
+#: features.php:37 features.php:134
+msgid "/fonctionnalites"
+msgstr "/funkciaro"
+
+#: features.php:38 features.php:42 features.php:46
+msgid "/carte-des-utilisateurs"
+msgstr "/uzantoj-mapo"
+
+#: features.php:38
+msgid "/pays"
+msgstr "/landoj"
+
+#: features.php:42
+msgid "/continents"
+msgstr "/kontinentoj"
+
+#: features.php:46
+msgid "/monde.png"
+msgstr "/mondo.png"
+
+#: features.php:55
+msgid "Créer votre compte Ğ1"
+msgstr "Krei vian konton Ğ1"
+
+#: features.php:56
+msgid ""
+"Choisissez un mot de passe ultra-sécurisé et créez votre compte en quelques "
+"minutes seulement."
+msgstr ""
+"Elektu pasvorton treege sekurigitan kaj kreu vian konton nur en kelkaj "
+"minutoj."
+
+#: features.php:57
+msgid "/inscription.png"
+msgstr "/enskribiĝo.png"
+
+#: features.php:60
+msgid "Recevez des Ğ1"
+msgstr "Ricevu Ğ1"
+
+#: features.php:62
+msgid "Dès votre compte créé, vous pouvez recevoir vos premières Ğ1."
+msgstr "Tuj kiam via konto estas kreita, vi povas ricevi viajn unuajn Ğ1."
+
+#: features.php:63
+msgid ""
+"Il suffit pour cela de partager votre clef publique à la personne qui "
+"souhaite vous en envoyer."
+msgstr ""
+"Por tio, sufiĉas havigi vian publikan ŝlosilon al la persono, kiu deziras "
+"sendi al vi ĝunojn (Ğ1)."
+
+#: features.php:65
+msgid "/recevoir.png"
+msgstr "/ricevi.png"
+
+#: features.php:68
+msgid "Trouvez des membres près de chez vous"
+msgstr "Trovi membrojn proksime de via hejmo"
+
+#: features.php:70
+msgid ""
+"Consultez la carte des membres afin de trouver les membres les plus proches "
+"de chez vous."
+msgstr ""
+"Konsultu la mapon pri la membroj por trovi la plej proksimajn membrojn de "
+"via hejmo."
+
+#: features.php:71
+msgid ""
+"Vous pouvez les contacter pour faire vos premiers échanges ou demander des "
+"certifications."
+msgstr ""
+"Vi povas kontakti ilin por fari viajn unuajn interŝanĝojn aŭ peti atestaĵojn."
+
+#: features.php:76
+msgid "Recherche par nom"
+msgstr "Serĉado per nomo"
+
+#: features.php:78
+msgid ""
+"Trouvez des membres de la Ğ1 d'après leur nom, prénom ou identifiant dans la "
+"blockchain."
+msgstr ""
+"Trovu membrojn de la Ğ1 per ilia familia aŭ persona nomo, aŭ per ilia "
+"identigilo en la blokĉeno."
+
+#: features.php:80
+msgid "/recherche-par-nom.png"
+msgstr "/serĉo-per-nomo.png"
+
+#: features.php:83
+msgid "Envoyez des Ğ1"
+msgstr "Sendu Ğ1"
+
+#: features.php:85
+msgid ""
+"Dans Cesium, il est facile de faire un virement en Ğ1 pour régler un achat "
+"ou faire un don."
+msgstr "Per Cesium, estas facile sendi Ğ1 por aĉeti ion aŭ fari donacon."
+
+#: features.php:87
+msgid "/envoyer.png"
+msgstr "/sendi.png"
+
+#: features.php:90
+msgid "Envoyez des messages aux autres utilisateurs"
+msgstr "Sendu mesaĝojn al la aliaj uzantoj"
+
+#: features.php:92
+msgid ""
+"Gardez le contact avec les autres membres grâce à la messagerie intégrée "
+"dans Cesium."
+msgstr ""
+"Konservu kontakton kun la aliaj membroj dank'al la mesaĝilo entenita en "
+"Cesium."
+
+#: features.php:94
+msgid "/messagerie.png"
+msgstr "/mesaĝilo.png"
+
+#: features.php:97
+msgid "Soyez notifié dès qu'il y a de l'activité sur votre compte"
+msgstr "Ricevu avizon, ekde kiam okazas ago en via konto"
+
+#: features.php:99
+msgid "Cesium dispose d'un système de notification par mail."
+msgstr "Cesium povas avizi vin rekte per retmesaĝo."
+
+#: features.php:100
+msgid ""
+"Activez-le pour être informé dès qu'une transaction a lieu ou lorsque "
+"quelqu'un vous envoie un message."
+msgstr ""
+"Aktivigu tiajn avizojn por esti informita, ekde kiam spezo okazis aŭ kiam iu "
+"sendis mesaĝon al vi."
+
+#: features.php:102
+msgid "/notifications-par-mel.png"
+msgstr "/ret-avizoj.png"
+
+#: features.php:105
+msgid "Trouvez les entreprises qui acceptent la Ğ1"
+msgstr "Trovu la entreprenojn, kiuj akceptas la Ğ1"
+
+#: features.php:107
+msgid ""
+"Cesium intègre un annuaire qui vous permet de trouver facilement les "
+"entreprises qui acceptent la Ğ1 comme moyen de paiement."
+msgstr ""
+"Cesium entenas adresaron, kiu ebligas al vi facile trovi la entreprenojn, "
+"kiuj akceptas la Ğ1 kiel pagmanieron."
+
+#: features.php:108
+msgid "Vous pouvez aussi y référencer gratuitement votre entreprise."
+msgstr "Vi ankaŭ povas senpage enlistigi en ĝi vian entreprenon."
+
+#: features.php:110
+msgid "/pages-jaunes.png"
+msgstr "/flavaj-paĝoj.png"
+
+#: features.php:113
+msgid "Scanner de QR codes intégré"
+msgstr "Skanilo de QR-kodoj"
+
+#: features.php:115
+msgid ""
+"L'application Cesium pour téléphone vous permet de scanner le QR code d'un "
+"portefeuille."
+msgstr ""
+"La apo Cesium por saĝtelefono ebligas al vi skani la QR-kodon de monujo."
+
+#: features.php:116
+msgid "Cela vous évite de devoir rechercher le membre par son prénom."
+msgstr "Tio evitigas, ke vi serĉu membron per ties nomo."
+
+#: features.php:117
+msgid "Avec les QR codes, pas de risque de se tromper de destinataire !"
+msgstr "Per QR-kodoj, estas neniu risko erari pri la mon-ricevonto!"
+
+#: features.php:119
+msgid "/scanner-de-QR-codes.jpg"
+msgstr "/QR-kodoj-skanilo.jpg"
+
+#: features.php:122
+msgid "Surveillez plusieurs portefeuilles"
+msgstr "Superrigardu plurajn monujojn"
+
+#: features.php:124
+msgid ""
+"Consultez facilement le solde de de vos autres portefeuilles (entreprise, "
+"association, financement participatif, etc.)"
+msgstr ""
+"Facile konsultu la saldon de viaj aliaj monujoj (entrepreno, asocio, "
+"kunhelpa financado, ktp.)"
+
+#: features.php:126
+msgid "/suivre-d-autres-portefeuilles.png"
+msgstr "/sekvi-aliajn-monujojn.png"
