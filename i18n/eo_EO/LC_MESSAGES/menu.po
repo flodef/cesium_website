@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 18:21+0100\n"
+"PO-Revision-Date: 2020-05-24 15:50+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: foot.php\n"
+"X-Poedit-SearchPath-1: head.php\n"
+
+#: foot.php:13
+msgid "Plan du site"
+msgstr "Mapo de la retejo"
+
+#: foot.php:19 head.php:61
+msgid "Accueil"
+msgstr "Hejmpaĝo"
+
+#: foot.php:23 head.php:64
+msgid "/fonctionnalites"
+msgstr "/funkciaro"
+
+#: foot.php:24 head.php:65
+msgid "Fonctionnalités"
+msgstr "Funkciaro"
+
+#: foot.php:28 head.php:68
+msgid "/telechargement"
+msgstr "/elŝuto"
+
+#: foot.php:29
+msgid "Téléchargement"
+msgstr "Elŝuto"
+
+#: foot.php:34
+msgid "Support"
+msgstr "Helpo"
+
+#: foot.php:42
+msgid "Développeur ? Rejoignez-nous !"
+msgstr "Programisto? Venu kun ni!"
+
+#: foot.php:48
+msgid "Forum Cesium"
+msgstr "Forumo Cesium"
+
+#: foot.php:53
+msgid "Venez faire connaissance"
+msgstr "Venu por konatiĝi"
+
+#: foot.php:58
+msgid "Forge GitLab de Cesium"
+msgstr "Forĝejo GitLab de Cesium"
+
+#: foot.php:63
+msgid "Guide du développement Cesium"
+msgstr "Gvidilo pri programado de Cesium"
+
+#: foot.php:82
+msgid "/mentions-legales"
+msgstr "/leĝaj-notoj"
+
+#: foot.php:87
+msgid "Choix de langue"
+msgstr "Lingvo"
+
+#: head.php:60
+msgid "/"
+msgstr "/"
+
+#: head.php:69
+msgid "Télécharger"
+msgstr "Elŝuti"
+
+#: head.php:72
+msgid "/tutoriel-cesium"
+msgstr "/lernilo"
+
+#: head.php:73
+msgid "Tutoriel"
+msgstr "Lernilo"
+
+#~ msgid "Cesium Ğ1"
+#~ msgstr "Cesium Ğ1"
+
+#~ msgid "/creer-compte-cesium-g1"
+#~ msgstr "/sign-up"
+
+#~ msgid "Créer un compte"
+#~ msgstr "Sign up"
+
+#~ msgid "Utiliser"
+#~ msgstr "Usage"

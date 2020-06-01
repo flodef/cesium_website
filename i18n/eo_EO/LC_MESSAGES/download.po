@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 17:30+0100\n"
+"PO-Revision-Date: 2020-05-24 13:15+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: tpl/download.php\n"
+"X-Poedit-SearchPath-1: cesiumDownloads.php\n"
+
+#: cesiumDownloads.php:10
+msgid "Disponible directement sur le Play Store"
+msgstr "Disponebla rekte ĉe la Play Store"
+
+#: cesiumDownloads.php:11
+#, php-format
+msgid "(ou <a href=\"%s\">télécharger le fichier .apk</a>)"
+msgstr "(aŭ <a href=\"%s\">elŝutu la dosieron .apk</a>)"
+
+#: cesiumDownloads.php:17
+msgid "Disponible sur l'App Store"
+msgstr "Disponebla ĉe la App Store"
+
+#: cesiumDownloads.php:24
+msgid "Paquet .deb pour Debian ou Ubuntu"
+msgstr "Pako .deb por Debian aŭ Ubuntu"
+
+#: cesiumDownloads.php:25
+msgid "En cas de problème&nbsp;:"
+msgstr "Kaze de problemo:"
+
+#: cesiumDownloads.php:31
+msgid "Installateur .exe pour Windows"
+msgstr "Instalilo .exe por Vindozo"
+
+#: cesiumDownloads.php:32
+msgid "Lancez le .exe et suivez les instructions à l'écran"
+msgstr "Eku la dosieron .exe kaj sekvu la instrukciojn ĉeekrane"
+
+#: cesiumDownloads.php:38
+msgid "Version web fonctionnant sous Mac"
+msgstr "Reta versio funkcianta por Makintoŝo"
+
+#: cesiumDownloads.php:39
+msgid "Décompressez le fichier .zip et ouvrez le fichier index.html"
+msgstr ""
+"Malkompaktigu la dosieron .zip kaj malfermu la dosieron index.html"
+
+#: cesiumDownloads.php:45
+msgid "Paquet pour Yunohost"
+msgstr "Pako por Yunohost"
+
+#: cesiumDownloads.php:52
+msgid "Pour une installation sur un serveur web"
+msgstr "Por instali en retservilo"
+
+#: cesiumDownloads.php:56
+msgid "Livrables"
+msgstr "Programoj"
+
+#: cesiumDownloads.php:59
+msgid "Toutes versions disponibles sur GitHub"
+msgstr "Ĉiuj versioj disponeblas ĉe GitHub"
+
+#: tpl/download.php:3
+msgid "Télécharger et installer"
+msgstr "Elŝuti kaj instali"
+
+#: tpl/download.php:4
+msgid ""
+"Site officiel de Cesium. Télécharger la dernière version pour Linux, "
+"Windows, Mac, Android et iPhone."
+msgstr ""
+"Oficiala retejo de Cesium. Elŝuti la lastan version por Linukso, "
+"Vindozo, Makintoŝo, Androido kaj iPhone."
+
+#: tpl/download.php:17
+msgid "Télécharger Cesium"
+msgstr "Elŝuti Cesium"
+
+#: tpl/download.php:26
+msgid "/merci/"
+msgstr "/dankon/"
+
+#: tpl/download.php:44
+msgid "Télécharger"
+msgstr "Elŝuti"

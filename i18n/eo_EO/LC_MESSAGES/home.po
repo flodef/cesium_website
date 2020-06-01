@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-07 17:18+0100\n"
+"PO-Revision-Date: 2020-04-15 17:37+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ../../../tpl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: home.php\n"
+
+#: home.php:4
+msgid "Cesium Ğ1 - Site officiel"
+msgstr "Cesium Ğ1 - Oficiala retejo"
+
+#: home.php:5
+msgid ""
+"Cesium est l'application la plus intuitive pour gérer votre portefeuille en "
+"monnaie-libre Ğ1."
+msgstr ""
+"Cesium estas la plej intuicia programo por mastrumi vian monujon en libera "
+"valuto Ğ1."
+
+#: home.php:16 home.php:145
+msgid "/accueil"
+msgstr "/hejmpaĝo"
+
+#: home.php:16
+msgid "/Cesium-G1-maquette.png"
+msgstr "/Cesium-G1-ekzemplo.png"
+
+#: home.php:21
+msgid "Recevez et envoyez <br />de la monnaie libre Ğ1"
+msgstr "Ricevu kaj sendu <br />liberan monon Ğ1"
+
+#: home.php:25 home.php:93 home.php:104
+msgid "/telechargement"
+msgstr "/elŝuto"
+
+#: home.php:26
+#, php-format
+msgid "Télécharger Cesium %s"
+msgstr "Elŝuti Cesium %s"
+
+#: home.php:32
+#, php-format
+msgid "Logiciel libre sous licence %s"
+msgstr "Libera programo kun licenco %s"
+
+#: home.php:36
+#, php-format
+msgid "Développeur ?"
+msgstr "Programisto?"
+
+#: home.php:37
+msgid "/developpeurs"
+msgstr "/programisto"
+
+#: home.php:38
+msgid "Rejoignez-nous !"
+msgstr "Venu kun ni!"
+
+#: home.php:48
+msgid "Cesium : la solution simple<br />pour échanger en monnaie libre"
+msgstr "Cesium estas facila rimedo<br />por interŝanĝi per libera mono"
+
+#: home.php:52
+msgid "Sécurisé"
+msgstr "Sekurigita"
+
+#: home.php:56
+msgid ""
+"Cesium signe numériquement vos transactions avant de les transmettre à la "
+"blockchain de Duniter."
+msgstr ""
+"Cesium ciferece skribas viajn interŝanĝojn antaŭ ol transdoni ilin al la "
+"blokĉeno de Duniter."
+
+#: home.php:60
+msgid "Offert"
+msgstr "Donacita"
+
+#: home.php:64
+msgid ""
+"Parce qu'il est codé avec amour par une communauté de gens qui croient aux "
+"monnaies libres en général (et à la Ğ1 en particulier), Cesium vous est "
+"offert sans exiger de contre-partie. "
+msgstr ""
+"Ĉar ĝi estas ame programita de homa komunumo, kiu kredas je liberaj monoj "
+"ĝenerale (kaj je la Ğ1 aparte), Cesium estas donacita al vi sen postuli "
+"kompenson."
+
+#: home.php:70
+msgid "Libre"
+msgstr "Libera"
+
+#: home.php:75
+msgid "Cesium est un logiciel libre."
+msgstr "Cesium estas libera programo."
+
+#: home.php:77
+#, php-format
+msgid ""
+"Vous êtes donc libre d'en consulter le code source (sur <a href=\"%s"
+"\">GitLab</a>), et d'adapter Cesium à vos besoins pour, par exemple, lancer "
+"votre propre monnaie libre."
+msgstr ""
+"Vi estas do libera konsulti ĝian fonto-kodon (ĉe <a href=\"%s\">GitLab</a>) "
+"kaj adapti Cesium al viaj bezonoj por, ekzemple, lanĉi vian propran liberan "
+"valuton."
+
+#: home.php:89
+msgid "Plus que quelques pas<br />avant de recevoir vos premières Ğ1"
+msgstr "Nur kelkaj paŝoj restas<br />antaŭ ol ricevi viajn unuajn Ğ1"
+
+#: home.php:98
+msgid "Téléchargez Cesium"
+msgstr "Elŝutu Cesium"
+
+#: home.php:102
+#, php-format
+msgid ""
+"Rendez-vous sur <a href=\"%s\">la page Téléchargement</a> pour récupérer le "
+"fichier qui convient à votre système d'exploitation."
+msgstr ""
+"Iru al <a href=\"%s\">la paĝo Elŝuto</a> por ricevi la dosieron, kiu taŭgas "
+"por via operaciumo."
+
+#: home.php:115
+msgid "Créez un compte"
+msgstr "Kreu konton"
+
+#: home.php:118
+msgid ""
+"Sur l'accueil, cliquez sur \"Créer un compte\", puis \"Commencer\" et "
+"\"Simple portefeuille\"."
+msgstr ""
+"Ĉe Cesium hejmpaĝo, alklaku \"Krei konton\", poste \"Komenci\" kaj \"Simpla "
+"monujo\"."
+
+#: home.php:122
+msgid "Choisissez un identifiant secret et un mot de passe tout aussi secret."
+msgstr "Elektu sekretan identigilon kaj pasvorton same sekretan."
+
+#: home.php:123
+msgid ""
+"Mémorisez-les bien car il ne sera pas possible de les retrouver ensuite."
+msgstr "Ja memorigu ilin, ĉar ne eblos retrovi ilin poste."
+
+#: home.php:132
+msgid "Recevez des paiements"
+msgstr "Ricevu pagojn"
+
+#: home.php:135
+msgid ""
+"Cliquez sur votre clef publique, copiez-la et transmettez-la à la personne "
+"qui souhaite vous faire un virement en Ğ1."
+msgstr ""
+"Alklaku vian publikan ŝlosilon, kopiu ĝin kaj transdonu ĝin al la persono, "
+"kiu deziras sendi al vi Ğ1."
+
+#: home.php:145
+msgid "/avis"
+msgstr "/opinioj"
+
+#: home.php:152
+msgid "Ce qu'elles et ils en pensent"
+msgstr "Kion ili opinias pri Cesium"
+
+#: home.php:180
+msgid "Cesium partout"
+msgstr "Cesium tra la mondo"
+
+#~ msgid "telechargement"
+#~ msgstr "download"
