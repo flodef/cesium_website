@@ -62,6 +62,10 @@ $availableLanguages =
 		 'name' => 'español',
 		 'folder' => 'es_ES'
 		 ],
+	 'eo' => [
+		 'name' => 'esperanto',
+		 'folder' => 'eo_EO'
+		 ],
 	/*
 	 'it' => [
 		 'name' => 'italiano',
