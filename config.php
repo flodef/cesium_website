@@ -16,7 +16,7 @@ $legalNotice =
 
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
-	
+
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
@@ -48,7 +48,7 @@ function checkAvailableLanguages ($langList) {
 	return $langList;
 }
 
-$availableLanguages =
+$languagesList =
 	[
 	 'fr' => [
 		 'name' => 'français',
@@ -62,6 +62,10 @@ $availableLanguages =
 		 'name' => 'español',
 		 'folder' => 'es_ES'
 		 ],
+	 'eo' => [
+		 'name' => 'esperanto',
+		 'folder' => 'eo'
+		 ],
 	/*
 	 'it' => [
 		 'name' => 'italiano',
@@ -70,7 +74,7 @@ $availableLanguages =
 	*/
 	];
 
-$availableLanguages = checkAvailableLanguages($availableLanguages);
+$availableLanguages = checkAvailableLanguages($languagesList);
 
 //echo '<pre>'; print_r($availableLanguages); echo '</pre>';
 
