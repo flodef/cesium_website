@@ -5,7 +5,7 @@ include('cesiumVersions.php');
 define('FUNDING_PUBKEY',  '78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8');
 // Duniter : 78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8
 // Cesium : CitdnuQgZ45tNFCagay7Wh12gwwHM8VLej1sWmfHWnQX
-define('FUNDING_TARGET', 20*40+230);
+define('FUNDING_TARGET', 20*60+230);
 
 $legalNotice =
 	[
