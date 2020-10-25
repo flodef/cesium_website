@@ -208,7 +208,7 @@ include('head.php');
 			<li>
 				<strong>indirectement</strong> (mais c'est tout aussi utile&nbsp;!) si vous vendez à quelqu'un qui ne développe pas la Ğ1, 
 				car tout utilisateur de la Ğ1 qui voit qu'il peut acheter des biens et services en Ğ1 sera à son tour motivé à mettre des choses 
-				en vente, et cela peut conduire à la mise en vente par certains junistes de biens ou services que les développeurs recherche 
+				en vente, et cela peut conduire à la mise en vente par certains junistes de biens ou services que les développeurs recherchent
 			</li>
 		</ol>
 
