@@ -92,22 +92,29 @@ include('head.php');
 			à l'amélioration de la Ğ1, de deux manières&nbsp;:
 		</p>
 		
-		<ol>
-			<li>
-				<strong>directement</strong> si vous vendez un bien ou service à un développeur. 
-				À titre d'exemple, Éloïs, qui en 2020 est le développeur principal de Duniter 
-				(logiciel crucial car c'est le moteur de la blockchain)
-				<a href="https://www.gchange.fr/#/app/market/view/AXIVawVxUm73BnXnuMPx/cherche-logement-a-louer-toute-lanne-en-1-en-occitanie">cherche un logement à louer en 
-				Occitanie</a>.
-			</li>
-			<li>
-				<strong>indirectement</strong> (mais c'est tout aussi utile&nbsp;!) si vous vendez 
-				à quelqu'un qui ne développe pas la Ğ1, car tout utilisateur de la Ğ1 qui voit qu'il 
-				peut acheter des biens et services en Ğ1 sera à son tour motivé à mettre des choses 
-				en vente, et cela peut conduire à la mise en vente par certains junistes de biens ou 
-				services que les développeurs recherchent
-			</li>
-		</ol>
+		<dl>
+			<dt>
+				directement
+			</dt>
+				<dd>
+					...si vous vendez un bien ou service à un développeur. 
+					À titre d'exemple, Éloïs, qui en 2020 est le développeur principal de Duniter 
+					(logiciel crucial car c'est le moteur de la blockchain)
+					<a href="https://www.gchange.fr/#/app/market/view/AXIVawVxUm73BnXnuMPx/cherche-logement-a-louer-toute-lanne-en-1-en-occitanie">cherche un logement à louer en 
+					Occitanie</a>. Faites passer le mot ;-)
+				</dd>
+
+			<dt>
+				indirectement (mais c'est tout aussi utile&nbsp;!)
+			</dt>
+				<dd>
+					...si vous vendez à quelqu'un qui ne développe pas la Ğ1. 
+					En effet, un utilisateur de la Ğ1, s'il voit qu'il peut acheter en Ğ1 
+					des biens et services qui l'intéresse, sera à son tour plus 
+					motivé à mettre des choses en vente, et cela peut, de fil en aiguille, conduire à 
+					la mise en vente par certains junistes de biens ou services que les développeurs recherchent.
+				</dd>
+		</dl>
 
 		<h3>
 			Moyen n°2&nbsp;: En finançant, en Ğ1, les développeurs
