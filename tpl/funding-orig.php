@@ -11,7 +11,7 @@ include('head.php');
 
 
 <article id="funding">
-	<h1><?php echo _("Encouragez-nous !"); ?></h1>
+	<h1><?php echo _("On a besoin de vous !"); ?></h1>
 	
 	<section class="text-box">
 		<?php
@@ -63,13 +63,13 @@ include('head.php');
 			Mais vous avez le pouvoir de contribuer à faire du rêve que nous partageons une réalité.
 		</p>
 		
-		<p>
-			Comment&nbsp;?
-		</p>
+		<h2>
+			Comment vous pouvez nous aider
+		</h2>
 		
-		<p>
-			Tout simplement en finançant les développeurs.
-		</p>
+		<h3>
+			1. En finançant les développeurs en Ğ1
+		</h3>
 		
 		<p>
 			Il existe des caisses de côtisations qui permettent à la communauté Ğ1 de valoriser, en Ğ1, 
@@ -77,7 +77,7 @@ include('head.php');
 		</p>
 		
 		<p>
-			Chaque mois, une vingtaine de contributeurs se voient gratifiés de 15 DU<sub>Ğ1</sub> pour leurs travaux sur Cesium, Silkaj, Sakia, Duniter, etc...
+			Chaque mois, une vingtaine de contributeurs se voient gratifiés d'au moins 15 DU<sub>Ğ1</sub> pour leurs travaux sur Cesium, Silkaj, Sakia, Duniter, etc... Il est donné davantages à certains contributeurs, sur divers critères comme l'impact espéré de leur contribution, ou encore la quantité de travail nécessaire à la production du code.
 		</p>
 		
 		<p>
@@ -182,6 +182,36 @@ include('head.php');
 			</div>
 		</div>
 		
+		<h3>
+			2. En vendant en Ğ1 des biens et services
+		</h3>
+		
+		<p>
+			La valeur d'une monnaie tient aux biens et services qui s'échange dans ladite monnaie.
+		</p>
+
+		<p>
+			Pour valoriser la Ğ1, il faut mettre des biens et services en vente, par exemple sur 
+			<a href="https://www.gchange.fr/">ğchange</a>.
+		</p>
+		
+		<p>
+			En faisant ça, vous permettez aux développeurs de continuer à développer la Ğ1 de deux façons&nbsp;:
+		</p>
+		
+		<ol>
+			<li>
+				<strong>directement</strong> si vous vendez un bien ou service à un développeur. À titre d'exemple, Éloïs, 
+				qui en 2020 est le développeur principal de Duniter (logiciel crucial car c'est le moteur de la blockchain)
+				<a href="https://www.gchange.fr/#/app/market/view/AXIVawVxUm73BnXnuMPx/cherche-logement-a-louer-toute-lanne-en-1-en-occitanie">cherche un logement à louer en Occitanie</a>.
+			</li>
+			<li>
+				<strong>indirectement</strong> (mais c'est tout aussi utile&nbsp;!) si vous vendez à quelqu'un qui ne développe pas la Ğ1, 
+				car tout utilisateur de la Ğ1 qui voit qu'il peut acheter des biens et services en Ğ1 sera à son tour motivé à mettre des choses 
+				en vente, et cela peut conduire à la mise en vente par certains junistes de biens ou services que les développeurs recherche 
+			</li>
+		</ol>
+
 		<?php
 		/*
 		echo '
