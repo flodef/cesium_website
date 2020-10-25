@@ -27,44 +27,29 @@ include('head.php');
 			</p>
 		
 			<p>
-				'. _('On profite de ce moment d\'attente pour vous dire un truc&nbsp;:') .'
+				'. _('On profite de ce moment d\'attente pour vous adresser ce petit appel à l\'action&nbsp;:') .'
 			</p>';
 			
 		}
 		?>
 		
-		
-		<p>
-			Vous rêvez d'un système monétaire plus juste&nbsp;?
-		</p>
-		
-		<p>
-			Nous aussi.
-		</p>
-		
-		<p>
-			L'ennui ? 
-		</p>
+		<h2>On a besoin de vous !</h2>
 		
 		<p>
 			L'adoption de la Ğ1 est lente.
 		</p>
 		
 		<p>
-			Cela tient à plusieurs choses, et l'une d'entre elles, c'est que le temps que les développeurs 
-			peuvent allouer au développement est limité.
+			Cela tient principalement à deux choses&nbsp;:
 		</p>
-		
-		<p>
-			Il n'y a malheureusement que 24 heures dans une journée :-(
-		</p>
-		
-		<p>
-			Mais vous avez le pouvoir de contribuer à faire du rêve que nous partageons une réalité.
-		</p>
-		
+
+		<ol>
+			<li>il est difficile de convertir des gens à la monnaie libre, pour diverses raisons (la monnaie, c'est compliqué, la confiance n'est pas forcément là a prior, etc.)</li>
+			<li>les logiciels de l'écosystème (Cesium, Duniter, etc.) doivent encore être améliorés pour garantir l'expansion de la Ğ1 (par exemple en permettant de valider les transactions plus sûrement et rapidement)</li>
+		</ol>
+
 		<h2>
-			Comment vous pouvez nous aider
+			Comment vous pouvez contribuer au développement de la Ğ1
 		</h2>
 		
 		<h3>
@@ -72,7 +57,22 @@ include('head.php');
 		</h3>
 		
 		<p>
-			Il existe des caisses de côtisations qui permettent à la communauté Ğ1 de valoriser, en Ğ1, 
+			La situation actuelle est la suivante&nbsp;:
+		</p>
+
+		<p>
+			Certains développeurs de la Ğ1 (Eloïs par exemple) ont fait le choix de démissionner 
+			de leur emploi pour se concentrer sur le développement de l'écosystème logiciel.  
+			D'autres développeurs contribuent sur leur temps libre, les soirs et week-ends.
+		</p>
+
+		<p>
+			Cette situation ne permet pas un développement très rapide des logiciels 
+			car, comme tout un chacun, un développeur n'a que 24&nbsp;h dans une journée.
+		</p>
+
+		<p>
+			Cependant, il existe des caisses de côtisations qui permettent à la communauté Ğ1 de valoriser, en Ğ1, 
 			les contributions que les développeurs apportent à l'écosystème logiciel de la Ğ1.
 		</p>
 		
