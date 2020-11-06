@@ -4,6 +4,8 @@ $pageTitle = _("Encouragez-nous !");
 $pageDescription = _("");
 
 include('cesiumDownloads.php');
+require_once('vendor/crowdfunding/Crowdfunding.class.php');
+
 
 include('head.php');
 
@@ -11,32 +13,80 @@ include('head.php');
 
 
 <article id="funding">
-	<h1><?php echo _("On a besoin de vous !"); ?></h1>
+	<?php
+	if (!empty($subpage)) {
+		
+		echo '
+		<p>
+			'. _('Votre téléchargement de Cesium doit être en cours.') . ' 
+			'. sprintf(_('Sinon, <a href="%s">cliquez ici</a>.'), $cesiumDownloads[substr($subpage, 1)]['url']) .'
+		</p>';
+	}
+	?>
 	
-	<section class="text-box">
-		<?php
-		if (!empty($subpage)) {
+	<h1><?php echo _("Merci aux donateurs !"); ?></h1>
+	
+	<p>Les développeurs remercient chaleureusement toutes les personnes qui, le mois dernier, ont financé en Ğ1 le projet Duniter&nbsp;:</p>
+	
+	<?php
+	
+	$today = new DateTime();
+	
+	$lastMonthSameDay = (clone $today)->sub(new DateInterval('P1M'));
+	$lastMonthStart = new DateTime($lastMonthSameDay->format('Y-m-') . '01');
+	$lastMonthEnd = new DateTime((clone $lastMonthSameDay)->format('Y-m-t'));
+	
+	$lastMonthCF = new Crowdfunding(FUNDING_PUBKEY, 'relative', $lastMonthStart->format('Y-m-d'), $lastMonthEnd->format('Y-m-d'));
+
+	$donors = $lastMonthCF->getDonors();
+
+	if (empty($donors)) {
+
+		echo _('Pas encore de donateurs');
+
+	} else {
+		
+		echo '<ul class="donorsList">';
+
+		foreach ($donors as $donor) {
+			
+			$donorProfile = $lastMonthCF->getDonorCesiumPlusProfile($donor);
 			
 			echo '
-			<p>
-				'. _('Votre téléchargement de Cesium doit être en cours.') . '
-			</p>
 
-			<p>
-				'. sprintf(_('Si ce n\'est pas le cas, <a href="%s">cliquez ici</a>.'), $cesiumDownloads[substr($subpage, 1)]['url']) .'
-			</p>
-		
-			<p>
-				'. _('On profite de ce moment d\'attente pour vous adresser ce petit appel à l\'action&nbsp;:') .'
-			</p>
-			
-			<h2>
-				'. _('On a besoin de vous&nbsp;!') . '
-			</h2>
-			';
+			<li>';
+				echo '
+				<a href="https://demo.cesium.app/#/app/wot/'. $donor .'/">';
+					
+					$avatar = $donorProfile->getAvatar();
+					
+					if (!empty($avatar)) {
+						
+						echo '<img src="data:'. $avatar->getContentType(). ';base64, '. $avatar->getContent() .'" />';
+					
+					} else {
+						
+						echo '<img src="'. DEFAULT_AVATAR .'" />';
+					}
+					
+					
+					echo '
+					<span class="name">
+						<span>
+							'. $donorProfile->getName() .'
+						</span>
+					</span>
+				</a>
+				
+			</li>';
 		}
-		?>
-		
+
+		echo '</ul>';
+	}
+	?>
+
+	
+	<section class="text-box">
 		<p>
 			L'adoption de la Ğ1 est lente.
 		</p>
@@ -150,21 +200,13 @@ include('head.php');
 		</p>
 		
 		<?php
-		include('inc/Crowdfunding.class.php');
-		$startDate = date('Y-m-d', (time() - (30*24*3600)));
 		
-		$cfDuniter = new Crowdfunding(FUNDING_PUBKEY, 'relative', $startDate);
-		
-		/*
-		$donationsList = $cfDuniter->getDonationsList();
-		$min = $cfDuniter->getMinDonation();
-		$max = $cfDuniter->getMaxDonation();
-		*/
-			
-		$totalCollected = round($cfDuniter->getAmountCollected());
+		$currentCF = new Crowdfunding(FUNDING_PUBKEY, 'relative');
+
+		$totalCollected = round($currentCF->getAmountCollected());
 		$portionReached = round($totalCollected / FUNDING_TARGET * 100);
-		$totalDonorsNb = $cfDuniter->getDonorsNb();
-		
+		$totalDonorsNb = $currentCF->getDonorsNb();
+
 		
 		echo '
 		<aside class="crowdfunding-widget">

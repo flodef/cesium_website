@@ -1207,51 +1207,79 @@ article#funding .crowdfunding-widget .progress-bar {
   -webkit-animation: progress-bar-stripes 1s linear infinite;
   animation: progress-bar-stripes 1s linear infinite;
 }
-article#funding .donorsList {
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 500px;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+
+:root {
+	
+	--base-width: 150px;
 }
-article#funding .donorsList > li {
-  padding: 0.10rem 0.5rem;
-  flex-shrink: 1;
-  box-sizing: border-box;
+
+.donorsList {
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	display: flex;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+
+	font-family: sans-serif;
 }
-article#funding .donorsList > li span {
-  border-radius: 1em;
-  padding: 0 0.25em;
-  color: white;
+
+.donorsList li {
+
+	flex-basis: var(--base-width);
+	flex-grow: 0;
+	overflow: hidden;
+	border: 2px solid hsl(0, 0%, 90%);
+	box-shadow: -1px 1px 10px hsla(0, 0%, 0%, 0.20);
+	margin: 1% 1em;
+	text-align: center;
+	border-radius: 1em;
+	
+	display: flex;
+	align-items: center;
 }
-article#funding .donorsList > li:nth-child(5n) span {
-  background: #66dbff;
-  color: black;
+
+.donorsList li a {
+	
+	width: 100%;
+	
+	color: hsl(0, 0%, 10%);
+	text-decoration: none;
+	font-size: 0.9em;
 }
-article#funding .donorsList > li:nth-child(5n+1) span {
-  background: #3dc5d1;
+
+.donorsList li a img {
+	
+	background-color: #1a237e;
+	width: var(--base-width);
 }
-article#funding .donorsList > li:nth-child(5n+2) span {
-  background: #004080;
+
+.donorsList li a img, 
+.donorsList li a .name {
+	
+	width: 100%;
 }
-article#funding .donorsList > li:nth-child(5n+3) span {
-  background: #99e7ff;
-  color: #03072b;
+
+.donorsList li a .name {
+
+	display: block;	
+	height: 1rem;
+	padding: 1rem 0;
+	font-weight: bold;
+	width: 100vw;
+	text-align: center;
+	position: relative;
+	left: calc(-50vw + 50%);
 }
-article#funding .donorsList > li:nth-child(5n+4) span {
-  background: #33cfff;
-  color: #03072b;
-}
-article#funding .donorsList > :nth-child(1) {
-  width: 100%;
-}
-article#funding .donorsList > :nth-child(2),
-article#funding .donorsList > :nth-child(3) {
-  width: 50%;
+
+.donorsList li a .name span {
+
+	display: inline-block;	
+	padding: 0 1em;
+	text-align: left;	
 }
 /* ======= Tutorial page ======= */
 #tuto {
