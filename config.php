@@ -26,7 +26,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	// Adaptez la ligne suivante à votre configuration (sans slash à la fin)
-	$rootURL = '/cesium-website-project/cesium_website';
+	$rootURL = '/cesium_website';
 } else {
 	$rootURL = '';
 }
