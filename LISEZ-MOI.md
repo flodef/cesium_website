@@ -79,7 +79,7 @@ Ces fichiers sont éditables avec des logiciels type PoEdit.
 
 Votre fichier .htaccess doit contenir les infos suivantes :
 
-```
+```txt
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
@@ -96,7 +96,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^/]+)/(.*)$ index.php?lang=$1&page=/$2 [L]
 </IfModule>
-
 ```
 
 Modifiez l'instruction RewriteBase du .htaccess pour qu'elle s'accorde à votre propre configuration 
@@ -106,7 +105,7 @@ Si lorsque vous essayez d'accéder au site, vous avez une erreur "404 Not Found"
 
 Il vous faudra alors éditer votre fichier `/etc/apache2/apache2.conf` (anciennement `/etc/apache2/httpd.conf`) pour y remplacer :
 
-```
+```txt
 <Directory /var/www/>
         Options Indexes FollowSymLinks
         AllowOverride None
@@ -114,12 +113,22 @@ Il vous faudra alors éditer votre fichier `/etc/apache2/apache2.conf` (ancienne
 </Directory>
 ```
 par :
-```
+```txt
 <Directory /var/www/>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
 </Directory>
+```
+
+Activez le mod_rewrite d'Apache :
+```
+sudo a2enmod rewrite
+```
+
+Redémarrez Apache :
+```
+systemctl restart apache2
 ```
 
 ### config.php
