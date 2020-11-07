@@ -5,6 +5,8 @@ $pageDescription = _("");
 
 include('cesiumDownloads.php');
 require_once('vendor/crowdfunding/Crowdfunding.class.php');
+require_once('vendor/crowdfunding/Chart.class.php');
+require_once('vendor/crowdfunding/Graph.class.php');
 
 
 include('head.php');
@@ -86,6 +88,42 @@ include('head.php');
 	?>
 
 	
+	<h2>Soutenir Duniter</h2>
+	
+	<p>
+		Si vous aussi vous souhaitez soutenir le projet Duniter, c'est simple&nbsp;: 
+	</p>
+
+	<div id="pubkey-and-copy-button">
+		<p class="pubkey">
+			Copiez la clef suivante dans votre presse-papier&nbsp;: 
+
+			<input id="pubkey" type="text" value="<?php echo FUNDING_PUBKEY; ?>" />
+		</p>
+
+		<p class="CTA-button">
+			<button id="copyButton">
+				Copier la clef
+			</button>
+		</p>
+
+		<div id="successMsg">
+			<p>Et maintenant collez-la dans l'annuaire Cesium afin de faire votre don 😉</p>
+			<p style="text-align: center;">Merci pour votre générosité ❤️</p>
+		</div>
+	</div>
+	
+	
+	<h2>Progression du crowdfunding du mois en cours</h2>
+	
+	<figure id="chart"></figure>
+	
+	
+	
+	
+	
+	<!--
+	<h2>Progression du crowdfunding du mois en cours</h2>
 	<section class="text-box">
 		<p>
 			L'adoption de la Ğ1 est lente.
@@ -199,119 +237,55 @@ include('head.php');
 			Voilà où nous en sommes par rapport à cet objectif&nbsp;:
 		</p>
 		
-		<?php
-		
-		$currentCF = new Crowdfunding(FUNDING_PUBKEY, 'relative');
-
-		$totalCollected = round($currentCF->getAmountCollected());
-		$portionReached = round($totalCollected / FUNDING_TARGET * 100);
-		$totalDonorsNb = $currentCF->getDonorsNb();
-
-		
-		echo '
-		<aside class="crowdfunding-widget">
-			<!--
-			<meter min="0" max="100" value="'. $portionReached .'" high="75" low="25" class="progress-meter">
-				'. $portionReached .'%
-			</meter>
-			-->
-			<!--
-			<div class="progress-container">
-				<div class="progress-bar" 
-					 aria-valuenow="'. max($portionReached, 100) .'"
-					 aria-valuemin="0" 
-					 aria-valuemax="100" 
-					 style="width:0%;">
-
-					<span class="sr-only">
-						'. $portionReached . '%
-					</span>
-
-				</div>
-			</div>
-			-->
-			
-			<p>
-				<strong>'. $portionReached .'%</strong>
-				<span>du montant souhaité est atteint</span>
-			</p>
-
-			<p>
-				<strong>'. $totalCollected . ' DU<sub>Ğ1</sub></strong>
-				<span>ont déjà été donnés, sur un total de '. FUNDING_TARGET .' DU<sub>Ğ1</sub></span>
-			</p>
-
-			<p>
-				<span>grâce à </span>
-				<strong>'. $totalDonorsNb . '</strong>
-				<span>donateurs</span>
-			</p>
-		</aside>
-		';
-		
-		?>
-		
-		<p>
-			Si vous souhaitez soutenir la Ğ1, c'est simple&nbsp;: 
-		</p>
-
-		<div id="pubkey-and-copy-button">
-			<p class="pubkey">
-				Copiez la clef suivante dans votre presse-papier&nbsp;: 
-
-				<input id="pubkey" type="text" value="<?php echo FUNDING_PUBKEY; ?>" />
-				
-				en cliquant sur le bouton ci-dessous&nbsp;:
-			</p>
-
-			<p class="CTA-button">
-				<button id="copyButton">
-					Copier la clef
-				</button>
-			</p>
-
-			<div id="successMsg">
-				<p>Et maintenant collez-la dans l'annuaire Cesium afin de faire votre don 😉</p>
-				<p style="text-align: center;">Merci pour votre générosité ❤️</p>
-			</div>
-		</div>
 		
 
-		<?php
-		/*
-		echo '
-		<p>
-			Nous remercions chaleureusement tous les junistes qui ont fait un don ce mois-ci&nbsp;:
-		</p>';
-		
-		
-		if (empty($donationsList)) {
-
-			echo _('Pas encore de donateurs');
-
-		} else {
-			
-			echo '<ul class="donorsList">';
-
-			foreach ($donationsList as $t) {
-
-				echo '
-
-				<li style="font-size: '.  (1 + ($t['amount'] / $max) * 2) . 'em;">
-				
-					<span>'. $t['name'] .'</span>
-					
-				</li>';
-			}
-
-			echo '</ul>';
-		}
-		*/
-		?>
 	
 	</section>
+	
+	-->
 </article>
 
+<?php 
+
+$currentCF = new Crowdfunding(FUNDING_PUBKEY, 'relative');
+$currentCF->setTarget(FUNDING_TARGET);
+$chart = new Chart($currentCF);
+
+$targetGraph = new Graph($chart->getTargetLinePoints(), _('Objectif'));
+$targetGraph->setStyle('type', 'line');
+$targetGraph->setStyle('borderColor', 'hsl(348.8, 89.2%, 52.9%)');
+$targetGraph->setStyle('borderDash', [5, 5]);
+$targetGraph->setStyle('radius', 0);
+$targetGraph->setStyle('fill', false);
+$chart->addGraph($targetGraph);
+
+$amountCumulativeGraph = new Graph($chart->getAmountCollectedByDayCumulativePoints(), _('Montant total récolté'));
+$amountCumulativeGraph->setStyle('type', 'line');
+$amountCumulativeGraph->setStyle('borderColor', '#301873');
+$amountCumulativeGraph->setStyle('backgroundColor', '#301873');
+$amountCumulativeGraph->setStyle('lineTension', 0);
+$amountCumulativeGraph->setStyle('pointRadius', 1);
+$amountCumulativeGraph->setStyle('borderWidth', 2);
+$amountCumulativeGraph->setStyle('steppedLine', false);
+$chart->addGraph($amountCumulativeGraph);
+
+
+echo $chart->getScripts(LANG, '#chart', $rootURL . '/vendor/crowdfunding/');
+
+?>
+
+<script src="lib/js/jquery-3.4.1.min.js"></script>
+<script src="lib/js/counter.js"></script>
+<script>
+$(document).ready(function(){	
+
+	$('.progress-bar').animate({
+
+		width: '<?php echo $currentCF->getPercentage(); ?>%'
+
+	}, 1300, '');
+});
+</script>
 
 <script>
 function copy() {
