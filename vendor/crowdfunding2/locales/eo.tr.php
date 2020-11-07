@@ -1,0 +1,30 @@
+<?php
+$ttr = array(
+	'error_bar_color_invalid' => 'Nevalida trinkeja koloro. Bonvolu kontroli vian sintakson.',
+	'error_border_color_invalid' => 'Nevalida bordkoloro. Bonvolu kontroli vian sintakson.',
+	'error_connect_node' => 'La rilato al la nodo Duniter malsukcesis. Modifu la uzatan nodon.',
+	'error_date_start_invalid' => 'Erara dato de komenciĝo. Kontrolu vian sintakson.',
+	'error_date_start_missing' => 'Mankanta dato de komenciĝo. Kontrolu vian sintakson.',
+	'error_date_end_invalid' => 'Erara fin-dato. Kontrolu vian sintakson.',
+	'error_date_end_anterior' => 'Fin-dato antaŭanta la daton de komenciĝon. Kontrolu vian sintakson.',
+	'error_font_color_invalid' => 'Nevalida tiparo koloro. Bonvolu kontroli vian sintakson.',
+	'error_pubkey_invalid' => 'Erara publik-ŝlosilo. Kontrolu vian sintakson.',
+	'error_pubkey_missing' => 'Mankanta publik-ŝlosilo. Kontrolu vian sintakson.',
+	'error_target_not_int' => 'Neentjera celo. Kontrolu vian sintakson.',
+	'error_target_negative' => 'Negativa aŭ nula celo. Kontrolu vian sintakson.',
+	'error_target_missing' => 'Mankanta celo. Kontrolu vian sintakson.',
+	'title_default' => 'Liber-mona amasfinancado',
+	'label_pubkey' => 'Publik-ŝlosilo de la konto:',
+	'label_qrcode' => 'QRcode',
+	'label_reached' => 'atingitaj',
+	'label_donators' => 'Donantoj',
+	'ud' => 'UD',
+	'label_ontotal' => 'Celo: {{total}} {{unit}}',
+	'label_ontotal_short' => 'Celo: {{total}} {{unit}}',
+	'label_remaining_d' => 'tagoj restas',
+	'label_contribute' => 'Kontribuu nun !',
+	'graph_title' => 'Evoluo de la financado',
+	'graph_target' => 'Celo',
+	'graph_delta' => 'Taga enspezo'
+);
+?>

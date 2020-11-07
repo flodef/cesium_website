@@ -4,9 +4,9 @@ $pageTitle = _("Encouragez-nous !");
 $pageDescription = _("");
 
 include('cesiumDownloads.php');
-require_once('vendor/crowdfunding/Crowdfunding.class.php');
-require_once('vendor/crowdfunding/Chart.class.php');
-require_once('vendor/crowdfunding/Graph.class.php');
+require_once('vendor/crowdfunding2/Crowdfunding.class.php');
+require_once('vendor/crowdfunding2/Chart.class.php');
+require_once('vendor/crowdfunding2/Graph.class.php');
 
 
 include('head.php');
@@ -270,7 +270,7 @@ $amountCumulativeGraph->setStyle('steppedLine', false);
 $chart->addGraph($amountCumulativeGraph);
 
 
-echo $chart->getScripts(LANG, '#chart', $rootURL . '/vendor/crowdfunding/');
+echo $chart->getScripts(LANG, '#chart', $rootURL . '/vendor/crowdfunding2/');
 
 ?>
 

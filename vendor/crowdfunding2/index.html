@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>G1Crowdfunding - Outils pour réussir votre financement participatif en monnaie libre</title>
+
+	<style>
+
+		section {
+
+			margin: 2em 1em;
+			padding: 0em 0em 1em;
+			border: 1px solid hsl(0, 0.0%, 50.0%);
+		}
+
+		section > * {
+
+			margin-left: 1em;
+			margin-right: 1em;
+
+		}
+
+		iframe {
+
+			width: calc(100% - 2em);
+			border: 0;
+		}
+
+		section > :first-child {
+
+			background-color: hsl(0, 0.0%, 50.0%);
+			color: white;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: 1em;
+			padding: 1em;
+
+		}
+
+		img, object, iframe {
+
+			display: block;
+			margin: auto;
+		}
+
+		.kickstarter,
+		.tipeee {
+
+			max-width: 500px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>G1Crowdfunding</h1>
+	</header>
+
+	<h2>
+		<span>Des outils pour réussir</span>
+		<span>votre financement participatif </span>
+		<span>en monnaie libre G1</span>
+	</h2>
+
+	<p>
+		G1Crowdfunding est un ensemble de widgets (images et iframes) à intégrer sur votre site web
+	</p>
+
+	<p>
+		Cela vous permet de mieux mettre en avant votre financement participatif en monnaie libre,
+		et ainsi lever plus de G1.
+	</p>
+
+	<nav>
+		<ul>
+			<li><a href="#features">Fonctionnalités</a>
+
+				<ul>
+					<li><a href="#paidge">Barre de progression</a></li>
+					<li><a href="#kickstarter">Kickstarter</a></li>
+					<li><a href="#tipeee">Tipeee</a></li>
+					<li><a href="#names-cloud">Nuage des noms des mécènes</a></li>
+					<li><a href="#quotes">Citations des mécènes</a></li>
+				</ul>
+			</li>
+			<li><a href="generate.php">Générateur</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<h2 id="features">
+			Fonctionnalités
+		</h2>
+
+
+		<section id="paidge">
+			<h3>
+				Barre de progression (originale)
+			</h3>
+
+
+			<h4>
+				iframe :
+			</h4>
+
+			<p>
+				Très personnalisable : avec ou sans graphique, possibilité de chosir les couleurs, etc.
+			</p>
+
+			<iframe class="autoHeight" src="iframe.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30&amp;theme=paidge&amp;display_graph=true"></iframe>
+
+
+			<h4>
+				image PNG :
+			</h4>
+
+			<img src="image.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30" alt="les développeurs de Duniter" />
+
+
+			<h4>
+				image SVG :
+			</h4>
+
+			<object type="image/svg+xml" data="svg.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30" border="0"></object>
+		</section>
+
+		<section id="kickstarter">
+			<h3>
+				Barre de progression (style Kickstarter)
+			</h3>
+
+			<iframe class="autoHeight kickstarter" src="iframe.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30&amp;theme=kickstarter"></iframe>
+		</section>
+
+
+		<section id="tipeee">
+			<h3>
+				Stats d'un soutien régulier (style Tipeee)
+			</h3>
+
+			<p>
+				Calcule la moyenne des dons mensuels sur les 3 derniers mois.
+			</p>
+
+			<iframe class="autoHeight tipeee" src="iframe.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;unit=relative&amp;theme=tipeee&amp;display_button=yes"></iframe>
+		</section>
+
+		<section id="names-cloud">
+			<h3>
+				Nuage des noms des mécènes
+			</h3>
+
+			<p>
+				Affiche un nuage des noms des mécènes.
+			</p>
+
+			<iframe class="autoHeight" src="iframe.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20développeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30&amp;theme=cloud"></iframe>
+		</section>
+
+		<section id="quotes">
+			<h3>
+				Citations des mécènes
+			</h3>
+
+			<p>
+				Affiche les commentaires associés aux plus gros dons de la période choisie.
+			</p>
+
+			<iframe class="autoHeight" src="iframe.php?pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8&amp;target=1000&amp;title=les%20développeurs%20de%20Duniter&amp;unit=relative&amp;start_date=2020-09-01&amp;end_date=2020-09-30&amp;theme=quotes"></iframe>
+		</section>
+
+		<h2>Faites la vôtre !</h2>
+
+		<p>
+			Vous aussi vous pouvez générer votre image ou iframe pour l'insérer sur un forum, un blog, un site web, etc.
+		</p>
+
+		<p>
+			<a href="generate.php">Accéder au générateur</a>
+		</p>
+	</main>
+
+	<script src="examples/js/autoHeight.js"></script>
+</body>
+</html>

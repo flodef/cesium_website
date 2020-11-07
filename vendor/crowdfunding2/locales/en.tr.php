@@ -1,0 +1,30 @@
+<?php
+$ttr = array(
+	'error_bar_color_invalid' => 'Invalid bar color. Please check your syntax.',
+	'error_border_color_invalid' => 'Invalid border color. Please check your syntax.',
+	'error_connect_node' => 'The connection to the duniter node failed. Change the used node.',
+	'error_date_start_invalid' => 'Invalid start date. Please check your syntax.',
+	'error_date_start_missing' => 'Missing start date. Please check your syntax.',
+	'error_date_end_invalid' => 'Invalid end date. Please check your syntax.',
+	'error_date_end_anterior' => 'End date is anterior to start date. Please check your syntax.',
+	'error_font_color_invalid' => 'Invalid font color. Please check your syntax.',
+	'error_pubkey_invalid' => 'Invalid pubkey. Please check your syntax.',
+	'error_pubkey_missing' => 'Missing pubkey. Please check your syntax.',
+	'error_target_not_int' => 'Target is not integer. Please check your syntax.',
+	'error_target_negative' => 'Target is negative or null. Please check your syntax.',
+	'error_target_missing' => 'Missing target. Please check your syntax.',
+	'title_default' => 'Crowdfunding in libre currency',
+	'label_pubkey' => 'Account pubkey:',
+	'label_qrcode' => 'QRcode',
+	'label_reached' => 'reached',
+	'label_donators' => 'Donators',
+	'ud' => 'UD',
+	'label_ontotal' => 'Over a total of {{total}} {{unit}}',
+	'label_ontotal_short' => 'Over {{total}} {{unit}}',
+	'label_remaining_d' => 'days remaining',
+	'label_contribute' => 'Contribute now !',
+	'graph_title' => 'Evolution of the funding',
+	'graph_target' => 'Target',
+	'graph_delta' => 'Daily income'
+);
+?>

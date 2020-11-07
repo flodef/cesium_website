@@ -1,0 +1,30 @@
+<?php
+$ttr = array(
+	'error_bar_color_invalid' => 'Couleur de barre invalide. Vérifiez votre syntaxe.',
+	'error_border_color_invalid' => 'Couleur de bordure invalide. Vérifiez votre syntaxe.',
+	'error_connect_node' => 'La connexion au noeud duniter a échoué. Modifiez le noeud utilisé.',
+	'error_date_start_invalid' => 'La date de début est incorrecte. Vérifiez votre syntaxe.',
+	'error_date_start_missing' => 'Il manque la date de début. Vérifiez votre syntaxe.',
+	'error_date_end_invalid' => 'La date de fin est incorrecte. Vérifiez votre syntaxe.',
+	'error_date_end_anterior' => 'La date de fin est antérieure à la date de début. Vérifiez votre syntaxe.',
+	'error_font_color_invalid' => 'Couleur de police invalide. Vérifiez votre syntaxe.',
+	'error_pubkey_invalid' => 'La clé publique n\'a pas le format attendu. Vérifiez votre syntaxe.',
+	'error_pubkey_missing' => 'Il manque la clé publique du compte à vérifier. Vérifiez votre syntaxe.',
+	'error_target_not_int' => 'La cible n\'est pas un entier. Vérifiez votre syntaxe.',
+	'error_target_negative' => 'La cible est un entier négatif ou nul. Vérifiez votre syntaxe.',
+	'error_target_missing' => 'Il manque le montant à atteindre. Vérifiez votre syntaxe.',
+	'title_default' => 'Financement participatif en monnaie libre',
+	'label_pubkey' => 'Clé publique du compte&nbsp;:',
+	'label_qrcode' => 'QRcode',
+	'label_reached' => 'atteints',
+	'label_donators' => 'Donateurs',
+	'ud' => 'DU',
+	'label_ontotal' => 'Sur un total de {{total}} {{unit}}',
+	'label_ontotal_short' => 'Sur {{total}} {{unit}}',
+	'label_remaining_d' => 'jours restants',
+	'label_contribute' => 'Contribuez maintenant !',
+	'graph_title' => 'Montant récolté',
+	'graph_target' => 'Objectif',
+	'graph_delta' => 'Contributions du jour'
+);
+?>
