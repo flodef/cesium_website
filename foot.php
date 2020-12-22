@@ -28,6 +28,12 @@
 									<?php echo dgettext('menu', 'Support'); ?>
 								</a>
 							</li>
+							<li>
+							
+								<a href="<?php echo $rootURL . parseURI(dgettext('menu', '/mentions-legales')); ?>">
+									<?php echo dgettext('menu', 'Mentions légales'); ?>
+								</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -64,16 +70,31 @@
 					</nav>
 
 					<section id="about">
-						<h5><?php echo ('Qui sommes-nous ?'); ?></h5>
+						<h5><?php echo _('Modifier ce site'); ?></h5>
 
 						<p>
-							Ce site est édité par Axiom-Team, qui est une équipe de techniciens, graphistes et designers 
-							ayant pour but la promotion des Monnaies Libres, des outils qui s'y rapportent, 
-							et le soutien des développeurs qui créent ces derniers.
+							<?php
+								echo _('Ce site est édité par la communauté Ğ1.');
+							?>
 						</p>
-
 						<p>
-							<a href="<?php echo $rootURL . dgettext('menu', '/mentions-legales'); ?>">Mentions légales</a>
+							<?php
+								printf(_('Son code source est disponible et modifiable sur <a href="%s">le dépôt GitLab</a>.'), 
+								WEBSITE_GIT_URL);
+							
+							?>
+							
+						</p>
+						<p>
+							<?php
+							
+								echo _('Toutes les bonnes volontés sont les bienvenues. ') . _('Si vous ne connaissez pas Git, on peut vous apprendre les 2-3 commandes qui permettront d\'apporter votre pierre à l\'édifice.');
+							?>
+						<p>
+							<?php
+								printf(_('Les questions concernant à la modification de ce site peuvent être posées ' .
+								'sur le <a href="%s">le canal #cesium-website</a> (si vous n\'avez pas encore de compte sur le chat, vous devrez en créer un pour lire et participer).'), WEBSITE_COMMUNICATION_URL);
+							?>
 						</p>
 					</section>
 

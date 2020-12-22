@@ -79,6 +79,8 @@ $availableLanguages = checkAvailableLanguages($languagesList);
 //echo '<pre>'; print_r($availableLanguages); echo '</pre>';
 
 define('DEFAULT_LANG', 'fr');
+define('WEBSITE_GIT_URL', 'https://git.duniter.org/websites/cesium_website');
+define('WEBSITE_COMMUNICATION_URL', 'https://chat.axiom-team.fr/channel/cesium-website');
 
 include('inc/lang.php');
 
