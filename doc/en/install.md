@@ -1,9 +1,23 @@
-Cesium website
+How to install Cesium website on your computer
 ===
 
-## Install notes
+## How to install the web server le serveur web
 
-### .htaccess
+To run Cesium website on your computer, you will need install a web server, and PHP ; the later converts the source code contained in *.php files into HTML the browser can understand.
+
+Linux users will need two packages: 
+- apache2
+- php
+
+For instance, Debian-like (Ubuntu, Linux Mint, etc.) users will have to run:
+
+```
+sudo apt install apache2 php
+```
+
+Windows users can use [WAMP Serveur](https://www.wampserver.com/).
+
+## .htaccess
 
 Create a .htaccess in cesium_website directory, with the following text : 
 
@@ -49,7 +63,7 @@ with :
 </Directory>
 ```
 
-### config.php
+## config.php
 
 In ̀`config.php`, edit $rootURL var according to your setup.
 
