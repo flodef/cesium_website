@@ -9,7 +9,7 @@ Pour les pages :
 - Fonctionnalités
 - Téléchargement
 
-...et les menu de l'entête et du pied de page :
+...et les menus de l'en-tête et du pied de page :
 
 les modifications sont à faire dans les fichiers .po que vous trouverez dans les dossiers type `i18n/es_ES/LC_MESSAGES/` (ici : l'espagnol)
 
@@ -48,11 +48,11 @@ Ici, slash ou pas slash, ça compte :
 
 ### Comment formatter les URLs dans les fichiers
 
-Chaque URLs est relative au fichier dans lequel on l'écrit.
+Chaque URL est relative au fichier dans lequel on l'écrit.
 
 ### Comment rendre notre code clair pour les autres
 
-Efforçons-nous d'aérer au maximum votre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
+Efforçons-nous d'aérer au maximum notre code HTML, afin qu'il soit facilement lisible par tous et donc rapidement modifiable.
 
 Aussi : utiliser 4 espaces consécutifs en guise d'indentation est une déviance ainsi qu'une perversion.
 
