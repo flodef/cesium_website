@@ -3,7 +3,7 @@ Installer le site sur son ordinateur
 
 ## Installer le serveur web
 
-Pour faire tourner ce site sur votre ordinateur, vous aurez besoin d'installer un serveur web ainsi que PHP, qui transforme le code source contenu dans les fichiers *.php en HTML que le navigateur du visiteur peu comprendre.
+Pour faire tourner ce site sur votre ordinateur, vous aurez besoin d'installer un serveur web ainsi que PHP, qui transforme le code source contenu dans les fichiers *.php en HTML que le navigateur du visiteur peut comprendre.
 
 Sous Linux, il vous faudra installer les paquets : 
 - apache2
