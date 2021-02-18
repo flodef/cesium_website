@@ -274,8 +274,8 @@ echo $chart->getScripts(LANG, '#chart', $rootURL . '/vendor/crowdfunding2/');
 
 ?>
 
-<script src="lib/js/jquery-3.4.1.min.js"></script>
-<script src="lib/js/counter.js"></script>
+<script src="<?php echo $rootURL; ?>/lib/js/jquery-3.4.1.min.js"></script>
+<script src="<?php echo $rootURL; ?>/lib/js/counter.js"></script>
 <script>
 $(document).ready(function(){	
 
