@@ -57,7 +57,7 @@ class Crowdfunding {
 	
 	private $isActivatedCache = true;
 	
-	private $cacheLongevity = 10800; // in seconds
+	private $cacheLongevity = 43200; // in seconds
 	
 	/**********************
 	 * General parameters
