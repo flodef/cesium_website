@@ -53,7 +53,7 @@ class Crowdfunding {
 
 	private $validDisplayTypes = ['img', 'svg', 'html'];
 	
-	private $cacheDir = __DIR__ . '/cache/';
+	private $cacheDir = __DIR__ . '/cache-cache/';
 	
 	private $isActivatedCache = true;
 	
