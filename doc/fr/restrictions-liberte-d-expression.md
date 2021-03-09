@@ -3,7 +3,7 @@ Restrictions à votre liberté d'expression
 
 Nous essayons de créer une communauté conviviale autour du projet de ce site.
 
-Pour cette raison, si vous choisissez de communiquer sur [le canal #cesium-website](https://chat.axiom-team.fr/channel/cesium-website), les restrictions suivantes vous seront imposées. 
+Pour cette raison, si vous choisissez de communiquer sur [le canal #cesium-website](https://riot.im/app/#/room/#cesium.app:matrix.org), les restrictions suivantes vous seront imposées. 
 
 Si vous n'adhérez pas à ces restrictions, vous pouvez choisir de communiquer dans un espace avec des restrictions différentes. Des outils comme [Aether](https://getaether.net/), [ScuttleButt](https://scuttlebutt.nz/), [Cabal](https://cabal.chat/) ou encore Matrix/[Riot/Element](https://riot.im/app/) vous permettent de créer des communautés sans grandes compétences techniques.
 
