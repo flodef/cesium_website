@@ -5,7 +5,7 @@ include('cesiumVersions.php');
 define('FUNDING_PUBKEY',  '78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8');
 // Duniter : 78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8
 // Cesium : CitdnuQgZ45tNFCagay7Wh12gwwHM8VLej1sWmfHWnQX
-define('FUNDING_TARGET', 20*40+230);
+define('FUNDING_TARGET', 20*60+230);
 
 $legalNotice =
 	[
@@ -26,7 +26,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
 	// Adaptez la ligne suivante à votre configuration (sans slash à la fin)
-	$rootURL = '/cesium-website-project/cesium_website';
+	$rootURL = '/cesium_website';
 } else {
 	$rootURL = '';
 }
@@ -79,6 +79,8 @@ $availableLanguages = checkAvailableLanguages($languagesList);
 //echo '<pre>'; print_r($availableLanguages); echo '</pre>';
 
 define('DEFAULT_LANG', 'fr');
+define('WEBSITE_GIT_URL', 'https://git.duniter.org/websites/cesium_website');
+define('WEBSITE_COMMUNICATION_URL', 'https://chat.axiom-team.fr/channel/cesium-website');
 
 include('inc/lang.php');
 

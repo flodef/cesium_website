@@ -1,0 +1,93 @@
+
+body, p {
+	
+	margin: 0;
+	padding: 0;
+	/*overflow: hidden;*/
+}
+
+p {
+	
+	text-align: center;
+}
+
+.donorsList {
+
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 500px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.donorsList > li {
+	
+	padding: 0.10rem 0.5rem;
+	flex-shrink: 1;
+	box-sizing: border-box;
+}
+
+.donorsList > li span {
+	
+	border-radius: 1em;
+	padding: 0 0.25em;
+	color: white;
+}
+
+.donorsList > li:nth-child(5n) span{
+
+	background: hsl(194, 100%, 70%);
+	color: black;
+}
+
+.donorsList > li:nth-child(5n+1) span{
+
+	background: hsl(185, 62%, 53%);
+}
+
+.donorsList > li:nth-child(5n+2) span{
+
+	background: hsl(210, 100%, 25%);
+}
+
+.donorsList > li:nth-child(5n+3) span{
+
+	background: hsl(194, 100%, 80%);
+	color: hsl(233, 88%, 9%);
+}
+
+.donorsList > li:nth-child(5n+4) span{
+
+	background: hsl(194, 100%, 60%);
+	color: hsl(233, 88%, 9%);
+}
+
+.donorsList > :nth-child(1) {
+	
+	width: 100%;
+}
+
+.donorsList > :nth-child(2),
+.donorsList > :nth-child(3)  {
+	
+	width: 50%;
+}
+
+.donorsList > :nth-child(2)  {
+	
+	text-align: right;
+}
+
+.donorsList > :nth-child(3)  {
+	
+	text-align: left;
+}
+
+.donorsList > :last-child {
+	
+	width: 100%;
+}

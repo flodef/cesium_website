@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kickstarter</title>
+		<style>
+			body {
+				
+				font-family: sans-serif;
+			}
+			
+			.appel-au-don {
+				
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				border-radius: 1em;
+				background-color: hsl(0, 0.0%, 75%);
+				overflow: hidden;
+				padding-bottom: 1em;
+				margin-top: 1em;
+			}
+			
+			.appel-au-don h1 {
+				
+				font-weight: 400;
+				flex-basis: 100%;
+				background-color: hsl(0, 0.0%, 31%);
+				color: hsl(0, 0.0%, 100%);
+				margin: 0;
+				padding: 1em;
+				text-align: center;
+				font-family: serif;
+				font-size: 2rem;
+			}
+			
+			.appel-au-don .presentation {
+				
+				padding: 1em;
+				flex-basis: calc(66% - 2em);
+				flex-shrink: 1;
+				font-size: 1.25em;
+				line-height: 1.5;
+				font-weight: lighter;
+			}
+			
+			iframe {
+			
+				flex-shrink: 1;
+				flex-basis: 30%;
+				flex-grow: 1;
+				border: 0;
+				margin: 1rem;
+			}
+			
+			.closing-formula {
+				
+				text-align: center;
+			}
+			
+			.signature {
+				
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>&lt; <a href=".">Autres exemples</a></nav>
+		
+		<section class="appel-au-don">
+			<h1>Encourageons les développeurs !</h1>
+
+			<section class="presentation">
+				<p>
+					Si vous aussi vous pensez qu'encourager les personnes qui donnent de leur temps à la monnaie libre est absolument indispensable 
+					au succès de celle-ci, nous vous proposons de soutenir les différentes initiatives qui s'y rapportent, et notamment les développeurs de Duniter.
+				</p>
+				<p class="closing-formula">
+					Merci pour eux,
+				</p>
+				<p class="signature">
+					Axiom-Team
+				</p>
+			</section>
+			
+			<iframe class="autoHeight" 
+					src="../iframe.php?theme=kickstarter&amp;display_button=1&amp;title=les%20d%C3%A9veloppeurs%20de%20Duniter&amp;target=1000&amp;unit=relative&amp;pubkey=78ZwwgpgdH5uLZLbThUQH7LKwPgjMunYfLiCfUCySkM8"
+					></iframe> 
+		</section>
+		
+		<script src="js/autoHeight.js"></script>
+	</body>
+</html>

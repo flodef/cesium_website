@@ -1,0 +1,165 @@
+/* ================ General ================ */
+
+@font-face {
+	
+    font-family:"Font Awesome 5 Free";
+    font-style:normal;
+    font-weight:400;
+    font-display:auto;
+    src:url(../lib/webfonts/fontawesome/400/fa-regular-400.eot);
+    src:url(../lib/webfonts/fontawesome/400/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../lib/webfonts/fontawesome/400/fa-regular-400.woff2) format("woff2"),url(../lib/webfonts/fontawesome/400/fa-regular-400.woff) format("woff"),url(../lib/webfonts/fontawesome/400/fa-regular-400.ttf) format("truetype"),url(../lib/webfonts/fontawesome/400/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+ @font-face {
+	 
+    font-family:"Font Awesome 5 Free";
+    font-style:normal;
+    font-weight:900;
+    font-display:auto;
+    src:url(../lib/webfonts/fontawesome/900/fa-solid-900.eot);
+    src:url(../lib/webfonts/fontawesome/900/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../lib/webfonts/fontawesome/900/fa-solid-900.woff2) format("woff2"),url(../lib/webfonts/fontawesome/900/fa-solid-900.woff) format("woff"),url(../lib/webfonts/fontawesome/900/fa-solid-900.ttf) format("truetype"),url(../lib/webfonts/fontawesome/900/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+body {
+	
+	
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	
+	color: hsl(0, 0.0%, 13.3%);
+	background: transparent;
+	
+    line-height: 1.5;
+	
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+p {
+
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.sr-only{
+	
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* ================ Progress bar ================ */
+
+.progress-container {
+
+	background-color: hsl(210, 15.8%, 92.5%);
+	border: 0;
+	height: 0.5rem;
+	 
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	font-size: .75rem;
+}
+
+@keyframes progress-bar-stripes {
+	
+	from { background-position: 1rem 0; }
+	to { background-position: 0 0; }
+}
+
+ .progress-bar {
+	 
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: hsl(153, 98.8%, 31.4%);
+	transition: width .6s ease;
+	 
+	-webkit-animation: progress-bar-stripes 1s linear infinite;
+	animation: progress-bar-stripes 1s linear infinite;
+}
+ 
+/* ================ Stats ================ */
+
+section.stats {
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	
+	font-size: 2rem;
+}
+
+section.stats .label {
+	
+	display: block;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+/* ================ Button ================ */
+
+.CTA-button a, 
+.CTA-button a:visited {
+	
+	background-color: hsl(153, 98.8%, 31.4%);
+	color: white;
+	text-decoration: none;
+	font-weight: 400;
+	
+	display: block;
+	border-radius: .25rem;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	width: calc(100% - 1.5rem - 2px);
+	font-size: 1rem;
+	line-height: 1.5;
+	
+	text-align: center;
+	vertical-align: middle;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	transition: 
+		color .15s ease-in-out, 
+		background-color .15s ease-in-out,
+		border-color .15s ease-in-out,
+		box-shadow .15s ease-in-out;
+	
+	margin-bottom: 0;
+	
+}
+
+.CTA-button a:hover {
+	
+	background-color: hsl(153, 98.8%, 36.4%);
+	
+}
+
+.CTA-button a:before { 
+	
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	content: "\f1d8"; /* fa-paper-place */
+	margin-right: 0.5rem;
+}
+
+

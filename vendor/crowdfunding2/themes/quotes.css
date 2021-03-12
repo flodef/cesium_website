@@ -1,0 +1,36 @@
+body, p {
+	
+	margin: 0;
+	padding: 0;
+	/*overflow: hidden;*/
+}
+
+blockquote {
+
+	background: hsl(50, 91%, 85%);
+	padding: 1em;
+	margin: 2em auto;
+	max-width: 500px;
+}
+
+cite {
+	
+	text-align: right;
+	display: block;
+	margin-top: 0.666em;
+}
+
+cite:before {
+	
+	content: "― ";
+}
+
+body > :first-child {
+	
+	margin-top: 0;
+}
+
+body > :last-child {
+	
+	margin-bottom: 0;
+}

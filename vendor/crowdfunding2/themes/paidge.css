@@ -1,0 +1,224 @@
+/* ================ General ================ */
+
+@font-face {
+	
+    font-family:"Font Awesome 5 Free";
+    font-style:normal;
+    font-weight:400;
+    font-display:auto;
+    src:url(../lib/webfonts/fontawesome/400/fa-regular-400.eot);
+    src:url(../lib/webfonts/fontawesome/400/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../lib/webfonts/fontawesome/400/fa-regular-400.woff2) format("woff2"),url(../lib/webfonts/fontawesome/400/fa-regular-400.woff) format("woff"),url(../lib/webfonts/fontawesome/400/fa-regular-400.ttf) format("truetype"),url(../lib/webfonts/fontawesome/400/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+ @font-face {
+	 
+    font-family:"Font Awesome 5 Free";
+    font-style:normal;
+    font-weight:900;
+    font-display:auto;
+    src:url(../lib/webfonts/fontawesome/900/fa-solid-900.eot);
+    src:url(../lib/webfonts/fontawesome/900/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../lib/webfonts/fontawesome/900/fa-solid-900.woff2) format("woff2"),url(../lib/webfonts/fontawesome/900/fa-solid-900.woff) format("woff"),url(../lib/webfonts/fontawesome/900/fa-solid-900.ttf) format("truetype"),url(../lib/webfonts/fontawesome/900/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+body {
+
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	color: hsl(210, 10.8%, 14.5%);
+	background-color: white;
+    line-height: 1.5;
+    font-weight:400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+@media  (min-width: 576px) { body { max-width: 540px; } }
+@media  (min-width: 768px) { body { max-width: 720px; } }
+@media  (min-width: 992px) { body { max-width: 960px; } }
+@media (min-width: 1200px) { body { max-width: 1140px; } }
+
+.sr-only{
+	
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* ================ Header ================ */
+
+h1 {
+	
+	margin-top: 0;
+	font-size: 2.5rem;
+}
+
+.pubkey {
+
+	font-weight: 500;
+}
+
+/* ================ Progress bar ================ */
+
+.progress-container {
+
+	background-color: hsl(210, 15.8%, 92.5%);
+	border: 1px solid hsl(210, 10.3%, 32.7%);
+	height: 2rem;
+	border-radius: 0;
+	 
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	font-size: .75rem;
+}
+@keyframes progress-bar-stripes {
+	
+	from { background-position: 1rem 0; }
+	to { background-position: 0 0; }
+}
+
+ .progress-bar {
+	 
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: hsl(45, 100.0%, 51.4%);
+	transition: width .6s ease;
+	 
+	-webkit-animation: progress-bar-stripes 1s linear infinite;
+	animation: progress-bar-stripes 1s linear infinite;
+}
+ 
+/* ================ Stats ================ */
+
+section.stats {
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+section.stats .label {
+	
+	display: block;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.reached > :first-child:before, 
+.donorsNb > :first-child:before, 
+.amountCollected > :first-child:before, 
+.daysLeft > :first-child:before {
+	
+	font-family: "Font Awesome 5 Free";
+	display: block;
+	margin-bottom: 1rem;
+}
+
+
+.reached > :first-child:before {
+	
+	content: "\f200"; /* Chart pie */
+	font-weight:900;
+}
+
+.donorsNb > :first-child:before {
+	
+	content: "\f007"; /* user */
+}
+
+.amountCollected > :first-child:before {
+	
+	content: "\f3d1"; /* fa-money-bill-alt */
+}
+
+.daysLeft > :first-child:before {
+	
+	content: "\f073"; /* fa-calendar-alt */
+}
+
+/* ================ Button ================ */
+
+.CTA-button {
+
+	margin-bottom: 0;
+}
+
+.CTA-button a {
+	
+	display: block;
+	width: calc(100% - 1.5rem - 2px);
+	text-decoration: none;
+	margin-bottom: 0;
+}
+
+.CTA-button a:before { 
+	
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	content: "\f1d8"; /* fa-paper-place */
+	margin-right: 0.5rem;
+}
+
+.btn {
+	
+	transition: 
+		color .15s ease-in-out, 
+		background-color .15s ease-in-out,
+		border-color .15s ease-in-out,
+		box-shadow .15s ease-in-out;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	border: 1px solid transparent;
+	display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+}
+
+.btn-success{
+	
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.btn:hover {
+	
+	color: #212529;
+	text-decoration: none;
+}
+
+.btn-success:hover {
+	
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+}
+
+

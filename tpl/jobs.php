@@ -26,7 +26,7 @@ include('head.php');
 		</p>
 
 		<p>
-			Les version 1.x de Cesium utilisent AngularJS 1.x tandis que Cesium v2 est en train d'être developée en utilisant Angular 2.x
+			Les version 1.x de Cesium utilisent AngularJS 1.x tandis que Cesium v2 est en train d'être developée en utilisant Angular v10 et Ionic 5.
 		</p>
 
 		<p>

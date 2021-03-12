@@ -28,6 +28,12 @@
 									<?php echo dgettext('menu', 'Support'); ?>
 								</a>
 							</li>
+							<li>
+							
+								<a href="<?php echo $rootURL . parseURI(dgettext('menu', '/mentions-legales')); ?>">
+									<?php echo dgettext('menu', 'Mentions légales'); ?>
+								</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -64,16 +70,31 @@
 					</nav>
 
 					<section id="about">
-						<h5><?php echo ('Qui sommes-nous ?'); ?></h5>
+						<h5><?php echo _('Modifier ce site'); ?></h5>
 
 						<p>
-							Ce site est édité par Axiom-Team, qui est une équipe de techniciens, graphistes et designers 
-							ayant pour but la promotion des Monnaies Libres, des outils qui s'y rapportent, 
-							et le soutien des développeurs qui créent ces derniers.
+							<?php
+								echo _('Ce site est édité par la communauté Ğ1.');
+							?>
 						</p>
-
 						<p>
-							<a href="<?php echo $rootURL . dgettext('menu', '/mentions-legales'); ?>">Mentions légales</a>
+							<?php
+								printf(_('Son code source est disponible et modifiable sur <a href="%s">le dépôt GitLab</a>.'), 
+								WEBSITE_GIT_URL);
+							
+							?>
+							
+						</p>
+						<p>
+							<?php
+							
+								echo _('Toutes les bonnes volontés sont les bienvenues. ') . _('Si vous ne connaissez pas Git, on peut vous apprendre les 2-3 commandes qui permettront d\'apporter votre pierre à l\'édifice.');
+							?>
+						<p>
+							<?php
+								printf(_('Les questions concernant à la modification de ce site peuvent être posées ' .
+								'sur le <a href="%s">le canal #cesium-website</a> (si vous n\'avez pas encore de compte sur le chat, vous devrez en créer un pour lire et participer).'), WEBSITE_COMMUNICATION_URL);
+							?>
 						</p>
 					</section>
 
@@ -133,23 +154,30 @@
 			</footer>
 	
 	<script src="<?php echo $rootURL;?>/lib/scripts.js"></script>
-<!-- Matomo Image Tracker-->
-<img src="https://piwik.p2p.legal/matomo.php?idsite=3&amp;rec=1" style="border:0" alt="" />
-<!-- Matomo JS-->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.p2p.legal/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '3']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
+	
+<?php
+if ($_SERVER['SERVER_NAME'] != 'localhost') {
+	?>
+	<!-- Matomo Image Tracker-->
+	<img src="https://piwik.p2p.legal/matomo.php?idsite=3&amp;rec=1" style="border:0" alt="" />
+	<!-- Matomo JS-->
+	<script type="text/javascript">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//piwik.p2p.legal/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '3']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
+	<?php
+}
+?>
 </body>
 
 </html>
