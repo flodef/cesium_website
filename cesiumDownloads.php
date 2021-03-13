@@ -19,7 +19,8 @@ $cesiumDownloads =
 	],
 	'firefox' => [
 		'title' => _('Firefox'),
-		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-extension-firefox.xpi', $cesiumVersions['firefox'], $cesiumVersions['firefox']),
+		//'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-extension-firefox.xpi', $cesiumVersions['firefox'], $cesiumVersions['firefox']),
+		'url' => 'https://addons.mozilla.org/fr/firefox/addon/cesium/',
 		'img' => 'firefox2019.png',
 		'desc' => _('Module complémentaire pour Firefox'),
 		'extra' => ''
@@ -29,6 +30,13 @@ $cesiumDownloads =
 		'url' => 'https://chrome.google.com/webstore/detail/cesium/ocbhjemiokgibfojkkjapfealnbmgoek',
 		'img' => 'chrome.svg',
 		'desc' => _('Extension pour Chromium&nbsp;/&nbsp;Chrome'),
+		'extra' => ''
+	],
+	'safari' => [
+		'title' => _('Safari'),
+		'url' => 'https://apps.apple.com/us/app/cesium-%C4%9F1-for-safari/id1551461335',
+		'img' => 'safari.png',
+		'desc' => _('Extension pour Safari'),
 		'extra' => ''
 	],
 	'brave' => [
@@ -58,13 +66,6 @@ $cesiumDownloads =
 		'img' => 'windows.svg',
 		'desc' => _('Installateur .exe pour Windows'),
 		'extra' => _('Lancez le .exe et suivez les instructions à l\'écran')
-	],
-	'mac' => [
-		'title' => 'Mac',
-		'url' => sprintf('https://github.com/duniter/cesium/releases/download/v%s/cesium-v%s-web.zip', $cesiumVersions['mac'], $cesiumVersions['mac']),
-		'img' => 'apple.svg',
-		'desc' => _('Version web fonctionnant sous Mac'),
-		'extra' => _('Décompressez le fichier .zip et ouvrez le fichier index.html')
 	],
 	'web' => [
 		'title' => 'Web',
