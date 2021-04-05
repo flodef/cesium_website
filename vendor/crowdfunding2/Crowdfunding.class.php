@@ -100,6 +100,7 @@ class Crowdfunding {
 
 		'g1.data.e-is.pro',
 		'g1.data.presles.fr',
+		'g1.data.adn.life',
 		'g1.data.duniter.fr',
 		'g1.data.le-sou.org'
 	];
