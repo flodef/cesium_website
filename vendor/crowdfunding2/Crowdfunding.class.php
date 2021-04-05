@@ -52,13 +52,13 @@ class Crowdfunding {
 	private $logoPath = NULL;
 
 	private $validDisplayTypes = ['img', 'svg', 'html'];
-	
+
 	private $cacheDir = __DIR__ . '/cache-cache/';
-	
+
 	private $isActivatedCache = true;
-	
+
 	private $cacheLongevity = 43200; // in seconds
-	
+
 	/**********************
 	 * General parameters
 	 **********************/
@@ -72,25 +72,25 @@ class Crowdfunding {
 	private $endDate = NULL;
 
 	private $nodes = [
-		
+
 		// Fast ones
 		'duniter.g1.1000i100.fr',
 		'duniter-g1.p2p.legal',
-		'duniter.normandie-libre.fr', 
-		'g1.mithril.re', 
-		'g1.presles.fr', 
+		'duniter.normandie-libre.fr',
+		'g1.mithril.re',
+		'g1.presles.fr',
 		'duniter.vincentux.fr',
 		'g1.le-sou.org',
 		'g1.donnadieu.fr',
-		
+
 		/*
 		// Node that timeout
 		'g1.duniter.org',
-		'g1.librelois.fr', 
-		'g1.cgeek.fr', 
+		'g1.librelois.fr',
+		'g1.cgeek.fr',
 		'remuniter.cgeek.fr',
 		'g1.monnaielibreoccitanie.org',
-		
+
 		// Nodes with other issues
 		'g1.duniter.inso.ovh',
 		*/
@@ -98,10 +98,12 @@ class Crowdfunding {
 
 	private $cesiumPlusNodes = [
 
+		'g1.data.e-is.pro',
+		'g1.data.presles.fr',
 		'g1.data.duniter.fr',
 		'g1.data.le-sou.org'
 	];
-	
+
 	private $preferredNode = NULL;
 	private $preferredCesiumPlusNode = NULL;
 
@@ -109,21 +111,21 @@ class Crowdfunding {
 	private $answeringNode = NULL;
 	private $answeringCesiumPlusNode = NULL;
 	*/
-	
+
 	// in seconds
 	private $nodeTimeout = 2;
 	private $nodeTimeoutIncrement = 2;
 	private $cesiumPlusNodeTimeout = 15;
 	private $cesiumPlusNodeTimeoutIncrement = 10;
-	
+
 	private $node = NULL;
 
 	private $apiNode = 'g1.duniter.fr'; // Where the web payment gateway is located
-	
+
 	private $unit = 'quantitative';
 
 	private $title = 'Financement participatif en monnaie libre';
-	 
+
 	/**********************
 	 * Display parameters
 	 **********************/
@@ -153,15 +155,15 @@ class Crowdfunding {
 	/**********************
 	 * Computed
 	 **********************/
-	 
+
 	private $isEvergreen = false; // monthly | forever
-	
+
 	private $hasStartedYet = NULL;
-	
+
 	private $isOver = NULL;
-	
+
 	private $daysLeft = NULL;
-	
+
 
 
 	private $monthlyAmountCollectedMean = NULL;
@@ -173,18 +175,18 @@ class Crowdfunding {
 	private $totalDonationPerDonor = NULL;
 
 	private $monthsToConsider = NULL;
-	
+
 
 	private $donationsList = NULL;
 
 	private $donorsNb = NULL;
-	
+
 	private $amountCollected = NULL;
-	
+
 	private $donorsList = NULL;
-	
+
 	private $donorsProfiles = NULL;
-	
+
 
 	private $meanDonation = NULL;
 
@@ -193,7 +195,7 @@ class Crowdfunding {
 	private $minDonation = NULL;
 
 	private $periodDonorsList = array();
-	
+
 	/*
 	 * UD amount in quantitive, for divisions
 	 */
@@ -252,7 +254,7 @@ class Crowdfunding {
 	}
 
 	public function getEndDate() {
-	
+
 		return (clone $this->endDate);
 
 	}
@@ -688,36 +690,36 @@ class Crowdfunding {
 
 		return checkdate($a["month"], $a["day"], $a["year"]);
 	}
-	
+
 	public function hasStartedYet () {
-		
+
 		if (empty($this->hasStartedYet)) {
-			
+
 			$this->hasStartedYet = ($this->startDate <= $this->now);
-		
+
 		}
-		
+
 		return $this->hasStartedYet;
 	}
-	
+
 	public function isEvergreen ($bool = NULL) {
-		
+
 		if (isset($bool)) {
-		
+
 			$this->isEvergreen = $bool;
-			
+
 		} else {
-			
+
 			return $this->isEvergreen;
 		}
 	}
-	
+
 	protected function handleDates ($startDate, $endDate) {
 
 		/* Starting date handling */
 
 		if (empty($startDate)) {
-			
+
 			$this->startDate = new DateTime('first day of this month');
 
 		} else if (!$this->isDate($startDate, self::DATE_FORMAT)) {
@@ -728,7 +730,7 @@ class Crowdfunding {
 			$this->decease($out);
 
 		} else {
-				
+
 			$d = DateTime::createFromFormat(self::DATE_FORMAT, $startDate);
 
 			if ($d === false) {
@@ -743,29 +745,29 @@ class Crowdfunding {
 				$this->startDate = $d;
 			}
 		}
-		
+
 		$this->startDate->setTime(0,0,0);
-		
+
 		/* Ending date handling */
 
 		if (empty($endDate)) {
-			
+
 			if (empty($startDate)) {
-			
+
 				// For everygreen campaigns (monthly crowdfunding)
-				
+
 				$this->isEvergreen('monthly');
-			
+
 			} else {
-			
+
 				$this->isEvergreen('forever');
 			}
-			
-		
+
+
 			$this->endDate = NULL;
 
 		} else {
-			
+
 			if (!$this->isDate($endDate, self::DATE_FORMAT) ) {
 
 				$out = [];
@@ -788,7 +790,7 @@ class Crowdfunding {
 
 					$this->endDate = $d;
 					$this->endDate->setTime(0,0,0);
-					
+
 					if (empty($startDate)) {
 
 						$out = [];
@@ -797,7 +799,7 @@ class Crowdfunding {
 						$out[] = _('Date de fin : ') . $this->endDate->format(self::DATE_FORMAT);
 
 						$this->decease($out);
-					
+
 					} elseif ($this->startDate >= $this->endDate) {
 
 						$out = [];
@@ -812,39 +814,39 @@ class Crowdfunding {
 					}
 				}
 			}
-			
+
 		}
 	}
-	
+
 	public function isOver () {
-		
+
 		if (empty($this->isOver)) {
-		
+
 			$this->isOver = (!empty($this->endDate) and ($this->endDate < $this->now));
 		}
-		
+
 		return $this->isOver;
 	}
-	
+
 	public function getDaysLeft () {
-				
+
 		if (!isset($this->daysLeft)) {
-			
+
 			if ($this->isEvergreen()) {
-						
+
 				$lastDayOfTheMonth = new DateTime($this->startDate->format('Y-m-t'));
 				$this->daysLeft = intval($this->today->diff($lastDayOfTheMonth)->format('%a'));
 
 			} elseif (empty($this->endDate)) {
-			
+
 				$this->daysLeft = NULL;
-			
+
 			} else {
-				
+
 				$this->daysLeft = intval($this->today->diff($this->endDate)->format('%R%a'));
 			}
 		}
-		
+
 		return $this->daysLeft;
 	}
 
@@ -898,9 +900,9 @@ class Crowdfunding {
 	}
 
 	protected function computePercentage () {
-		
+
 		$this->percentage = $this->getAmountCollected() / $this->getTarget() * 100;
-		
+
 	}
 
 	public function getPercentage () {
@@ -910,28 +912,28 @@ class Crowdfunding {
 			$this->computePercentage();
 
 		}
-		
+
 		return round($this->percentage);
 	}
 
 	public function getAmountCollected () {
 
 		if (!isset($this->amountCollected)) {
-			
+
 			$this->fetchDonationsList();
 
 		}
-		
+
 		return $this->convertIntoChosenUnit($this->amountCollected);
 	}
-	
+
 	public function getDonorsNb () {
 
 		if (!isset($this->donorsNb)) {
-			
+
 			$this->fetchDonationsList();
 		}
-		
+
 		return $this->donorsNb;
 	}
 
@@ -1065,61 +1067,61 @@ class Crowdfunding {
 	}
 
 	private function getTransactions ($pubkey, $startDate, $endDate = NULL) {
-		
-		if ($startDate > $this->now) { 
-			
+
+		if ($startDate > $this->now) {
+
 			return array();
-		
+
 		} else {
-			
+
 			if (!isset($endDate)) {
-			
+
 				$endDate = $this->today;
 			}
-			
+
 			$json = NULL;
 			$jsonUri = '/tx/history/' . $pubkey . "/times/" . $startDate->getTimestamp() . "/" . $endDate->getTimestamp();
 			$txCacheDir = $this->cacheDir . 'tx/';
-			
+
 			if ($this->isOver()) {
-			
+
 				$txFullPath = $txCacheDir . $pubkey . '_'  . $startDate->format('Y-m-d') . '_' . $endDate->format('Y-m-d') . '.json';
-			
+
 			} else {
-				
+
 				$txFullPath = $txCacheDir . $pubkey . '_'  . $startDate->format('Y-m-d') . '.json';
-				
+
 			}
-			
+
 			if ($this->isActivatedCache) {
-			
+
 				if (file_exists($txFullPath) and ((time() - filemtime($txFullPath)) < $this->cacheLongevity)) {
-					
+
 					$json = file_get_contents($txFullPath);
 				}
-				
-				
+
+
 				if (empty($json)) {
-					
+
 					$json = $this->fetchJson($jsonUri);
-					
+
 					// Cache tx
-					
+
 					if ($this->isActivatedCache) {
-					
+
 						if (!file_exists($txCacheDir)) {
-							
+
 							mkdir($txCacheDir, 0777, true);
-						
+
 						}
-						
+
 						file_put_contents($txFullPath, $json);
 					}
-					
+
 				}
-				
+
 			} else {
-				
+
 				$json = $this->fetchJson($jsonUri);
 			}
 
@@ -1134,7 +1136,7 @@ class Crowdfunding {
 
 
 	}
-	
+
 	public function getDonationsList () {
 
 		if (empty($this->donationsList)) {
@@ -1146,97 +1148,97 @@ class Crowdfunding {
 		return $this->donationsList;
 
 	}
-	
+
 	public function getDonors () {
-		
+
 		if (empty($this->donorsList)) {
-			
+
 			$this->fetchDonationsList();
 		}
-		
+
 		return $this->donorsList;
 	}
-	
+
 	public function getDonorCesiumPlusProfile ($pubkey) {
-		
+
 		if (!isset($this->donorsCesiumPlusProfiles)) {
-		
+
 			$this->fetchCesiumPlusProfiles();
 		}
-		
+
 		if (isset($this->donorsCesiumPlusProfiles[$pubkey])) {
-		
+
 			return $this->donorsCesiumPlusProfiles[$pubkey];
-		
+
 		} else {
-		
+
 			return new Donor($pubkey);
 		}
 	}
-	
+
 	public function fetchCesiumPlusProfiles () {
-		
+
 		$this->donorsCesiumPlusProfiles = array();
-		
+
 		$queryParams = [
-			'size' => $this->donorsNb, 
+			'size' => $this->donorsNb,
 			'query' => [
 				'bool' => [
 					'should' => []
 				]
 			],
 			'_source' => [
-				'city', 
-				'title', 
-				'issuer', 
+				'city',
+				'title',
+				'issuer',
 				'avatar',
 				'geoPoint'
 			]
 		];
-		
+
 		foreach ($this->donorsList as $pubkey) {
-			
+
 			$queryParams['query']['bool']['should'][] = [
-			
+
 				'match' => [
-				
+
 					'issuer' => $pubkey
 				]
 			];
 		}
-	
+
 		$json = $this->fetchJson('/user/profile/_search', true, $queryParams);
 		$result = json_decode($json);
 		$cesiumPlusProfiles = $result->hits->hits;
-		
+
 		foreach ($cesiumPlusProfiles as $profile) {
-			
+
 			$profile = $profile->_source;
-			
+
 			$donor = new Donor($profile->issuer);
-			
+
 			if (isset($profile->title)) {
-			
+
 				$donor->setName($profile->title);
 			}
-			
+
 			if (isset($profile->city)) {
-			
+
 				$donor->setCity($profile->city);
 			}
-			
+
 			if (isset($profile->avatar)) {
-			
+
 				$donor->setAvatar($profile->avatar->_content, $profile->avatar->_content_type);
 			}
-			
+
 			if (isset($profile->geoPoint)) {
-			
+
 				$donor->setGeoPoint($profile->geoPoint->lon, $profile->geoPoint->lat);
 			}
-			
+
 			$this->donorsCesiumPlusProfiles[$profile->issuer] = $donor;
-			
+
 		}
 	}
 
@@ -1279,18 +1281,18 @@ class Crowdfunding {
 
 
 	private function fetchDonationsList () {
-		
+
 		$this->donationsList = array();
 		$this->totalDonationPerDonor = array();
 		$this->donorsList = array();
 		$this->amountCollected = 0;
 		$this->donorsNb = 0;
-		
+
 		$tx = $this->getTransactions($this->pubkey,
 		                             $this->startDate,
 		                             $this->endDate
 		                            );
-		
+
 		foreach ($tx as $t) {
 
 			// Filter only incoming transactions
@@ -1307,25 +1309,25 @@ class Crowdfunding {
 						$transactionAmount = $o[0] / 100;
 
 						$this->donationsList[] = new Donation(
-						
-							$transactionAmount, 
-							$donorPubkey, 
-							intval($t->time), 
+
+							$transactionAmount,
+							$donorPubkey,
+							intval($t->time),
 							$t->comment
 						);
-						
+
 						$this->amountCollected += $transactionAmount;
-						
+
 						if (!in_array($donorPubkey, $this->donorsList)) {
-							
+
 							++$this->donorsNb;
-						
+
 							$this->donorsList[] = $donorPubkey;
-							
+
 							$this->totalDonationPerDonor[$donorPubkey] = $transactionAmount;
-							
+
 						} else {
-						
+
 							$this->totalDonationPerDonor[$donorPubkey] += $transactionAmount;
 						}
 					}
@@ -1341,12 +1343,12 @@ class Crowdfunding {
 			return $amountInQuantitative;
 
 		} else {
-			
+
 			if (!isset($this->startDateUdAmount)) {
-			
+
 				$this->startDateUdAmount = $this->getUdAmount($this->startDate);
 			}
-			
+
 			return round($amountInQuantitative / $this->startDateUdAmount, 2);
 		}
 	}
@@ -1356,10 +1358,10 @@ class Crowdfunding {
 	public function addNode ($node) {
 
 		$node = htmlspecialchars($node);
-		
+
 		$this->nodes = array_unique(
 		                            array_merge(
-		                                        (array)$node, 
+		                                        (array)$node,
 		                                        $this->nodes
 		                                       )
 		                           );
@@ -1368,259 +1370,259 @@ class Crowdfunding {
 
 
 	public function addNodes ($nodes) {
-		
+
 		if (!is_array($nodes)) {
-	
+
 			$nodes = explode(' ', $nodes);
 		}
-		
+
 		foreach ($nodes as $node) {
-		
+
 			$this->addNode($node);
 		}
-		
+
 	}
-	
-	/** 
+
+	/**
 	 * @return $nodes array
 	 */
 	public function getNodesList ($cesiumPlus = false) {
-		
+
 		$nodesFilename = $cesiumPlus ? 'nodes-cesiumplus' : 'nodes';
 		$nodesFilename .=  '.txt';
 		$nodesFullpath = $this->cacheDir . $nodesFilename;
-		
+
 		$nodes = $cesiumPlus ? $this->cesiumPlusNodes : $this->nodes;
-		
+
 		if ($this->isActivatedCache) {
-			
+
 			if (!file_exists($nodesFullpath)) {
-				
+
 				shuffle($nodes);
-				
+
 				$this->cacheNodes($nodes, $cesiumPlus);
-				
-				
+
+
 			} else {
-			
+
 				$nodesStr = file_get_contents($nodesFullpath);
-				
+
 				$nodes = explode("\n", $nodesStr);
 			}
-		
+
 		} else {
-			
+
 			shuffle($nodes);
-			
+
 		}
-		
+
 		return $nodes;
 	}
 
 	protected function cacheNodes ($nodes, $cesiumPlus = false) {
-	
+
 		$nodesFilename = $cesiumPlus ? 'nodes-cesiumplus' : 'nodes';
 		$nodesFilename .=  '.txt';
-	
+
 		if (!file_exists($this->cacheDir)) {
-			
+
 			mkdir($this->cacheDir, 0777, true);
-		
+
 		}
-	
+
 		file_put_contents($this->cacheDir . $nodesFilename, implode("\n", $nodes));
 	}
 
 	protected function saveNodes ($nodes, $cesiumPlus = false) {
-	
+
 		if ($cesiumPlus) {
-		
+
 			$this->cesiumPlusNodes = $nodes;
-		
+
 		} else {
-			
+
 			$this->nodes = $nodes;
 		}
 	}
-	
+
 	protected function fetchJson_aux ($nodes, $uri, $cesiumPlus, $queryParams, $nodesNb, $nodeTimeout) {
-		
+
 		if ($cesiumPlus) {
-		
+
 			// $header = 'Content-Type: application/x-www-form-urlencoded';
 			// $header = "Content-Type: text/xml\r\n";
-			
+
 			$opts = [
 				'http' => [
 					'method'  => 'POST',
 					'content' => json_encode($queryParams),
-					// 'header'  => $header, 
+					// 'header'  => $header,
 					'timeout' => $nodeTimeout
 				]
 			];
-			
+
 		} else {
-		
+
 			$opts = [
 				'http'=>[
 					'timeout' => $nodeTimeout,
 				]
 			];
 		}
-		
+
 		$streamContext = stream_context_create($opts);
-		
+
 		$i = 0;
 
 		do {
-			
-			
-			$json = @file_get_contents("https://" . current($nodes) . $uri, 
-				                   false,  
+
+
+			$json = @file_get_contents("https://" . current($nodes) . $uri,
+				                   false,
 				                   $streamContext);
-			
+
 			if (empty($json)) {
-				
+
 				$nodes[] = array_shift($nodes);
 				++$i;
 			}
-			
+
 		} while (empty($json) and ($i < $nodesNb));
-		
+
 		if (!empty($json)) {
-		
+
 			// Let's save node order for other queries :
 			$this->saveNodes($nodes, $cesiumPlus);
-			
+
 			if ($this->isActivatedCache) {
-			
+
 				$this->cacheNodes($nodes, $cesiumPlus);
 			}
 		}
-		
+
 		return $json;
 	}
-	
-	
+
+
 	public function fetchJson ($uri, $cesiumPlus = false, $queryParams = NULL) {
 
 		$json = NULL;
-		
+
 		$nodes = $this->getNodesList($cesiumPlus);
-				
+
 		$nodesNb = count($nodes);
-		
+
 		$maxTries = 3;
-		
+
 		$nodeTimeout = $cesiumPlus ? $this->cesiumPlusNodeTimeout : $this->nodeTimeout;
 		$nodeTimeoutIncrement = $cesiumPlus ? $this->cesiumPlusNodeTimeoutIncrement : $this->nodeTimeoutIncrement;
-		
+
 		for ($i = 0; ($i < 3) and empty($json); ++$i) {
-			
+
 			$json = $this->fetchJson_aux($nodes, $uri, $cesiumPlus, $queryParams, $nodesNb, $nodeTimeout);
-			
+
 			$nodeTimeout += $nodeTimeoutIncrement;
 		}
-		
+
 		if (empty($json)) {
-			
+
 			$out = [];
 			$out[] = _('Aucun noeud Duniter n\'a été trouvé.');
 			$out[] = _('Noeud interrogés : ');
-			
+
 			if ($cesiumPlus) {
-			
+
 				$out[] = _('Paramètres de la requête : ');
 				$out[] = print_r($queryParams, true);
 			}
-			
+
 			$out = array_merge($out, $nodes);
-			
+
 			$this->decease($out);
 		}
 
 		return $json;
 	}
-	
+
 	protected function fetchUdAmount ($date) {
-		
+
 		// On récupère les numéros de chaque blocks de DU journalier
 		$json = $this->fetchJson('/blockchain/with/ud');
-		$blocks = json_decode($json)->result->blocks;	
-		
+		$blocks = json_decode($json)->result->blocks;
+
 		if ($date > $this->now) {
-			
+
 			// On récupère le dernier block
 			$blockNum = end($blocks);
 
 		} else {
-			
+
 			// On récupère le bloc de la date qui nous intéresse
 			$blockNum = $blocks[count($blocks) - $this->today->diff($date)->format("%a") - 1];
 		}
-		
+
 		// Puis on récupère le montant du DU
 		$json = $this->fetchJson('/blockchain/block/' . $blockNum);
 		$block = json_decode($json);
-		
-		
+
+
 		return ($block->dividend / 100);
 	}
-	
+
 	public function getStartDate () {
-		
+
 		return (clone $this->startDate);
 	}
-	
+
 	public function getUdAmount ($date) {
-		
+
 		$udFilename = $this->getUdFilename($date);
 		$udsCacheDir = $this->cacheDir . 'uds/';
 		$udFullPath = $udsCacheDir . $udFilename;
-		
+
 		if ($this->isActivatedCache) {
-		
+
 			if (file_exists($udFullPath)) {
-			
+
 				$udCachedAmount = file_get_contents($udFullPath);
-				
+
 				if (is_numeric($udCachedAmount) and $udCachedAmount != 0) {
-					
+
 					$udAmount = floatval($udCachedAmount);
 				}
 			}
-			
-			
-			
+
+
+
 			if (!isset($udAmount)) {
-				
+
 				$udAmount = $this->fetchUdAmount($date);
-				
+
 				// Cache UD amount
-				
+
 				if (!file_exists($udsCacheDir)) {
-					
+
 					mkdir($udsCacheDir, 0777, true);
-				
+
 				}
-				
+
 				file_put_contents($udFullPath, $udAmount);
-				
+
 			}
 
-		
+
 		} else {
-				
+
 			$udAmount = $this->fetchUdAmount($date);
-			
+
 		}
-		
+
 		return $udAmount;
 	}
-	
+
 
 	protected function getUdFilename ($date) {
-		
+
 		$datePreviousAutumnEquinox = new DateTime($date->format('Y') . '-09-22');
 		$datePreviousSpringEquinox = new DateTime($date->format('Y') . '-03-20');
 
@@ -1631,7 +1633,7 @@ class Crowdfunding {
 		} elseif ($date > $datePreviousSpringEquinox) {
 
 			$udFilename = $date->format('Y') . '-spring';
-			
+
 		} else {
 
 			$udFilename = ($date->sub(new DateInterval('P1Y'))->format('Y')). '-autumn';
